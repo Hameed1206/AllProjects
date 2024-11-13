@@ -1,0 +1,15 @@
+QA Automation tester with 2 years of experience. Tools used is Java selenium, cucumber framework and SQL.
+I will be working with developers, offshore testing team and project management to achieve high quality, release deadlines and QA process improvements.
+
+https://www.linkedin.com/in/hameed-hussain-9646432a0/
+
+
+FedEx is an American multinational courier delivery service company. Agenda of Revenue Execution project is ensuring the Application involved in shipping, Invoicing and settlement are works fine. We will test these functions by creating backend test cases and testing the functionalities of all applications.
+
+Project, I contribute myself is FedEx Revenue Execution.
+FedEx is a US based courier and logistics.
+Our responsibility is to test and handle the applications that's responsible for invoicing.
+We will be handling around 10 applications; each apps will have an update for every release. So, we will test the new functionalities and also the regression part we will take care, so the new scripts don't disturb the old functions.
+The applications are more secure and complicate, so every release we may have a little change in DOM html code, for which we will use locators which is more customized.
+Also, all locators are under shadow Dom, so we will handle that and access the Web element.
+We use different testing techniques to ensure the functions Equivalence case partition technique, Boundary value analysis, state transition technique.

@@ -1,0 +1,55 @@
+Wait->Interface
+===============
+Wait has 2 types
+
+
+1. Static Wait
+==============
+It will wait for mentioned time even if locator is find, this will make performance issue
+Thread.Sleep(milliseconds)
+
+
+2. Dynamic Wait
+============
+It wont wait for the maximum time if the locator is found
+
+It has 2 types,
+-Implicit wait
+-Explicit wait
+
+Implicit wait
+=============
+Implicit wait is common for all the locators
+We can mention only once in a method
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+This is wait command to wait for the complete web page to load, Implicit wait will wait for findElement and findElements function only
+driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+
+Explicit wait
+=============
+It is applicable only for specific locator, so we need to mention again and again when there is a need
+It has 2 categories
+-WebDriverWait
+-FluentWait
+
+WebDriverWait -> Class
+======================
+It wont wait for the maximum time if the locator is found within a mentioned time
+It is applicable only for specific locator
+we cant set time interval
+
+We can ask webdriver to wait until below condition is satisfied, we can give lot of conditions.
+WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		w.until(ExpectedConditions.alertIsPresent());
+		w.until(ExpectedConditions.elementToBeClickable(locator);
+		w.until(ExpectedConditions.visibilityOfElementLocated(locator);
+                w.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName("iframes")));
+
+FluentWait  -> Class
+====================
+Similar as WebDriver Wait, But here we can give polling time for the fluent wait to go and check the DOM structure
+default polling time 500milli seconds (This will make performance issues)
+Also we can handle exceptions
+
+Wait<WebDriver> q = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(50)).pollingEvery(Duration.ofSeconds(5)).ignoring(Exception.class);

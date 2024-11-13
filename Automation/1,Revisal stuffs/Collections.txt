@@ -1,0 +1,153 @@
+Array:
+========
+	1. It will not support dissimilar data type
+	2. It has high memory wastage
+	3. It has fixed length
+
+
+Parent for all the Classes is Object
+Parent for all the Interface is Search Context
+
+
+
+				    SEARCH CONTEXT
+					  |
+				       ITERABLE
+		               		  |
+				     COLLECTION(I)
+					
+
+	List(I)				Set(I)					Map(I)
+
+1. ArrayList(C)			     1. HashSet(C)			     1. HashMap(C)
+2. LinkedList(C)		     2. LinkedHashSet(C)		     2. LinkedHashMap(C)
+3. VectorList(C)		     3. TreeSet(C)			     3. TreeMap(C)
+									     4. HashTable(C)
+									     5. ConcurrentHashMap(C)
+
+
+Collections
+===========
+Collections supports dissimilar datatypes
+It is a dynamic memory allocation or Run time memory allocation, so wastage can be avoided
+
+It has 3 types,
+List -> Interface
+Set  -> Interface
+Map  -> Interface
+
+
+List -> Interface
+=================
+List is used to store multiple values of dissimilar datatype in single reference
+List is index based
+It will allow duplicates and null values too
+
+Classname                          Good                                  Bad
+----------------------------------------------------------------------------------------
+ArrayList                 Searching & Retrieving                 Insertion & Deletion
+LinkedList                 Insertion & Deletion                 Searching & Retrieving
+Vector                              NA                                   NA 
+
+Object Creation
+===============
+List l = new ArrayList();
+List ll = new LinkedList();
+List<String> lll = new Vector();
+
+Methods in List
+===============
+add()     -> To insert a value
+size()    -> To find the length of list
+get()     -> To fetch value for particular index
+remove()  -> To remove particular value from list
+add( , )  -> To add values inbetween , Index based
+set( , )  -> To replace a value
+contains  -> To check if a value is present
+clear     -> This will clear the list / remove all the values
+indexOf() -> To find the index position of a value
+lastIndexOf() -> To find the last occurence
+addAll()      -> To add all values from one list to another
+removeAll()   -> To remove common values by comparing 2 lists
+retainAll()   -> To retain common values by comparing 2 lists
+List support both For loop and For Each (Enhanced for loop)
+
+=====================================================================================================================================================================================
+
+Set -> Interface
+================
+Set is used to store multiple values of dissimilar datatypes in a single reference
+Set is based on value
+It wont allow duplicates, It will ignore the duplicates
+
+We have 3 classes
+
+Classname                  printing order                                       SPEC
+-------------------------------------------------------------------------------------------------------------
+HashSet                     Random order                          Allows one null value
+LinkedHashSet              Insertion order                        Allows one null value
+TreeSet                    Ascending order           Wont allow null values and dissimilar datatypes as well
+
+Object Creation
+===============
+Set s = new HashSet();
+Set ss = new LinkedHashSet();
+Set<Integer> sss = new TreeSet();
+
+Methods in Set
+==============
+add()      -> To add the value
+remove()   -> To remove the value
+size()     -> To get the size
+contains   -> To check if a value is present
+addAll()   -> To add another reference all the values and also we can add values from list by giving reference
+removeAll()-> To remove all the value from particular reference
+This supports only enhanced for loop -> For Each
+
+======================================================================================================================================================================================
+
+Map -> Interface
+================
+Key and value combination 
+Key wont allow duplicates , Value allow duplicates
+
+We have 4 classes
+
+Classname                  printing order                                       SPEC
+-------------------------------------------------------------------------------------------------------------
+HashMap                     Random order            Key allow 1 null value , value allows N no of null values
+LinkedHashMap             Insertion order           Key allow 1 null value , value allows N no of null values
+TreeMap                   Ascending order           Key ignore null value , value allows N no of null values
+HashTable                   Random order            Key ignore null value , value also ignore null value
+
+Object Creation
+===============
+Map<String , Integer>  mp = new HashMap();
+Map<Integer , String>  mpp = new LinkedHashMap();
+Map<String , String>   mppp = new TreeMap();
+Map<Integer , Integer> mpppp = new Hashtable<Integer , Integer>();
+
+Methods in Map
+==============
+put()    -> To add / insert values
+size()   -> To get the size
+get(x)   -> In x give a key and get the corresponding value
+values() -> To get all the values (only values)
+keySet() -> To get all the keys   (only keys)
+replace()-> To replace or change a value
+remove() -> To remove a value
+containsKey() / containsValue()  -> To check if particular key/value present or not
+
+entrySet() -> To iterate the map we need to use this , this will return set<Entry>
+
+below 2 methods available in Map.Entry class
+getKey()   -> To display only keys
+getValue() -> To display only values
+
+for (Entry<String, Integer> en : mp.entrySet()) {
+		System.out.println(en);
+		System.out.println(en.getKey()+" -> "+en.getValue());
+		
+	}
+
+=======================================================================================================================================================================================

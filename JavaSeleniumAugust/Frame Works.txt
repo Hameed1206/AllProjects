@@ -1,0 +1,13 @@
+Frame Works:
+============
+
+Why do we need framework ?
+
+-> Framework is a code structure that helps to make the code maintenance easy
+-> To reduce the work compared to selenium
+-> Without frameworks, we will place code and data in same class, which cannot be reused
+-> Using framework we can maintain the code structure with increased code reusability and reduce cost of maintaining code
+
+-> 
+
+

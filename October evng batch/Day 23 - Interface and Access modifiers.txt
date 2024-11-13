@@ -1,0 +1,49 @@
+Multiple Inheritance
+====================
+
+Is not possible with class in Java
+More than one parent class access child class parallelly
+
+We can access multiple classes parallelly, its possible only with interface
+
+Hybrid Inheritance
+==================
+Combination single and multiple
+
+    A -> b -> c -> d -> A
+
+
+Access specifiers/Modifiers
+=================
+public    -> It can be accessed globally (both inside and outside the package) (either you should extends / you should create object for class holding the method)
+private   -> It can be accessed only in class (Restricted)
+default   -> It can be accessed only inside the package , not outside the package
+protected -> It can be accessed inside package , but outside we can access with child class ( you should use extends keyword )
+
+
+Task
+====
+
+Create 4 interface , implement all in a same class 
+create 4 abstract class
+
+class 1 -> 1 method with body       3 without body
+      2 -> 1 body                   2 without
+      3    1                        1
+      4 -> complete the one , create object and run
+
+Datatypes Practise problems
+
+Polymorphism
+
+Access modifiers
+
+
+
+https://youtu.be/R5UFQK0cMSs?si=1clY7LQJKYQN1voo
+s1
+s2
+s10
+s11
+s14
+s15

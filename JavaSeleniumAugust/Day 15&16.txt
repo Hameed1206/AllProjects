@@ -1,0 +1,136 @@
+Constructor
+==========
+
+Constructor basically a super method , it takes the class name to create constructor
+Constructor will be implicitly invoked when object is created
+It doesn't have any return type
+It will support method overloading, But won't support method overriding
+We have 2 types,
+
+1. Default Constructor / Non parameterized constructor
+------------------------------------------------------
+Example
+-------
+public class TestConstrc{
+        public TestConstrc() {
+		System.out.println("Hello from constructor");
+	    }
+        public static void main(String[] args) {
+		
+		TestConstrc q = new TestConstrc();	
+	    }
+   }
+Console
+-------
+Hello from constructor
+
+In above, If we create object the constructor will be invoked implicitly, we don't want to call separately. This is default Constructor.
+
+2. Parameterized constructor
+----------------------------
+Example
+-------
+public class TestConstrc{
+        public TestConstrc(String s, int I, char c) {
+		System.out.println(s+" "+i+" "+c);
+	    }
+        public static void main(String[] args) {
+		
+		TestConstrc qq = new TestConstrc("Java", 17, 'C');	
+	    }
+   }
+Console
+-------
+Java 17 C
+
+In above, when we create object we need to pass parameters for the constructor, these values can be utilized throughout this object reference. This is Parameterized constructor
+
+
+We have 2 keywords which is very useful in constructor
+this & super
+this -> current class reference
+super -> parent class reference
+
+Constructor chaining
+--------------------
+We can inter link constructors in same class and also in different classes using this and super keywords
+
+Example
+-------
+
+public class Constructor {
+
+	public Constructor() {
+	this(9879879879l);
+	}
+	public Constructor(String name) {
+	System.out.println(name);
+	}
+	public Constructor(int age) {
+	this("Java"); 
+	System.out.println(age);
+	}
+	public Constructor(float height) {
+	this(25);
+	System.out.println(height);
+	}
+	public Constructor(long phoneNo) {
+	this(55.5f);
+	System.out.println(phoneNo);
+	}
+	public static void main(String[] args) {
+		Constructor con = new Constructor();
+	}
+}
+
+In above I have created object for class, which will implicitly invoke default constructor, 
+But the logic inside the constructor is calling another constructor having long value as parameter
+now 2 constructor has to execute, but the 2nd one calling another one with float value, 
+And 3rd one calls an another with int value , 4th one calls String parameterized constructor.
+
+So here execution will be in this order
+String Constructor
+int Constructor
+float Constructor
+long Constructor
+
+When we multiple classes , we will use super keyword to inter link them
+
+Example
+-------
+
+public class ChildConstructor extends ParentConstructor1 {
+
+	public Constructor() {
+	this(9879879879l);
+	}
+	public Constructor(float height) {
+        super(25);
+	System.out.println(height);
+	}
+	public Constructor(long phoneNo) {
+	this(55.5f);
+	System.out.println(phoneNo);
+	}
+	public static void main(String[] args) {
+		Constructor con = new Constructor();
+	}
+}
+
+public class ParentConstructor1 {
+
+	public Constructor(String name) {
+	System.out.println(name);
+	}
+	public Constructor(int age) {
+	this("Java"); 
+	System.out.println(age);
+	}
+
+}
+
+Here execution will be in this order
+Parent String Constructor
+Parent int Constructor
+Child float Constructor
+Child long Constructor

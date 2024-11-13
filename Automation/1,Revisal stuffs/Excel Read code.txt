@@ -1,0 +1,47 @@
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class ExcelReadExample {
+    public static void main(String[] args) {
+        String filePath = "path/to/your/excel/file.xlsx"; // Replace with the path to your Excel file
+
+        try (FileInputStream inputStream = new FileInputStream(filePath)) {
+            Workbook workbook = new XSSFWorkbook(inputStream);
+            Sheet sheet = workbook.getSheetAt(0); // Assuming you want to work with the first sheet
+
+            int columnIdx = 3; // 4th column (0-based index)
+            int rowIndex = 1; // 2nd row (0-based index)
+
+            while (true) {
+                Row row = sheet.getRow(rowIndex);
+                if (row == null) {
+                    break; // Stop if the row is empty
+                }
+
+                Cell cell = row.getCell(columnIdx);
+
+                if (cell != null) {
+                    String cellValue = "";
+
+                    if (cell.getCellType() == CellType.STRING) {
+                        cellValue = cell.getStringCellValue();
+                    } else if (cell.getCellType() == CellType.NUMERIC) {
+                        cellValue = String.valueOf(cell.getNumericCellValue());
+                    }
+
+                    System.out.println("Value at Row " + (rowIndex + 1) + ", Column " + (columnIdx + 1) + ": " + cellValue);
+                } else {
+                    break; // Stop if the cell is empty
+                }
+
+                rowIndex++;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

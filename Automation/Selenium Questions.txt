@@ -1,0 +1,200 @@
+Selenium Questions
+==================
+
+1. How to Initiate PageFactory in selenium ?
+
+public class POM {
+	public POM() {
+		PageFactory.initElements(driver, this);              }
+
+
+2. Diff B/W driver.quit(); and driver.close();
+
+driver.quit();   -> Completly terminate the particular execution
+The driver.quit() method is used to close the entire browser window and terminate the WebDriver session.
+
+driver.close();  -> this will close the particular window
+The driver.close() method is used to close the current browser window or tab that the WebDriver is currently focused on.
+
+
+
+Given two strings s and t return whether or not s is an anagram of t.
+Note: An anagram is a word formed by reordering the letters of another word.
+
+Ex: Given the following strings...
+s = "cat", t = "tac", return true
+s = "listen", t = "silent", return true
+s = "program", t = "function", return false
+
+example in project for each oops concept
+==================================================================================================================
+Accenture
+=========
+
+get char count without collections
+
+String s = "Accenture";
+int i = 0;
+for(int i=0; i<s.length(); i++){
+
+   char c = s.charAt(i);
+    
+     String s1 = c;
+
+     if(s1.equals(c)){
+        int a = i+1;
+
+     ================
+String output = "";
+for(int i=s.length()-1; i>0; i--){
+   
+    char c= s.charAt(i);
+output = output + c;
+}
+System.out.println(output);
+
+
+Configurations c = new Configurations( path , "reportname")
+
+ReportBuilder 
+command to get report in terminal
+
+1st git command in morning
+
+git status
+git log
+
+bug life cycle
+
+process for pull request
+git add .
+git commit -m "message"
+git push
+
+annotations
+
+what is d/b integer and int
+
+what is input stream
+
+jar file to read excel
+
+SQL how to get duplicate rows
+====================================================================================================================
+Applied Materials QUE
+=====================
+
+reflection in java
+
+where we use abstract class and where we use interface
+why WebDriver is a interface
+
+application architecture front end, back end, API
+New locators added in selenium 4
+
+
+=============================
+Rotate values
+-------------
+ Int[] in = {1, 2, 3, 4, 5}
+
+ int n = 3;
+
+Int size= in.length(); = 5
+
+reverseArray(in,0,size-1);
+reverseArray(in,0, n-1);
+reverseArray(in, n, size-1);
+
+rotateArray(in, n);
+
+Public void reverseArray(int[] in, int start, int end){
+    while(start<end){
+    Int complete = in[start]; 
+     in[start] = in[end];
+       in[end] = complete; 
+
+start++
+end--
+}
+==========================================================================================================================
+Capgemini Interview
+=========
+String s = "Hameed';
+Map<Character , Integer> mp = new LinkedHashMap();
+for(i=0; i<s.length(); i++){
+Char c = s.charAt(i);
+if mp.containsKey(c){
+Integer i = mp.get(c);
+mp.put(c , i+1);  
+}
+else{
+mp.put(c , 1);
+}
+}
+System.out.Println(mp);
+
+
+String s = "capgemini";
+		Map<Character,Integer> mp = new LinkedHashMap();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (mp.containsKey(c)) {
+			Integer count = mp.get(c);
+			mp.put(c, count+1);
+			}
+			else {
+			mp.put(c, 1);
+			}
+			}
+		System.out.println(mp);
+	}
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.seconds);
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+===============================================================================
+WebDriverManager.ChromeDriver.SetUp();
+WebDriver driver = new ChromeDriver();
+String s = driver.getWindowHandle();
+Set<String> s1 = driver.getWindowHandles();
+for(WebElement windows : s1) {
+
+
+List li = new ArrayList();
+li.addAll(s1);
+
+for 
+
+driver.manage.timeouts().implicitlyWait(10, Timeunit.SECONDS);
+WebDriverWait w = new WebDriverWait(driver, 10);
+w.until(ExpectedCondition.elementToBeClickable);
+
+Wait w1 = new FluentWait(driver).
+
+
+
+data1 data2 data3  get(0).get(1)
+data4 data5 data6
+=================================================================================
+String s = "www.gaagle.com";
+        
+        //output Google
+       String s1 = s.replace("www.gaagle.com", "Google");
+        System.out.println(s1);
+        
+        String S2 = "India.Srilanka.Pakistan";
+            //output India
+                     Srilanka
+                     Pakistan
+======================================================================================
+Enterprise questions
+====================
+what is supply chain management
+what is integration testing and example
+what is mobile testing
+diff b/w TDD and BDD
+waits
+How to add integrate cucumber with Jira for defect tracking the failed test cases
+what is Residual defect
+how to add screenshot in cucumber report
+=====================================================================================================

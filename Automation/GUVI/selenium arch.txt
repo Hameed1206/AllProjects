@@ -1,0 +1,71 @@
+SELENIUM:
+=========
+It is an Automation Testing Tool 
+
+There are 4 components:
+=======================
+	1. Selenium IDE
+	2. Selenium RC
+	3. Selenium WebDriver
+	4. Selenium Grid
+
+
+1. Selenium IDE: Integrated Development Environment
+================	
+	This is only for Firefox.
+	It can be used only for simple test cases.
+
+2. Selenium RC:(1.0)Remote Control
+================
+	Installation is complicated using server.
+
+3. Selenium WebDriver: Automation Testing Tool
+======================
+	It supports all programming languages.
+	It can be easily integrated with Eclipse.
+
+4. Selenium Grid:
+==================
+	It is used for executing test case, across different machines.
+	We can perform parallel execution, so that execution time will be reduced.
+	Used for Hub-Node concepts.
+	Run in single system(hub) and execute it in different machines.
+
+RC + WebDriver --->2.0 (Advance version is 3.0)
+
+selenium-server-standalone-3.141.59 jar
+
+
+WebDriver:
+==========
+	It's a collection of open source API(Application Programming Interface).
+	This is used to Automate the testing of web-application.
+	It supports many browsers such as Chrome, IE, Firefox, Safari,etc.
+
+
+							Search Context(I)
+								|
+							        | (extends)
+								|
+							  WebDriver(I)
+								|
+							        | (implements)
+								|
+		             JavascriptExecutor------->Remote WebDriver(C)------->TakesScreenshot
+				(Interface)			|		   (Interface)					
+						        	| (extends)
+								|
+				FirefoxDriver(C)	ChromeDriver(C)         InternetExplorerDriver(C)
+
+
+==============================================================================================================
+		   	
+		           DriverName		          .exe			  ClassName
+========================================================================================================
+Chrome			webdriver.chrome.driver	      chromedriver.exe	        ChromeDriver()
+________________________________________________________________________________________________________
+Internet Explorer	webdriver.ie.driver	      IEDriverServer.exe     InternetExplorerDriver()
+________________________________________________________________________________________________________
+Firefox			webdriver.gecko.driver	      geckodriver.exe		FirefoxDriver()
+________________________________________________________________________________________________________
+

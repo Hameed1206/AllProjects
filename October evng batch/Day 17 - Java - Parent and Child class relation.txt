@@ -1,0 +1,76 @@
+Day 2 
+=====
+How to call one class methods in another class
+
+Step 1 : Decide parent class and Child class
+         Parent class methods should be always public
+
+Step 2 : In child class, Create object for parent class and call the methods
+         If child class also having some methods means, create object and call child class methods too
+         Run or Execute the program in child class
+
+Note : If we want to access class from different package means, we should also the import the class, then create object and call methods
+
+
+Normal program
+==============
+/// Parent class
+public class FirstDay {
+
+	public void dayOne() {
+		System.out.println("Class 1 method 1");
+	}
+	public void dayOne2() {
+		System.out.println("Class 1 method 2");
+	}
+	
+	public static void main(String[] args) {
+		
+		FirstDay day = new FirstDay();
+		day1.flour();
+		day1.masala();
+	}
+}
+
+Console / Output
+================
+Class 1 method 1
+Class 1 method 2
+
+===============================================================================================================================
+
+How to call one class method in another class
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+/// Child class
+public class SecondDay {
+
+	public void dayTwo() {
+		System.out.println("Class 2 method 1");
+	}
+	public void dayTwo2() {
+		System.out.println("Class 2 method 2");
+
+	}
+
+	public static void main(String[] args) {
+		
+		SecondDay day2 = new SecondDay();
+		day2.dayTwo();
+		day2.dayTwo2();
+		
+		FirstDay day1 = new FirstDay();
+		day1.dayOne();
+		day1.dayOne2();
+	}
+}
+
+Console / Output
+================
+Class 2 method 1
+Class 2 method 2
+Class 1 method 1
+Class 1 method 2
+
+Like above we call one class methods in another class
+We need to create object for the class we want to utilize
+then call the methods from that class

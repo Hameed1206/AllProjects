@@ -1,0 +1,89 @@
+parent , child , following-sibling , preceding-sibling ,  ancestor , descendant
+
+div
+	input
+		img id=image
+		span
+		a
+			h3
+	input1
+div1
+
+	type
+		a1
+		img
+	type1
+
+syntax: //tagName[@attributename='attributevalue']/relation::tagname[@attna='atv']
+
+//img[@id='image']/parent::input/parent::div
+//img[@id='image']/ancestor::div
+//img[@id='image']/parent::input/parent::div/following-sibling::div1
+//img[@id='image']/preceding-sibling::a/child::h3
+//img[@id='image']/preceding-sibling::a/h3
+//img[@id='image']/parent::input/following-sibling::input1
+//img[@id='image']/parent::input/parent::div/follwing-sibling::div1/type
+//img[@id='image']/parent::input/parent::div/follwing-sibling::div1/descendant::img
+
+another example
+//a[contains(text(), 'test2 test2')]//parent::td//preceding-sibiling::td//input[@name = 'contact']
+here we are locating the text that contains test2 test2 and moving to his parent and moving to parents preceding sibling and accessing it with the xpath
+
+
+
+If we have ubnormal space for a locator, there might be a chance while copying it will become incoreect
+To over come we use normalized space.
+<label> Forgot   password  ?<label>
+//tagName[normalized-space(text()='text')]
+//label[normalized-space(text()='Forgot password ?')]
+
+
+
+
+
+public void method(String companyName){
+String changeValue= "//a[contains(text(),'"+companyName+"')]/parent::td/following-sibling::td/font"
+System.out.println("Change value :"driver.findElement(By.xpath(changeValue)).getText());
+}
+
+http://demo.guru99.com/test/web-table-element.php
+print the count of each company occurence
+print the change of each company
+print the prev close of each company
+print the current price of each company
+print company, prev close, current price, change
+
+
+Xpath : 
+
+link --> a tag, attribut --> href
+
+//tagName[@attributeName='attributevalue']
+
+//tagName[text()='fulltext']
+
+//tagName[contains(text(),'partialtext')]
+
+//tagName[contains(@attributeName,'attributevale')]
+
+//tagName[starts-with(@attributeName,'attributevale')]
+
+//tagName[ends-with(@attributeName,'attributevale')]
+
+//tagName[not (contains(@attributeName,'attributeValue')]
+
+//tagName[@attributeName='attributevalue'][@attributeName='attributevalue']
+
+//tagName[@attributeName='attributevalue' and @attributeName='attributevalue']
+
+//tagName[@attributeName='attributevalue' or @attributeName='attributevalue']
+
+//tagName[@attributeName='attributevalue']|//anothertagName[@attributeName='attributevalue']
+
+//a[@href='value']|//div[@type='link'] - for links html tags ia always a
+
+and operator or operator
+
+and --> both condition should be true
+
+or --> either any one condition may be true

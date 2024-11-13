@@ -1,0 +1,115 @@
+JAVA Starts
+***********
+
+Java
+
+JDK - Java development kit
+            |
+JRE - Java runtime environment 
+            |
+JVM - Java virtual machine
+
+JVM runs the program it will look for main method
+
+
+
+Concatenation operator + ( inside sysout)
+
+
+
+Primitive and non primitive data type
+--------------------------------------
+
+Non primitive- using data type we will create object to access and we can store multiple data
+
+Primitive- Directly assigned to variable, we can store only one value for a reference 
+
+        Default Values
+
+Data Type          Default Value (for fields)
+
+short                     0
+
+int                       0
+
+long                      0L
+
+float                     0.0f
+
+Boolean                   false
+
+String                    null
+
+
+Identifiers (class, method, variable, object)
+
+Should start in alphabet or _ or $
+
+Cannot start with numeric or any other symbols 
+
+Identifiers cannot take the key words which is predefined in Java 
+
+Identifiers are case sensitive 
+
+
+Operators:
+=========
+
+Arithmetic operators
+--------------------
+
+Addition + , Subtraction - , Multiplication * , Division / , modulus %
+
+Comparison operator
+-------------------
+Equal to == , returns true if LHS equal to RHS
+Not Equal != , returns true if LHS not equal to LHS
+less than < , returns true if LHS less than RHS
+greater than > , returns true if LHS Greater than RHS
+less than or equal to <= , returns true if LHS less than or equal to RHS
+grater than or equal to >= , returns true if LHS Greater than or equal to RHS
+
+Logical operators
+-----------------
+AND &&, both condition should satisfy
+OR ||, Any one condition should satisfy
+NOT ! , Inverse operation, to change the result direct opposite
+
+unary operator
+
+
+how pre increment and post increment works
+
+int a = 10;
+
+a++ > here a is incremented to 11 (Value is changing, No addition or subtraction is performed), While coming in value is 10, While going out value is 11.
+++a > Here a is incremented to 11 (Value incremented in same step itself, while inside itself its incremented and changed to 11)
+
+(a++ + ++a + a++)
+finally a = ?
+in above while coming in 
+value is 10 so before + value is 10 (10+
+value crossing + value is incremented to 11, again there pre increment value changed to 12 (10 + 12 +
+value is now 12 and crossing the +, there post increment. so value remains 12 (10+12+12)
+while crossing the incremental step only its incremented to 13, so in next line a = 13.
+
+here ++ is only changing value and performing any addition or subtraction (default value is 1)
+
+
+Bitwise Operator:
+-----------------
+AND &, both condition should satisfy
+OR |, Any one condition should satisfy
+XOR ^ , Any one only should satisfy 
+complement ~ , Inverse
+
+Ternary operator perform conditional operation :
+ A > B ? if true : if false
+if a is greater than b, then 1st condition execute, if false means 2nd condition execute
+A = 10
+b = 15
+A > b ? A*10 : b*10
+In above a is less than b , so it will execute false condition, b*10 = 150
+
+A < b ? A*10 : b*10
+In above a is less than b , so condition true,  it will execute True condition, A*10 = 100

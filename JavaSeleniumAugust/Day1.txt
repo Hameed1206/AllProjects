@@ -1,0 +1,128 @@
+Why Java ?
+It includes lot of frameworks and tools in it and it is oops based language
+OOPS : Object Oriented programming structure
+
+Java is a open source
+It is platform independent
+Multi threading 
+Secure
+Portable
+Its a case sensitive language
+
+To use Java we need to install, , ,
+
+JDK - Java app - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html
+IDE - to develop codes - https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2024-09/R/eclipse-inst-jre-win64.exe
+
+=============================================================================================================================
+3 core things in OOPs
+---------------------
+Class  -> Blueprint / Template   -> Kitchen
+Method  -> Actions Items         -> Mixer , Mirchi-> 
+Object -> Will use to trigger the execution  -> Current  
+
+4 main Pillars of OOPS
+----------------------
+-> Inheritance
+-> Polymorphism
+-> Abstraction
+-> Encapsulation
+
+How to create a project--
+===========================
+File->New -> project->Project Name -> Each word first letter should be in caps
+To create package -> RC on src -> package -> all letters should be small
+To create Class -> RC on package -> Class -> Each word first letter should be in caps
+To create Method -> Camel Notation -> First word should start small letter and following words should have first letter as caps
+sample format to create method = javaProgrammingLanguage
+To create Object -> Classname reference = new Classname();
+
+to execute method -> Create object and call the methods
+like , reference.methodname();
+Eg.,
+----
+Project Name => First letter capital for every word  -> ManualTesting
+Package Name => all letters should be small          -> manualtesting
+Class Name => First letter capital for every word  -> ManualTesting
+
+cat CAT Cat cAt caT CAt - as per Java all these are different words since Java is a case sensitive language
+
+=========================================================================================================================================================================================
+Object Oriented Programming Language
+====================================
+OOPS -> Object Oriented programming structure
+
+-> Class
+-> Method
+-> Object
+-> Inheritance
+-> Polymorphism
+-> Abstraction
+-> Encapsulation
+
+Types of Languages
+------------------
+
+1, Object Oriented programming language  :   If All above 6 are supported its OOPS language  :  Eg., C++, Java, C# . . .
+
+2, Object Based language  :  If only Class and Object are supported its a Object based language  :  Eg., VB, VBScript . . .
+
+3, Structured programming language  :  It doesn't support OOPS concepts  :  Eg., C .
+
+Python is only language that will come under all above category
+
+==========================================================================================================================================================================================
+JDK
+---
+Java JDK(Java Development Kit) = Development Tools + JRE (Java Runtime Environment) ::
+The JDK (Java Development Kit) is a software development kit that develops applications in Java. Along with JRE, the JDK also consists of various development tools (Java Debugger, JavaDoc, compilers, etc.)
+JRE
+---
+JRE Java Runtime Environment = Libraries for running the application + JVM (Java Virtual Machine) ::
+The Java Runtime Environment (JRE) is an implementation of JVM. It is a type of software package that provides class libraries of Java, JVM, and various other components for running the applications written in Java programming.
+JVM
+---
+JVM Java Virtual Machine = Only the runtime environment that helps in executing the Java bytecode ::
+The Java Virtual Machine (JVM) is a platform-independent abstract machine and it also comes with a Just-in-Time (JIT) compiler for converting the Java source code into a low-level machine language.
+
+In simple,
+
+JDK - Java Complete Software including JRE and JVM - To develop code we need this.
+JRE - To run Java based app or script we need a environment, which is JRE. 
+    - JRE will contain JVM
+    - If we don't want to develop a code, only we need to run means, we don't need JDK, only JRE enough.
+JVM - JVM cannot be installed separately, It will come with JRE / JDK
+    - This will compile our code for execution, if any error there it will notify us.
+    - This will convert our program to byte code
+    - JVM will execute the code and provide results
+
+===========================================================================================================================================================================================
+First Program
+=============
+-> Class         Kitchen              - You need home/space to write programs
+-> Method      Mixer and products     - You need to perform/describe Action items
+-> Object        Current              - To perform action you need object
+
+package org.automation;
+Public class FirstDay {
+        //Action block
+	private void masala() {
+		//print statement
+		System.out.println("JAVA SELENIUM");
+	}
+	private void flour() {
+        System.out.println("Manual Testing");
+	}
+	
+	public static void main(String[] args) {
+		//object creation
+		FirstDay g = new FirstDay();
+		//calling the method
+		g.flour();
+		g.masala();
+		g.masala();
+	}
+}
+
+Use ctrl+space for shortcuts
+sysout -> ctrl+space ->	System.out.println();

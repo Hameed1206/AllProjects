@@ -1,0 +1,15 @@
+Selenium Questions
+==================
+
+1. How to Initiate PageFactory in selenium ?
+
+public class POM {
+	public POM() {
+		PageFactory.initElements(driver, this);              }
+
+
+2. Diff B/W driver.quit(); and driver.close();
+
+driver.quit();   -> Completly terminate the particular execution
+driver.close();  -> this will close the particular window
+

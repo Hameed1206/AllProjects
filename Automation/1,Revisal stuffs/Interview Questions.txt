@@ -1,0 +1,11 @@
+Interview Questions
+
+How to choose a date from date picker from a webpage using selenium
+How to get a particular value from dynamic web table
+Arrange String in ascending order
+How to swich between windows using set
+What is Data driven and Keyword driven frameworks
+What are the testing techniques we use in manual tesing
+which methodolgy and type we follow
+How we Write test cases , on what basis
+what is Residual defects

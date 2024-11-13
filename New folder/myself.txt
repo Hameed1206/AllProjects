@@ -1,0 +1,32 @@
+QA Automation tester with 2 years of experience. Tools used is Java selenium, cucumber framework and SQL.
+I will be working with developers, offshore testing team and project management to achieve high quality, release deadlines and QA process improvements.
+
+https://www.linkedin.com/in/hameed-hussain-9646432a0/
+
+https://www.skillindiadigital.gov.in/scheme/application/detail/FeeSchCor_36209
+
+FedEx is an American multinational courier delivery service company. Agenda of Revenue Execution project is ensuring the Application involved in shipping, Invoicing and settlement are works fine. We will test these functions by creating backend test cases and testing the functionalities of all applications.
+
+Project, I contribute myself is FedEx Revenue Execution.
+FedEx is a US based courier and logistics.
+Our responsibility is to test and handle the applications that's responsible for invoicing.
+We will be handling around 10 applications; each apps will have an update for every release. So, we will test the new functionalities and also the regression part we will take care, so the new scripts don't disturb the old functions.
+The applications are more secure and complicate, so every release we may have a little change in DOM html code, for which we will use locators which is more customized.
+Also, all locators are under shadow Dom, so we will handle that and access the Web element.
+We use different testing techniques to ensure the functions Equivalence case partition technique, Boundary value analysis, state transition technique.
+
+
+
+----------------------------------------------------------------------------------------------------------------
+Being an representative of Atos, I will be Proactively address the clients' requirements and focus on finding solutions. Also I will be ensuring all the expectations are met in timely manner
+
+I will take ownership on my work and will be responsible for my role and accountability.
+By staying calm and cool, I can also spread my positivity to others.
+
+I am always dedicated to learning and enhancing my skills.
+Analyzing all issues from end to end will help me to understand the root cause and resolve them efficiently.
+Automating my work will be a greater priority for me to reduce my effort.
+
+
+I am dedicated to working as a team to improve everyone's efficiency on all tasks.
+Recognition and appreciation of their work can keep them motivated and help them achieve new heights

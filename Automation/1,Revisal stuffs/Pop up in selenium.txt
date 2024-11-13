@@ -1,0 +1,38 @@
+Pop up in selenium
+==================
+
+3 Types of pop up
+
+-> Alerts - JavaScript popup
+-> File Upload pop up 
+-> New Browser window pop up
+
+Alerts - JavaScript popup
+=========================
+Normal alert messsage we get in browser , we can use alert concept from selenium
+Alert a = driver.switchTo().alert();
+a.accept();
+a.dismiss();
+a.getText();
+a.sendKeys();
+we can use all above option to handle alerts
+
+File Upload pop up 
+==================
+To upload a file , locate the browse/file upload button and with sendKeys method pass the file location and name
+But make sure in dom html tag we have type = "File" then only we can use above option
+
+New Browser window pop up
+=========================
+
+Its a new window, so we can use windows handling concept
+
+Set<String> windows = driver.getWindowHandles();
+Here we use iterator concept to switch between windows , since we cannot use for loop and index concept
+Iterator<String> it = windows.iterator();
+This iterator will stand at the top outside , if we give next() once it will move to 1st parent window and again give next() for following child window
+String id1 = it.next();   -> Parent window
+
+String id2 = it.next();   -> child window
+
+Now driver.switchTo().window(id1/id2);

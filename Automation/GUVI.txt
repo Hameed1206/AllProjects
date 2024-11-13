@@ -1,0 +1,11 @@
+20/03/2024 -> Jira ends and GIT Started
+21/03/2024 -> GIT commands
+22/03/2024 -> Git tokens and ended, Java Started, Intro, Basic Program, Datatypes, Main method
+25/03/2024 -> Datatypes , Operators 
+26/03/2024 -> Scanner, Static block, Bitwise operators, Control statements
+27/03/2024 -> Loop types and array started
+28/03/2024 -> Array and Strings
+01/04/2024 -> Strings and OOPS - Variables, keywords and constructor
+02/04/2024 -> Constructor with variables, Polymorphism
+03/04/2024 -> Polymorphism, Encapsulation(2,11 t0 2,25), Access modifiers, Inheritance
+04/04/2024 -> Abstraction

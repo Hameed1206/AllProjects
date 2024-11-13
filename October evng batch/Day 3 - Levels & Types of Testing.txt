@@ -1,0 +1,96 @@
+Levels of Testing
+=================
+
+Unit Testing: 
+-> Testing individual components or functions of the software in isolation to ensure correctness. As soon as developer develops a function he will do a validation on how it works. He will ensure that the logic he wrote is working as expected. This is mostly done by developers. Testing each and every unit of application separately by the developer in developer's environment.
+
+Integration Testing: 
+-> Testing the interaction between integrated units or components to ensure they work together as expected. Once all the developers in a team developed their function/modules, then we need to integrate them and a testing will be performed on how these functions working together. Integration is done to check the connectivity by combining all the individual modules together and test the functionality.
+
+System Testing: 
+-> Testing the entire system to verify it meets the specified requirements and behaves correctly. Testers will test the applications against the requirements to ensure the development is matching the requirements. We will adopt different approach and techniques to ensure applications behave as expected. Testing will be conducted based on user perspective. Both functional and Non-Functional testing will be done.
+
+User Acceptance Testing (UAT): 
+-> Final testing performed by the end users to ensure the software meets business needs and is ready for deployment. We will provide the application to the people from outside the team or client side employees, friends or colleagues to use and explore the application. Depends on their feedback also we can do some upgrades to the application.
+
+
+Types of Testing:
+=================
+
+Static Testing: 
+-> Reviewing the software's documentation and code without executing it to find errors in requirements, design, or implementation.
+The kind of verification we do on the software work products before the process of compilation and creation of an executable product, Is more of Requirement review, design review, code review, walkthroughs and audits.
+
+Dynamic Testing: 
+-> Testing that involves executing the code to check the system's behavior with actual input. Here we test the software by executing and comparing the actual & expected results.
+
+Functional Testing: 
+-------------------
+-> Testing the functionality of the software to ensure it behaves according to business requirements. Validating the functions with expected behaviour and ensuring it met with the actual.
+
+White Box Testing: 
+-> Testing based on the internal structure or code, where the tester has knowledge of the code and logic. White Box Testing is a testing technique that focuses on testing the internal workings of the software. The tester has access to the source code of the software and tests the software based on its internal structure, design, and implementation.
+
+Black Box Testing: 
+-> Testing based on inputs and outputs without knowledge of the internal workings of the software. Black Box Testing is a testing technique that focuses on testing the software from the perspective of a user, without knowing the internal workings of the software. The tester only knows the inputs and outputs of the software and tests the software based on the expected outputs.
+
+Interface Testing:
+-> Interface Testing is done to check whether the individual modules are communicating properly one among the other as per the specifications.
+
+Positive Testing: 
+-> Testing with valid data to ensure the system behaves as expected in normal conditions.
+
+Negative Testing: 
+-> Testing with invalid or unexpected data to verify that the system handles errors gracefully.
+
+Formal testing: 
+-> Formal testing is a structured testing process based on predefined requirements and test cases. It ensures software meets standards, with a focus on documentation and traceability.
+
+Informal Testing: 
+-> Unstructured testing without formal documentation or procedures, often conducted to quickly check a feature.
+
+Regression Testing: 
+-> Re-testing the software after changes or updates to ensure that existing functionality has not been broken. Ensuring that software updates does not affected the old working functionalities.
+
+Sanity Testing: 
+A quick test to verify that a particular function or bug fix works as expected after a minor change. Similar to regression testing, but focuses only on important functions, performed when we don't have enough time to do regression testing.
+
+Smoke Testing: 
+-> A preliminary test to check if the basic functions of the application are working, before moving on to more detailed testing.
+
+Retesting: 
+-> Testing the same scenario again to ensure a previously failed test case now passes after a bug fix. When we found any error in application we will intimate to developers, then he will work and fix, now again we need retest that and ensure that the error that was found before is not occurring now.
+
+Non-Functional Testing:
+-----------------------
+This type of testing evaluates aspects of the software that are not related to specific functionality, such as performance, usability, scalability, and security. It ensures that the system behaves efficiently under various conditions, providing a good user experience and meeting quality standards.
+
+Performance Testing: 
+-> Evaluating the speed, responsiveness, and stability of the software under various workloads. 
+
+Load Testing: 
+-> Testing the system’s performance under expected user loads to check how it handles volume.
+
+Stress Testing: 
+-> Testing the system by pushing it beyond its limits to see how it behaves under extreme conditions.
+
+Usability Testing: 
+-> Evaluating how easy and user-friendly the software is for users.
+
+Scalability Testing: 
+-> Testing how well the system can scale up or down in terms of performance and functionality under different loads.
+
+Compatibility Testing: 
+-> Ensuring the software works well across different browsers, devices, or operating systems.
+
+Penetration Testing (Security Testing): 
+-> Testing the software’s security by simulating attacks to identify vulnerabilities.
+
+Recovery Testing: 
+-> Testing how well the system recovers from crashes, hardware failures, or other interruptions.
+
+Monkey Testing / Stability Testing:
+-> Random testing where inputs are generated randomly to see if the software crashes or behaves unexpectedly. Jumping in to different fields to observes the software behaviour and stability.
+
+Exploratory Testing: 
+-> Unscripted testing where the tester actively explores the software, learning and testing at the same time to find defects. Exploring the application by assuming user scenarios on different behavioural approach.

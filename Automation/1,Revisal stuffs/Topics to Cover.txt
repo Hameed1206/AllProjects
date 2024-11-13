@@ -1,0 +1,162 @@
+ChatGPT
+-------
+*prompt in bold letter*
+Prompt in Chatgpt for interview - 
+
+Be ready you have an interview 6 years java with selenium and api testing rest assured. I'll be asking questions. 
+
+Answer should be short, don't give full explanation. Make it precise and on point with one example
+
+---
+Create a new chat in Chatgpt and use this prompt, new chat will give faster response. Do not use an already available chat that might be slow.
+
+capgemini 1st
+-------------
+Find out the shortest array and its length from the the array group.
+Ex:
+Given : { {1,2,3,4},{0,2,7},{4,12},{1,2,5,6}
+ 
+output:
+Shortest Array: {4,12}
+Length: 2
+
+2nd
+----
+1. Write a code to find the no of time a char occurrence in string Capgemini
+2. ⁠how to initiate page factory in selenium
+3. ⁠difference between drive.quit and close
+4. ⁠return type for string1.equals(string2)
+5. ⁠how to input value in text box
+6. ⁠what is (or) difference between / and //
+
+L1
+Can we overload constructor
+What is his 2 types
+Which one of those will be triggered while creating object
+
+Classname a = new Classname();
+Classname();  - what is this
+
+How to add value in HashMap
+.
+..
+...
+....
+.....
+Write a code to print this
+
+If a method has return type as object , what will its return type
+
+Agile ‎methodology
+---------------------------------------------------------------
+public class RightTrianglePattern   
+{   
+public static void main(String args[])   
+{   
+//i for rows and j for columns      
+//row denotes the number of rows you want to print  
+int i, j, row=6;   
+//outer loop for rows  
+for(i=0; i<row; i++)   
+{   
+//inner loop for columns  
+for(j=0; j<=i; j++)   
+{   
+//prints stars   
+System.out.print(".");   
+}   
+//throws the cursor in a new line after printing each line  
+System.out.println();   
+}   
+}   
+}
+--------------------------------------------------------------------------
+
+
+Topics to Cover
+---------------
+String methods copy
+Array
+Encapsulation
+Cucumber coding’s 
+Java questions 
+Selenium code practice 
+Waits
+Windows handling 
+Java script 
+Frames 
+Screenshot 
+Webtable 
+Xpath 
+Broken links
+Manual Testing
+Agile methodology
+JIRA tool
+
+Refer udemy Rahul shetty classess
+
+GAVS Interview
+--------------
+Rejects in Java 
+Alternate for sendKeys
+How to add Map to List
+GIT conflicts
+SQL joints
+How to get and avoid duplicates in ArrayList
+In Cucumber report how to attach Screenshot
+Why we can’t implement Interface in Interface -> We cannot implement anything in to methods
+
+How to handle Windows pop up - using to Sequli - over view of sequli
+Split string and store in array -> how it works
+Day to day activities
+SQL Fetch names which has m in it -> using name like %m%
+SQL Fetch Duplicates
+How to handle image 
+Where we prefer css selector over xpath
+
+What is Burn up and burn down chart in jira
+Interface
+Polymorphism 
+StaleElementReferenceException
+Cucumber report
+Occurrence oh char in a word and sentence
+
+
+public class FirstCharOfWords {
+    public static void main(String[] args) {
+        String str = "Hello World Java Program";
+        String[] words = str.split("\\s+"); // Splitting the string into words based on spaces
+
+        for(String word : words) {
+            if (!word.isEmpty()) {
+                System.out.print(word.charAt(0) + " "); // Printing the first character of each word
+            }
+        }
+    }
+}
+
+Over the next few years, I aim to deepen my expertise in [specific area related to the job], taking on challenging projects that drive innovation and growth. I’m particularly excited about [Company]’s focus on [Company’s strategic goal or project], and I see a great opportunity to contribute to this initiative through my skills in [Your skills/experience]. I’m also keen on developing leadership abilities, and I’m open to mentorship and training opportunities that would prepare me for advancing within the company. Ultimately, I’m looking for a career where I can continuously learn, contribute to impactful projects, and grow alongside a company that values innovation and sustainability.”
+
+
+
+why to use Maven? ✨ 
+
+Maven projects typically have a standardized directory structure and configuration files that define project metadata, dependencies, and build instructions.
+
+
+✨ 1- Directory Structure:
+- Maven projects follow a standard directory structure, which includes directories such as src/main/java for Java source code
+- src/test/java for test code
+- src/main/resources for non-Java resources.
+
+✨ 2- Project Object Model (POM): Each Maven project is defined by a Project Object Model (POM) file named pom.xml. 
+This XML file contains project metadata such as the project's name, version, dependencies, build settings, plugins, and other configurations.
+
+✨ 3- Dependency Management: Maven simplifies dependency management by allowing developers to specify project dependencies in the pom.xml file. Dependencies are typically declared using groupId, artifactId, and version coordinates, and Maven automatically downloads and manages the required dependencies from remote repositories.
+
+✨ 4- Build Lifecycle and Goals: Maven provides a set of predefined build phases (clean, compile, test, package, install, deploy) and goals (actions performed during each phase) that define the project's build lifecycle. 
+Developers can customize the build process by configuring plugins and specifying additional goals in the pom.xml file.
+
+✨ 5- Plugins: Maven supports a wide range of plugins that extend its functionality and enable tasks such as compiling source code, running tests, packaging artifacts, generating documentation, and deploying applications. Plugins are configured in the pom.xml file and are executed during the build process.
+
+SO --> Automatic Standard project skeleton creation, ease of adding project dependencies, and seamless integration with CI/CD.

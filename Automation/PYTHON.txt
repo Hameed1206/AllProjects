@@ -1,0 +1,138 @@
+PYTHON
+======
+
+We can use Google Collab to run Python
+New Workbook
+We will be having shells here
+To run use run button in Left side of every shell / ctrl+enter /shift+enter(this is run and pass the cursor to next shell)
+
+To print anything
+=================
+print() -> Input data with single/double curse
+eg., print('Hello World')
+
+How to assign Variable
+======================
+a=30
+No need to give anyother , above is enough
+with this we can use  a  to access 30 , we can change the value here and use the same variable anywhere
+
+print(a)
+Output : 30
+
+Variable declaration
+---------------------
+Variable should start with alphabet
+there should not be any space
+we can use _ this symbol
+Variable is case sensitive
+a & A will be completly diffferent variables
+
+
+DataTypes
+=========
+Any numbers either positive or negative will be Integer (int)
+To get a dataType for a value
+eg., a=10
+print(type(a))
+type() -> method will give the data type
+Output :  <class 'int'>
+
+numbers with decimal is float data type
+eg., a=3.14
+<class 'float'>
+
+anything characters enclosed with '' or "" single /double curse is String
+eg., a = 'g3&k*2n' 
+for bulk of data crossing one line means enclose it with 3times ''' / """" curse
+<class 'str'>
+
+True / False id Boolean data type , only if both words starts with uppercase
+<class 'bool'>
+
+Indexing
+=========
+
+s='guvi'
+we can fetch data with index
+
+-4 -3 -2 -1  -> Negative index
+ g  u  v  i
+ 0  1  2  3  -> Positive index
+we can use both index value to fetch data
+
+print(s[2])
+output : v
+
+Type Casting
+============
+String to Int
+-------------
+changing / converting the data type
+s = '123'  -> This is string
+print(s)
+print(type(s))
+Output : 123
+         <class 'str'>
+
+a = int(s) -> here string value to type casted to integer
+print(a)
+print(type(a))
+Output : 123
+         <class 'int'>
+
+Only numerical string values can be type casted to integer
+
+Int to Float
+------------
+i=123
+f=float(i)
+print(f)
+print(type(f))
+Output : 123.0
+         <class 'float'>
+
+String to float
+---------------
+s='3.149090'
+f=float(s)
+print(type(f))
+print(f)
+Output : <class 'float'>
+         3.14909
+
+Boolean to Int
+--------------
+True = 1
+False = 0
+Above is default denotes for boolean values
+
+a=False
+b=int(a)
+print(b)
+print(type(b))
+Output : 0
+         <class 'int'>
+
+Int to Boolean
+--------------
+a=-4
+b=bool(a)
+print(b)
+print(type(b))
+Output : True
+         <class 'bool'>
+
+Int to String
+-------------
+a=12
+b=str(a)
+print(b)
+type(b)
+Output : str
+
+Float to Int
+------------
+a=3.7
+int(a) 
+Output : 3

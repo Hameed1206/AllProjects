@@ -1,0 +1,89 @@
+Types of locators:
+------------------
+id
+className
+name
+xpath
+tagName
+linkText
+partialLinkText
+cssSelector
+
+Multiple ways to declare xpath
+------------------------------
+Example ::
+<input        type="text"        class="inputtext _55r1 _6luy"       name="email"        id="email"        data-testid="royal_email"        placeholder="Email address or phone number" autofocus="1"        aria-label="Email address or phone number"        "Log in">
+
+In the above, input is tagname
+type, class, name, id, data-testid, placeholder, autofocus, aria-label   =   these all attribute name
+text, inputtext _55r1 _6luy, email, email, royal_email, Email address or phone number, 1, Email address or phone number   =  these all are attribute value
+Log in,  is text
+
+//tagname[@attribute name = 'attribute value']
+//tagname[text() = 'textfromfunction']
+
+If some part of text or attribute value is dynamic then we can go with contains concept
+
+//a[contains(text() , 'Sign in')]
+//tagname[contains(@attribute name , 'attribute value')]
+
+If a xpath element is pointing to more than one field, then we can use indexing to fetch the unique one
+(//a[contains(text() , 'Sign in')])[1]
+(//tagname[contains(@attribute name , 'attribute value')])[1]
+
+
+xpath axes
+----------
+We can also use relations to access xpath functions
+
+ancestor
+parent 
+child 
+following-sibling 
+preceding-sibling  
+descendant
+
+
+syntax:    //tagName[@attributename='attributevalue']/relation::tagname[@attributename='attributevalue']
+           //tagName[@attributename='attributevalue']/relation::tagname/relation::tagname/relation::tagname
+example :: //span[text()='339']//ancestor::div[@data-cy='price-recipe']/preceding-sibling::div[2]//span
+
+<body>
+   <div> 
+      <div1>
+      <div2>
+      <div3> class = "name"
+         <span>
+            <input> id = "hello#"  </input>
+         </span>
+      </div>
+      </div>
+      </div>
+   </div>
+   <divv>
+      <div4>
+      <div5>
+      <div6> class = "name"
+         <span>
+            <input> id = "hello"  </input>
+         </span>
+      </div>
+      </div>
+      </div>
+   </divv>
+</body>
+
+
+In above, body is ancestor for all other tags
+both the div and divv are child for body
+div is parent for div1, div2, div3
+divv is parent for div4, div5, div6
+div3 is parent for span
+input is descendant for all above tags
+div1 is preceding sibling for div2
+div3 is following sibling for div2
+
+
+We can travel in both forward and backward direction in xpath,
+-> forward  ->  //div[@class = 'name#']/span/input
+   backward     //input[@id='hello#']//parent::span//parent::div3

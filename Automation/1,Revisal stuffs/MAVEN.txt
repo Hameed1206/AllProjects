@@ -1,0 +1,78 @@
+MAVEN
+=====
+
+Maven is a build tool (Software or Project management tool  | S/W or Project build tool | Dependency management tool)
+
+It describes how a software is build
+It describes the software dependency
+
+Execution starts in pom.XML File (whereas in java execution starts in Main method)
+
+XML = xtensible markup language
+
+pom - project object model
+
+Maven used to build software application / manage your dependencies / run your tests and create report
+
+In maven we have folder structure that will be easy to maintain N of classes and reports
+
+Goal:
+Clean - It will uninstall the old version
+install - install the new version 
+test - It will execute our code in newly installed version
+
+------
+In Software industry the application were deployed like Application developed will be converted to Artifacts , 
+Artificats will be deployed to server
+Maven is a build tool , So they deploy maven artifact
+
+========================
+
+Maven Life cycle
+================
+
+The default Maven lifecycle consists of 8 major phases: Validate, Compile, Test, Package, Integration Test, Verify, Install, and Deploy.
+Each phase represents a specific step in the build process and has its own set of goals to be executed.
+
+For example, the Compile phase compiles the source code, the Test phase runs unit tests, and the Package phase creates a distributable artifact.
+Maven follows a sequential order, where executing a specific phase also triggers the preceding phases.
+
+The Maven build lifecycle includes three built-in lifecycles: default, clean, and site.
+The default lifecycle handles the regular build process, the clean life cycle removes generated artifacts, 
+and the site life cycle generates project documentation and reports.
+Overall, the Maven lifecycle provides a structured and standardized approach to building and managing projects, 
+ensuring consistent and reliable results.
+
+
+Maven Clean Lifecycle:
+---------------------
+1. The Maven clean lifecycle consists of the following phases:
+pre-clean
+clean
+Post-clean
+
+2. By using the Clean phase (mvn clean), you ensure a clean and consistent build environment. 
+It removes previously generated artifacts, reducing the risk of conflicts or outdated files.
+
+3. Ensures that subsequent builds start from a clean state, minimizing potential build errors. 
+Provides a fresh workspace for developers, leading to improved productivity and reliability.
+
+Maven Build Lifecycle:
+---------------------
+
+1. The Maven build lifecycle consists of the following phases:
+validate
+compile
+test
+package
+verify
+install
+deploy
+
+2. The Build phase (mvn compile, mvn test, mvn package, etc.) automates the compilation, testing, and packaging processes.
+
+3. It ensures consistent and reliable builds across different test environments.
+
+4. Maven’s dependency management handles the resolution and integration of external libraries, simplifying the development process.
+
+5. Build reports and test results provide valuable insights into the project’s health and code quality.

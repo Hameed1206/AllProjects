@@ -1,0 +1,1749 @@
+Day 1:
+------
+Software Testing Introduction
+What is Testing?
+SDLC life cycle
+Software Testing Methodologies-White Box,Black Box, GreyBox Testing
+Requirement Evaluation
+
+Test link - https://forms.gle/GLBMxg98FBdS7Pib9
+
+What is Testing?
+Its a process of evaluating a system.
+
+2 Types:
+
+1. Manual Testing  -> Write and execute the test cases without any help of tool support.
+2. Automation Testing -> Write and execute the test Scripts with the help of tool support.
+
+Who does?
+
+Developers will also do testing --> Unit testing
+Managers will do -> Exploratory Testing
+User will do --> User Acceptance Testing (UAT)
+
+When to do tetsing?
+
+- Build ready
+- Once test case document is written and approved.
+- Setup the environment (Software , hardware req for doing testing)
+- Test Data 
+- In the initial stage of SDLC.
+
+When to stop?
+
+- When all the test cases are executed and there are no high severity and high priority defect.
+- When Management decides to stop.
+
+Diff between testing and de-bugging:
+
+Testing ->  is the process to find the defect without correcting (Testers)
+De-bugging -> is the process to find the defect and correct the code (Developers)
+
+SDLC life cycle:
+
+Software Development LifeCycle 
+
+=> Structured process , 6 phases.
+=> To deliver a high quality product, with low cost and in the shortest possible duration of time.
+
+1. Requirement Analysis and Planning
+2. Design
+3. Development
+4. Testing
+5. Deployment
+6. Maintenance
+
+1. Requirement Analysis and Planning
+
+BA -> Business Analyst -> collects all the details from the client and prepare a document 
+				BRS (Business Requirement Specification)
+BA will conduct meeting with Team Leads and discuss about the req.
+
+If the Tech leads are ok, then FRS (Functional Requirement Specification)
+
+1)FRS -> It contains all the functionality details. eg: Login functionality, Sign up 
+
+2)SRS (Software Requirement Specification) : Eg: What needs to be present in Login functionality
+						i.e: field specification
+
+2.Design:
+
+=> Done by designers(UI/UX team)
+
+=> During this phase 2 documents will be prepared:
+
+1) HLD : High level design document
+
+2) LLD : Low level design document
+
+Development:
+
+-> Development team writes the code and the once the build is ready they will give it to the testing team
+
+Testing: -> We follow a lifecycle called : STLC (Software Testing Lifecycle)
+
+Deployment :
+
+DevOps team -> move the application from local system.
+
+Maintenance Phase :
+
+Support Team will take care. 
+
+Software Testing Methodologies-White Box, Black Box, GreyBox Testing
+-------------------------------------------------------------------
+Manual Testing :
+
+	1. White Box Testing
+	2. Black Box Testing
+	3. Grey Box Testing
+
+1. White Box Testing:  -> Structural based testing
+
+-> Done by developers 
+-> Unit Testing
+
+2. Black Box Testing -> Specification Based Testing
+
+-> Tester
+-> System Testing
+	
+	1. Functional Testing -> Based on the input given whether the app is working fine or not
+	2. Non- Functional Testing -> Testing the speed and performance of the app. Done by performance engg., using performance tool e.g: JMeter.
+
+1. Performance Testing:
+	-> It is done by giving the workload.
+	-> 2 types:
+		Load Testing  -> Giving the load within the limit
+		Stress Testing -> giving the load beyond the limit.
+
+		Scalability Testing -> increase the no.of user and checking it's performance
+		Stability Testing -> Testing whether app is stable at all situation.
+
+2. Usability Testing: GUI testing
+	-> Testing look and feel of the application i.e: User interface
+
+3. Compatibility Testing: 
+	-> Testing whether the app is working on all the devices, websites, OS etc.,
+
+4. Accessability Testing:
+	-> Checking whether the app is acessible by everyone including differently abled.
+
+
+Functional Testing:
+
+1. Smoke Testing:
+	Testing the basic or critical functionality is working fine or not.
+
+2. Re-testing: 
+	Testing the failed test case again.
+	Once the developer fixed the bug, the tester has to test again.
+
+3. Regression Testing:
+	Done after there is an enhancement made to the build.
+	Testing the addressed scope along with it's related functionality.
+
+	E.g: Adding emailid to login page.
+
+4. Sanity Testing:
+	Done after there is an enhancement made to the build.
+	Testing only the enhanced part.
+
+Sanity is a subset of regression -> Testing will happen when there is an enhancement.
+
+5. Exploratory Testing:
+	Testing done by experienced person.
+
+6. Adhoc Testing:
+	-> The person who do this have coding and testing knowledge.
+	-> They will randomly pick the functionality and do the testing.
+	-> It's like cross verification.
+
+7. Monkey Testing:
+	-> They will randomly pick the functionality and do the testing.
+	-> They don't have any coding or testing knowledge.
+
+
+
+3. Grey Box Testing -> Combination of black box and white box.
+
+Requirement Evaluation: 
+
+	-> It's the process of checking that requirement defined for testing, define the system that the customer wants.
+
+
+
+=============================================================================================================================================================
+Day 2:
+------
+SDLC phases-Requirements Phase, Analysis Phase, Design phase, Coding Phase, Testing phase, Delivery and Maintenance Phase
+SDLC Models-Waterfall Model., V Model, Agile Model, Spiral Model.
+Test Case Design Techniques-
+Levels of Testing
+
+Test Link: https://forms.gle/zHXJujwGbiRPBLaM7
+
+SDLC Models:
+
+Waterfall Model:
+
+	-> Linear Sequential Model
+	-> Without completing the previous phase, next phase cannot be started.
+
+Where? 
+	-> Requirements are stable
+	-> Small project.
+
+Drawbacks:
+	-> If the requirement is changed in between we have to start from the first.
+
+Advantages:
+	-> Each phase is clearly defined.
+	-> Each phase is completed one at a time.
+	-> Cost and time is calculated before the start.
+
+Disadvantage:
+	-> Client interaction will not be available throughout.
+	-> Adapting changes to the requirement is not possible.
+	-> Intergration testing is done at the end.
+
+
+V-Model:  Verification and Validation
+
+Verification -> Static Testing --> We don't execute anything just check
+
+		-> Are you building the product right? 
+		
+Validation -> Dynamic Testing --> We will execute the steps.
+
+		-> Are you building the right product? 
+
+Where to use?
+	-> Development and testing happens parallely.
+	-> Requirements can change but not too frequently.
+	-> High sucess rate compared to waterfall model.
+
+
+Spiral Model:
+
+	It is a combination of waterfall model and iterative model.
+	Each phase starts with customer communication and ends with customer evaluation.
+	Software is developed in a series of incremental releases.
+
+Phase 1: Communication
+Phase 2: Planning - project estimation and risk analysis
+Phase 3: Modeling -> Design
+Phase 4: Construct -> code and test
+Phase 5: Deployment -> Delivery , support and feedback.
+
+First Spiral -> Concept development
+2nd Spiral -> System development
+3rd Spiral -> System Enhancement
+4th Spiral -> System maintenance. 
+
+
+When?
+	-> Large project
+	-> When release are required to be frequent.
+	-> When risk and cost evaluation is important
+	-> When chnages may require at any time.
+
+
+Agile Model: 
+	-> Incremental and Iterative model
+	-> When requirements are not stable we can go for agile.
+
+150 modules -> 15 each * 10 cycle -> 
+
+Test Case Design Techniques / Black Box testing technique:
+
+	-> We cannot test all possile ways, so this techniques will help us to obtain required test data to be tested.
+	-> Reduce the size of input and obtain best inputs.
+
+E.g: Input field allow only 41 characters --> Not possible to check 41 times, so we can use 2 case, 1st case within the limit(1-41) and 2nd case beyond the limit(>41). 
+
+We have 2 major categories: 
+
+	1. Static Technique -> Line by line review of test case document.
+		1. Review  ->  Manually without any tool
+			1. Informal Review  -> Domain expert
+			2. Walkthrough -> peer review
+			3. Technical Review -> Technical Lead
+			4. Inspection -> Formal review
+		2. Static Analysis -> Done using tool
+			
+	2. Dynamic Technique: Execute the steps
+		1. Equivalence Class Partitioning
+		2. Boundary Value Analysis
+		3. Decision Table Testing
+		4. State Transition Tetsing
+		5. Use Case Testing
+
+
+Equivalence Class Partitioning:(ECP)
+-------------------------------
+
+E.g: FirstName field(mandatory) -> 40 chars 
+
+rage: 1 - 40  --> we can partition the range of values into equal class
+
+1 - 10   11 - 20   21 - 30   31 - 40  -> 4 class (Valid input condition)  --> positive testing
+
+8 -> asdfgyhd
+15 -> asdfghuyrhegtds
+26 -> 
+37 -> 
+
+Below 1   Above 40   --> 2 class (Invalid input)  --> negative testing
+
+
+E.g: password - 
+
+Range: 1 - 10 chars
+
+1. 1 - 5    6 - 10   --> 2 class (positive data)
+2. Below 1   Above 10  --> 2 class (-ve data)
+
+
+1. 1 to 2   3 to 4    5 to 6   7 to 8    9 to 10 --> 5 class
+
+
+
+Boundary Value Analysis: (BVA)
+-----------------------
+
+E.g: 1 - 43
+
+		A = 1    B=43 
+		A-1,A,A+1,B-1,B,B+1     --> 0 1 2 42 43 44
+						0 and 44 --> invalid i/p
+
+						1 2 42 43 --> valid i/p
+
+
+Decision Table tetsing:
+------------------------
+	Formula : 2^n  ---> n = no.of test condtions (i/p fields)
+
+	E.g: To vote for election we have 2 conditions
+		1. He/She should be an Indian citizen 2. He/She should be above the age of 18
+
+		2^n -: 2^2 --> 4 posible inputs
+
+			Inputs                       O/P
+		Citizen   age > 18
+		True	   True 		  True
+		False      True                   False
+		True 	   False                  False
+		False      False 		  False
+
+State Transition Testing:
+------------------------
+
+According the user access level the state of the application should change accordingly.
+
+E.g: Basic user, Permium user, Admin user --> all these three users should be able to access application at 						their access level only.
+
+
+Use Case Testing: 
+-----------------
+Interaction between system user and the function supported by the system.
+
+
+
+Levels of Testing
+------------------
+
+1. Unit Testing: Done by Developer
+	-> Tetsing the induviual part is called unit testing.
+	-> This comes under White Box Testing.
+	-> Code testing will happen.
+
+2. Integration Testing:  Integrate --> combine or consolidate
+	-> Combining the logically related modules together and performing the testing.
+	-> To check the data flow/ connectivity.
+	-> To check whether our app is moving from one page to another/one app to another.
+	-> Done either by developers or tester
+	-> This comes under grey box testing.
+
+	1. Top-Down Approach --> If any of the low level module is not available then we use dummy module called stub.
+	2. Bottom-Up Approach --> If any of the high level modul is not available then we use dummy module
+called driver.
+
+
+3. System Testing: End - to - end testing
+	-> Done by tester
+	-> This comes under Black Box testing.
+
+4. Acceptance Testing:
+
+	1. Internal Acceptance  --> Alpha tetsing (At developer site)	
+	2. External Acceptance  --> UAT (Client side) (Beta testing)
+
+
+==================================================================================================================================================
+Day-3:
+-----
+Software Testing Life Cycle
+QA & QC & Testing
+Bug Life Cycle
+
+Test Link: https://forms.gle/HBSxVR54BQ8jekHZ7
+
+Software Testing Life Cycle  - STLC
+	Sequence of different activity performed only by testers.
+
+-> Requirement Analysis
+-> Test Planning
+-> Test Case Development
+-> Test Environment setup
+-> Test Execution
+-> Test Closure.
+
+Requirement Analysis:
+---------------------
+	If the testing team has any doubts, they conduct meeting with BA, Dev team clarify the doubts and prepare the 2 documents:
+	1. Automation Feasibility Report --> Prepared by Test Lead 
+		It will have some set of questions and 
+			-> If the score is above 70 -> go for automation
+			-> If the score is below 50 -> go for manual
+			-> If the score is between 50 and 70 -> submit proof of concept.
+
+	2. Requirement Traceability Matrix(RTM): Entire team will be involved.
+		They map the business requirement with test cases.
+		Each business requirement will have it's corresponding id. Every test case will have it's id. We have to mark this in excel. So by referring to the document, we will get to know status of the test case execution.
+
+JIRA - Project Management Tool.
+	
+E.g: BD01(Login functionality)  --> 	4 Test case TC_001,TC_002,TC_003,TC_004
+
+Test Planning:
+--------------
+	Only the Lead or Manager will involve and they will prepare 2 documents:
+		1. Strategy document: This will be same for all the projects inside an 							organization.
+			
+		2. Test Plan:
+			What Tools?
+			Which Technology?
+			Do we have proper resource ? Do we need to train?
+			Resource planning, roles and responsibility. 
+
+Test Case Development: Test will be involved.
+----------------------
+	-> In case automation we will write the test scripts.
+	-> In case of manual we will write the test cases.
+
+	2 Documents:
+		1. Test Scenario: What needs to be tested?
+			Functionality that needs to be tested.
+				E.g: Login Functionality, SignUp Functionality, Add_To_Cart Functionality, Checkout Functionality, Payment Functionality etc.,
+TS_AM_001  Login Functionality
+TS_AM_002  SignUp Functionality
+			
+		2. Test Case Document: How to be tested? 
+			This will have the steps to execute.
+			
+TC_AM_001 
+
+Environment Setup:
+	-> Setup Test Bed  ->  Configuring the Hardware and software needed for testing.
+	-> Build Verification Testing(Smoke Testing): Testing the Critical Functionality. 
+
+Test Execution:
+
+	-> Execution of test cases
+	-> Reporting the test result
+	-> Logging defects for failed test case.
+	-> Verification and re-testing the defect.
+	-> Closure of defect.
+
+Test Closure:
+
+	If there is no high priority bug, test will be closed.
+	
+	-> Test Closure report / Test Summary Report
+		-> How many test case written
+		-> How many passed, how many failed, how many defects were reported etc.,
+
+
+QA & QC & Testing
+
+Quality Assurance: 
+
+	Ensuring a company is providing a top notch quality product. 
+	Ensuring the product will fulfill the quality
+	Part of SDLC
+	Whole team is responsible for this.
+	Preventive approach.
+
+Quality Control:
+
+	-> Part of STLC 
+	-> QC is a subset of QA.
+	-> Finding the bugs and getting it fixed. 
+	-> Reactive approach
+
+Testing:
+ 
+	-> Find the bugs.
+	-> Testing is a subset of QC
+	-> Only Tester will involve.
+
+
+Bug Life Cycle:
+	Error found by tester is called Defect. The same error accepted by developer is called Bug.
+
+1) New => When the bug is identified.
+2) Assigned => When its assigned to a developer.
+3) Open => When the developer starts to work on the reported bug
+4) Pending retest => If the tester are occupied with other work then it will be in pending.
+5) Retest => Tester will retest the changed code.
+6) Reopened => If the bug is still present even after developers change.
+7) Verified => Verify whether all the reported bugs are fixed.
+8) Closed => Once all the bugs are fixed, we will close it.
+
+Developers can ignore/reject a defect with following reasons:
+
+1. Duplicate
+2. Not a bug
+3. Deferred - Postponing the bug to next release based on the priority if there is no time.
+
+
+Bug leakage: Product is released, but the defect is found by the end user, missed by tester. 
+Bug Release: Releasing the product with the known low priority defect. 
+
+
+===========================================================================================================================================================
+Day 4:
+------
+Recap of testing techniques
+Agile methodology
+
+Test Link: https://forms.gle/mR88tWbsyc6xHFA39
+
+Agile methodology
+-----------------
+	Agile is an incremental and iterative.
+	Big projects will be divided to smaller chunks/units/iteration that is called as sprint.
+	Iterative Development: Software is developed and delivered to the customer and based on the feedback, again developed in cycles or release or sprints. 
+
+E.g: 150 modules  --> 15 modules for each sprint. --> 15 * 10 = 150 -> 1 sprint (2weeks)
+Example: Release 1 software is developed in 5 sprints and delivered to the customer, now the customer is having change the development team plan for 2nd release which can be completed in some sprints.
+
+	Incremental Development: Software is developed in parts or increments.
+E.g: In each increment, a portion of the complete requirement will be delivered. 
+
+
+Advantages of Agile:
+
+-> If the req's are not stable or if its keep on changing then we can go for agile.
+-> Customer interaction will be available through out the project.
+-> It is used for big project.
+
+To implement the agile methodology we do have many frameworks:
+
+a) Scrum b) Kanban c) Extreme Programming
+
+Framework: It is a set of rules or protocols to implement anything.
+Scrum: It's a framework which is used to implement an agile methodology.
+
+Agile core values:
+
+1. Individuals and interactions over processes and tools;
+2. working software over comprehensive documentation;
+3. customer collaboration over contract negotiation and
+4. responding to change over following a plan.
+
+Scrum:
+------
+
+Sprint --> Its a continuous time-boxed life cycle.
+The duration of sprint: It should not go beyond 4 weeks.
+
+
+User stories -> In agile the requirements called as user stories.
+E.g: In gmail, in the login functionality, each field UN, PWD, Login button --> these are called as user story.
+
+Collection of user stories --> called as Epic
+Ex: UN, PWD, Login button  --> the entire login functionality is called as Epic.
+
+Product Owner --> who collects the user stories from the client 
+
+Scrum Roles:
+1. Scrum Team
+2. Product Owner
+3. Scrum Master
+
+1.Scrum Team
+	-> It's a self organized team (There is no bossy culture)
+	-> It's a cross functional team (All members (designer, dev, tester, support etc.,) all work together.
+	- Team size is 6 + or - 3
+
+2. Product Owner:
+	-> who collects the user stories from the client 
+	-> Who acts as a bridge b/w customer and the team
+	-> Once the user story is collected , PO will create Product backlog.
+	-> Who prioritize/re-prioritize the user story from backlog.
+	-> Who will decide whether the sprint should gets release or not.
+
+3. Scrum Master:(3'P)
+	a)Process coach
+	b)Protector
+	c)Problem solver.
+
+
+Scrum Meetings:
+
+1.Sprint grooming meeting
+2.Sprint planning meeting
+3.Daily scrum meeting
+4.Sprint review meeting
+5.Sprint retrospective meeting
+
+
+1. Sprint grooming meeting:
+	Grooming is an open discussion b/w scrum team and PO.
+	The user stories are discussed to help the team to gain better understanding about the functionality.
+	Have to give story/user points (measure to indicate the work to be done(hrs,days)
+
+1 user point - 4hr 
+
+Username - user story 
+
+des --> 12 hrs ---> 3 story points
+dev --> 12 hrs ---> 3 story points
+tes --> 16 hrs ---> 4 story points.
+
+
+2. Sprint Planning meeting:
+
+PO,SM,Team --> plan for the sprint
+Like what are all the user stories they have to complete for the particular sprint, sprint duration, roles and responsibility for each team member.
+
+3. Daily scrum(stand-up) meeting:
+15mins
+
+1. How much work has been completed
+2. What's plan for the day.
+3. Mention technical issues.
+
+No discussion only update.
+
+
+4. Sprint Review Meeting:
+
+	-> Before the release of the sprint, team will give demo to the PO, Client, SM.
+	-> If they are ok, PO decides whether the sprint should gets released or not.
+	-> PO may give some modifications --> will gets added in the backlog 
+
+5. Sprint Retrospective meeting:
+
+	-> They will discuss the lessons learnt(positive or negative) from the sprint
+	-> This will help us for upcoming sprint.
+
+
+
+Sprint Backlog: Sprint planning is done, but the user story work is yet to be started.
+
+Spill Over: If any user story is not yet completed in the particular sprint, we can able to move on to the next upcoming sprint. 
+
+
+============================================================================================================================================================
+Day - 6:
+--------
+Project management tool 
+Hands-on with Jira & Scrum:
+Creating epic, user stories, Sprint planning,Backlog ,Seviority ,Priority and Release Version.
+
+JIRA: Project Management Tool
+
+It is used for bug tracking, issue tracking, planning and maintaining the project. 
+This helps you manage your project effectively and smoothly.
+
+We can manage: 
+	Planning
+	Tracking
+	Releasing
+	Reporting
+
+What is Epic?
+	Large use story that cannot be delivered with single iteration.
+
+What is User story?
+	Smallest unit of work. 
+
+Eg:
+
+As a [person], I [want to], [so that I can achieve this]
+
+As a user, I want to be able to add items to my shopping cart.
+
+As a customer, I want to perform login functionality with valid credentials.
+
+
+
+
+-------------------------------------------------------------------------------	
+
+1. Create account in GitHub -> https://github.com/signup?source=login
+2. Download Git in your system -> https://git-scm.com/download/win
+
+Execute and install the app to your system
+
+=============================================================================================================================================================
+
+Mock Insights:
+
+Manual Testing:
+---------------
+
+Software Testing Introduction
+When to do testing
+SDLC
+STLC
+Testing Methodologies
+Software development Models
+Test Case Design Technique
+QA and QC
+Levels of Testing
+Types of Testing
+Test scenario drafting
+Test case document
+Bug Reporting
+JIRA
+Agile Methodology 
+Bug Life Cycle
+
+
+Scenario Based:
+
+1. Suppose you find a bug in production. How would you make sure that the same bug is not introduced again?
+2. What do you do when your developer denies the bug that you filed?
+3. What has been the greatest challenges while doing regression testing?
+4. Difference between functional and non-functional testing?
+5. List down the key challenges that are faced while performing software testing?
+6. What are different levels of testing?
+7. What are the drawbacks of the Agile methodology that you feel?
+8. What is your approach when you have a high priority release to be delivered in a very short time?
+9. Given an example for High Priority and Low Severity Bug
+10. What is your understanding regarding a Test Plan?
+11. Explain what will be your reaction if a project you have been working got sudden changes in it's deadline.
+12. Difference between smoke testing and sanity testing
+13. Your approach when small section of code is update?
+14. Difference between Ad-hoc testing and Exploratory testing?
+	Adhoc testing -> learning the application and then proceeding to test
+	Exploratory -> learning the application while testing.
+
+15.How do you select regression test cases?
+16. Difference between re-testing and regression ?
+17. In Agile Environment, in case you have any doubts regarding your project, how do you approach?
+18. Suppose you are testing a social media app and your user reports that they are unable to upload picture, what will be your approach?
+19. Suppose you are testing a e-commerce website and your user reports that they have charged twice for the same order, what will be your approach?
+
+
+Java Concepts:
+--------------
+
+Data types and Variables
+Java Introduction -> JDK, JVM, JRE
+Keywords
+Access specifiers
+Looping statements
+Conditional Statements
+
+OOPS Concept
+Constructor
+Interface
+Exception Handling
+Collections API
+Regular expression
+Java Stream
+
+8 Pillars:
+
+1. Naming convention and Coding standards
+2. Datatypes and Variable
+3. Control flow statements
+4. Looping statements
+5. Operators
+6. Methods/Functions
+7. Keywords
+8. Concepts
+
+1. Naming convention and Coding standards
+	Package --> small case
+	Class --> Title Case -> begins with caps  --> NewProgram
+	Variables/Methods --> Camel case --> newNumber
+	keywords --> small case
+
+2. Datatypes
+	1. Primitive
+	2. Non-Primitive
+	
+Variable:
+	1. Local
+	2. Instance
+	3. Static 
+
+3. Control flow statements
+
+
+6. Methods/Functions
+	1. What does it do?
+		-> It can take input
+		-> It can return output
+		-> perform the logic
+		-> If the logic fails, let you to handle there or lets you to throws the Exception the signature.
+	To use the method, we have to call it.
+
+7. Keywords
+	-Pre-defined word
+	
+
+8. Concepts
+
+Arrays, Strings, Collection
+
+Coding problems: https://docs.google.com/document/d/1PoJpm0yTIDtmJl1aBBzEUKmTjjPDitdlAlyVBZPYvFQ/edit?usp=sharing
+
+
+Constructor
+Normal method
+Static method
+
+Things to remember when attending interview:
+
+================================================================================================================================================
+Day 8:
+------
+Introduction to Java
+Setting up java with Environment -JDK& JRE
+Eclipse IDE Setup
+Variables, Data Types, Keywords
+Operators.
+
+
+Introduction to Java:
+
+	- Its a Object Oriented Programming Language (OOPs)
+	- Easy and simple.
+	- Open source 
+	- Platform Independent 
+	- Write Once and Run Anywhere (WORA)
+	- Lots of Libraries available
+
+Eclipse:
+	- IDE (Integrated Development Environment)
+	- Code editor -> type, run and execute your code.
+
+Java Architecture:
+
+
+JDK --> Java Development Kit
+	javac (compiler),jheap -> memory allocation
+	jconsole,jshell --> command prompt where you can execute your code.
+
+JVM --> Java Virtual Machine 
+	-> Load the code,Verify the code, allocate the memory, Execute code --> provide runtime environment 
+
+Source code --> Byte code (0's and 1's) --> Machine Language --> give you the output.
+
+JRE -> Java Runtime Environment 
+	-> It's a implementation of JVM
+	-> Set of software tools which are used for developing java application.
+
+
+Source code--> javac (compile) Byte code --> JVM (Interpret) provides JRE --> JRE (ML) --> Output.
+
+Sample1.java --> java file (source code) --> compile --> Sample1.class  
+
+Language Fundamentals:
+----------------------
+1. Identifiers/Variables
+2. Reserved words/Keywords
+3. Data types
+4. Operators
+5. Main method
+6. Command lines
+7. Java coding standards. 
+
+1. Identifiers/Variables:
+-------------------------
+=> It's name given
+=> Never starts with number
+=> Case sensitive -->   HELLO hello 
+=> Cannot start with special character --> #,$,@
+=> a-z , A-Z, 0-9, _   
+=> Keywords cannot be used as identifiers.
+
+E.g: variable_1 --> valid    
+     1abd --> invalid  
+     #1abc --> invalid  
+	
+Reserved word/Keywords:
+-----------------------
+	-> Special words that has pre-defined meaning.
+	-> We have 53 reserved keywords.
+
+Data types - 8 -> byte,short,int,long,float,double,char,boolean
+Control flow -> if,else,switch,case,default,for,do,while,break,continue,return
+modifiers -> public,private,protected,static,final,abstract. 
+
+Data types: 
+-----------
+
+	-> It defines the type of value the variable is holding.
+	-> Based on the data type the memory allocation will happen.
+
+Add  -->  10 + 20 = result.
+
+Variable --> container --> where you store a value 
+
+Declaring and assigning value to variable:
+---------------------
+int a = 10;
+
+int a;  --> declare the variable
+a=10;   --> assign value 
+
+Syntax: 
+datatype variable_name = variable_value;
+
+2 Types:
+	1. Primitive Data type --> Stores single value and don't have any special capabilities.
+
+		1. Numeric -> byte, short, int, long 
+		2. Floating -> float, double
+		3. char, boolean
+
+ 
+	2. Non-Primitive Data type/Reference Data type --> Complex value, has some special 			capabilities. E.g: String, Array etc., 
+
+
+E.g:
+byte a = 70;
+byte b = 70;
+short c = a + b ;
+
+long num = 3423L;
+
+float num = 2.4F;
+double num = 2.45;
+
+
+boolean flag = false;
+char value_1 = 'a'; 
+
+Operators:
+----------
+	Special symbol that perform specific operations on one or two or more operands.
+
+a + b ===>  a and b -> operands  , + -> operator
+
+1. Arithmetic operator
+2. Assignment operator
+3. Comparison operator
+4. Logical
+5. Bitwise
+6. Unary
+7. Ternary
+
+
+Arithmetic operator;
+	+ , - , * , / , % 
+
+Assignment operator:
+	= , += , -= , /=, %= , *=
+
+E.g:
+int a = 50;
+a -= 20; ===> // a = a + 20;
+System.out.println(a); --> 30
+
+
+Comparison operator:
+	< , > , <= , >= , == , !=
+
+a=10;
+b=20;
+
+a == b 
+	
+Logical:
+	&& , || ,!
+
+a=10;
+b=20;
+c=30;
+
+	a > b && a > c   - if both the condition are passing then it return true else false
+
+	a > b || a > c  - if any of one condtion passes it return true.
+
+	! -> return the opposite of the result.
+
+
+Bitwise
+	| , &, ^ (XOR)
+
+a = 5 = 0101
+b = 7 = 0111
+
+a | b  ---: 0101
+	|   0111
+	------------
+	    0111
+
+a & b   ->  0101
+
+
+Unary:
+
+	postfix, prefix
+			a++  --> postfix
+			++a --> prefix
+			a--
+			--a
+		
+
+Ternary: ?:
+
+Syntax:
+
+variable = expression1 ? expression 2 : expression3
+
+c = a > b ? true : false
+
+int a = 10;
+int b = 20;
+		
+int res;
+		
+res = (a > b) ? (a + b) : (a - b);
+		
+System.out.println(res);
+
+
+
+To create project:
+	File -> New -> Java project -> give a name and check the jre -> Finish
+
+To create a package:
+	Right click on src folder -> new -> package -> package name (start with lower case)
+
+To create a class:
+	Right click on package -> New -> Class -> class name ( starts with caps) -> check main method box -> Finish
+
+
+Main method:
+	Important, the java execution starts from here, without main method it will not consider as java application.
+
+Command line / Comment line:
+	single line --> // 
+	block of line --> /*  ----  */ 
+==============================================================================================================================================
+Day: 10
+-------
+OOPS Concepts
+Class & Object Creation 
+Constructor,Methods,
+Use of Static and Instance
+
+Object Oriented Programming:
+
+Class and Objects:
+
+An object Knows something  --> Attributes	
+	  Does something  --> Methods
+
+A class will have the structure and working of an Object.
+
+Class is a blueprint
+Object is an instance of an class
+
+2 things:
+	1. Variables
+	2. Methods
+
+Syntax: public class Calculator{
+
+}
+
+void -> return type (when your method is not returning any values)
+
+Syntax  for method:
+	access_modifier return_type method_name() {  }
+	
+	e.g: public void add() { }
+
+
+Objects:
+	1. To invoke/call the variables and methods of a class.
+	2. Syntax: class_name object_reference = new class_constrcutor();
+		Eg: Calculator obj = new Calculator(); 
+	3. To allocate memory for the class.
+
+
+2 types of methods:
+	1. static
+	2. normal
+
+
+Why main method is static?
+
+	without static keyword its a normal method --> you need object to call the method								Object is created inside the method
+
+Static method:
+	->It can be invoked directly with the method name without object creation
+		-> If the method is from same class, directly call it with method name
+		-> If it's from different class, call it with class name
+				e.g: Calculator.mul();
+	-> Static method uses static variables.
+			static int a;
+			public static void mul() { }
+
+
+3 types Variables:
+	1. Local variable  -- Variable declared inside a method. The scope of the variable will be 				within the method.
+	2. Instance Variable  --> Variable that is declared inside the class and outside the 						method
+	3. Static Variable --> use static keyword. 
+
+
+this -> keyword to differentiate Instance variable from local variable.
+	When you are having same variable name for local and instance.
+		e.g: this.a = a;
+				-> this.a --> instance variable.
+
+Constructor :
+	-> Special methods
+	-> Constructor name should be same name as class name.
+	-> To create an object you need constructor.
+	-> Used to allocate the memory to the object.
+	-> When object is created constructor will be invoked.
+	-> Java provides a default constructor.
+	-> Constructor does not have any return type.
+		
+	2 types: 
+		1. Default constructor --> Java provides
+		2. Parameterized constructor --> User defines	
+
+Multiple constructor in same class with different parameter list --> constructor overloading					
+=================================================================================================================================================================
+Day 9:
+------
+Control statements,Looping
+Arrays, Strings Class,Access modifiers
+
+Control statements:
+
+	Used to set conditions and control the flow of the execution. 
+
+1. Decision making statements
+
+	-> if statement
+	-> switch statement
+
+2. Loop statements
+
+	-> do while
+	-> while
+	-> for
+	-> for each
+
+3. Jump statement
+	
+	-> break
+	-> continue
+
+
+1. if statement
+	
+	-> Simple if
+	-> if-else
+	-> if-else-if ladder
+	-> Nested if
+
+
+Simple if:
+
+	Syntax:
+		if(condition){
+			block of code
+		}
+
+if-else:
+
+	Syntax: 
+		if(condition){
+			block of code
+		} else {
+			block of code
+		}
+
+if-else-if ladder:
+
+	Syntax:
+		if(condition1){
+			statement 1;
+		} else if(condtion2){
+			statement 2;
+		} else {
+			else block of code;
+		}
+
+Nested if:
+
+	Syntax:
+		if(condition 1){
+			statement 1;
+			if(condtion 2){
+				statement 2;
+			}
+		} else {
+			block of code;
+		}
+
+switch:
+	syntax:
+		switch(expression) {
+			case value1:
+				statement1;
+			break;
+		
+			case value2:
+				statemet2;
+			break;
+
+			default:
+				statement;
+
+		}
+
+Looping statements:
+	
+	for:
+		syntax:
+			for(intilization, condition,increment/decrement){
+				block of code;
+			}
+
+11111
+11111
+11111
+11111
+11111
+
+12345
+12345
+12345
+12345
+12345
+
+
+Step 1: Identify the No.of rows = how many times the outer loop should run  
+Step 2: Identify the No.of cols = how many times the inner loop should run 
+Step 3: Identify the Value to be printed: 1
+
+while:
+	Syntax:
+		while(condition){
+			block of code
+		}
+
+do-while:  --> do block will execute at least once.
+
+		syntax:
+			do {
+				block of code
+			} while(condtions);
+	
+Arrays:
+-------
+	Collection of values that are of similar data type.
+	Fixed size.
+	The index of array starts with 0.
+
+1 2 3 4 5   --> element
+0 1 2 3 4   --> index
+
+1st way: To declare an array.
+
+int[] arrayName = new int[10]; 
+arrayName[0] = 10;
+arrayName[1] = 20;
+
+2nd ways: 
+
+	int[] number = {10,20,30,40};
+
+
+String:
+	=> Sequence of Character 
+
+Two ways:
+	1. Literal  -> if the value is already present it will just point to that 
+
+			String value ="Guvi";
+			String name ="Guvi"
+ 
+	2. Object  -> It will create individual memory even though the value is already present.
+			String name = new String("Guvi");
+
+
+Access modifiers:
+	Allow to set the scope or accessibility or visibility of data member be it a field, constructor,class or method.
+
+
+Default:
+	When access is not specified, it is considered as default. The scope of default level is with the package.
+
+Public:
+	The particular entity is accessible throughout from within or outside the class, within or outside the package.	
+
+Protected:
+
+	Allow access to entities through subclass of the main class in which the entity is declared.
+
+Private:
+
+	Not accessible outside the class. 
+================================================================================================================================================================
+Day: 11
+-------
+Features of OOP'S:
+Inheritance
+Abstraction
+Polymorphism-Overloading and Overriding
+Encapsulation-Getter and Setter Methods
+
+Inheritance:
+------------
+
+Acquiring all the properties of another class(Base, Parent, Super) to the child class 
+
+Parent  Super  Base
+Child   Sub    Derived
+
+Client 1 -> Calculator app --> add,sub,mul,div --> 5000
+Client 2 -> Calculator app --> add,sub,mul,div,mod --> 6000
+Client 3 -> Calculator app --> add,sub,mul,div,cos,tan --> 7000
+
+public class Calc1 {
+	
+	public void add(){ }
+	public void sub() { }
+	public void mul(){ }
+	public void div(){ }
+
+}
+
+extends -> Keyword that is used to acquire the methods and variables from parent to child class.
+
+public class Calc2 extends Calc1{
+
+	public void mod(){ }
+
+}
+
+Types of Inheritance:
+
+1. Single Inheritance
+2. Multi-level Inheritance
+3. Multiple Inheritance
+4. Hierarchy Inheritance
+5. Hybrid
+
+1. Single Inheritance: One Parent class --> One Child Class 
+2. Multi-level Inheritance: Grand Parent --> Parent --> Child
+3. Multiple Inheritance: 2 Parent --> 1 Child
+	It's not supported by Java. This can be achieved using Interface. 
+4. Hierarchy Inheritance: 1 Parent class --> 2 Child class
+
+
+Clinet 1 -> add,sub,mul --> a , b
+Client 2 -> add,sub,mul,div  --> a , b + 1
+
+a + b ==> Client1
+a + b + 1 ==> Client2
+
+Polymorphism-Overloading and Overriding
+---------------------------------------
+	-> Polymorphism : Ability of a method to take multiple forms.
+
+		2 types:
+			-> Method Overriding -> Same method name, same parameter list and same 							data type.
+					     -> At least 1 Parent and 1 child class should be 							present.(Only with Inheritance it's possible)
+
+			-> Method Overloading -> Same method name, different 								parameter/different parameter data type.
+					      -> Can be performed in same class.
+
+Abstraction:
+------------
+	Taking the important details and hiding the complicated parts.
+
+2 ways to achieve abstraction:
+	1. Abstract class --> 0 - 100%
+	2. Interface --> 100%
+
+1. Abstract class:
+	Any class that has abstract methods is called as abstract class.
+	It allows unimplemented method and implemented method as well.
+	Using "abstract" keyword abstract class and methods are defined. 	
+
+	Abstract methods: Unimplemented method
+			-> public void abstract add();   --> Declaring the method 
+
+	Normal method: public void add(){ 
+			body of the method 
+			}   ----> Declare and define the method --> implemented method
+		
+Encapsulation:
+--------------
+	Binding the data with methods, only way to access the variable is through methods.
+	-> getter method
+	-> setter method
+
+	-> when variables are declared as private using getters and setter we can access them.
+==============================================================================================================================================================================
+Day: 12
+-------
+Difference  b/w Abstract class & Interface
+Interface Implementation
+Regular Expression 
+Java Streams
+
+Interface:
+	-> It's not a class
+	-> We cannot create object.
+	-> By implementing the interface to concrete class we use the interface methods.
+		By using "implements" keyword. 
+	-> By default all the methods are public and abstract.
+	-> By default all the variables are public, static and final.
+	-> When you want to perform Multiple inheritance / when you want to have only the abstract 		methods we will go for interface.
+	-> Interface will not have it's own memory.
+
+	-> From Java 8 onwards, interface supports implemented methods when its default or static.
+
+Class --> Class -> extends
+Interface --> Class -> implements   --> implement all the unimplemented methods.
+Interface --> Interface -> extends
+
+Java Regular Expression:
+------------------------
+	It's a sequence of characters that forms a search pattern. 
+	When you search for data in a text, you can use this search pattern to describe what you are searching for.
+	
+	java.util.Regex -> import the package.
+		
+		1. Pattern class -> Defines a pattern (to be used in search)
+		2. Matcher class -> Used to search for the pattern
+		3. PatternSyntaxException Class -> Indicates syntax error in a regular expression 							pattern
+
+1. Find out if there are any occurrences of the word "Guvi" in the given sentence "Welcome to Guvi"
+
+2. Regex should accept alphanumeric characters only. Its length must be six characters long only.
+
+[a-zA-Z0-9]{6}
+
+3. Regex that accepts 10 digits numeric character. Starting with 7,8 or 9 only.
+
+[789]{1}[0-9]{9}
+
+=================================================================================================================================================================================
+Day: 13
+-------
+Exception-
+Introduction to Exceptions
+What is Exception and Exception Handling?
+Types of Exceptions
+Use of Try-Catch-finally blocks
+Throw and throws keyword
+
+Exception:
+	Event that disrupts normal flow of the program.
+	E.g: Open a file --> 
+	     divide by 0 --> user inputs for a and b --> a/b ==> a = 10; b = 0;
+	     Accessing the element of array beyond the size.
+
+Exception Handling: 
+	To maintain the normal flow of the application.
+
+		Throwable
+		   1. Exception -> We can handle
+		   2. Error -> We cannot handle E.g: JVM not working, RAM not having enough space.
+	
+Exception:
+	1. CheckedException: Java itself will know it might throw an exception and it allow you to 				handle it.
+		1. IOException
+		2. FileNotFoundException
+		3. SqlException
+
+	2. UnCheckedException: It will not make it compulsory to handle it.
+	     RunTimeException
+		1. ArithmeticException
+		2. ArrayIndexOutOfBoundException
+		3. NullPointerException
+
+
+Statements -> line of code E.g: initialization, declaration, class definition.
+	1. Normal
+	2. Critical --> Try and catch block.
+
+In try block --> if the exception occurs in very 1st statement it will not proceed to execute the other statements present in the block.
+
+Try-catch:
+1. Divide by 0, string length, adding element to array, file operation
+2. Try-catch
+3. Multiple catch block
+4. Resolving exception in catch block
+5. Print custom message.
+6. Multiple statements in try block.
+
+
+Multiple catch block:
+	-> At a time only one exception can occur and only one catch block is executed.
+	-> All catch block must be ordered from more specific to general
+
+throws --> used to suppress the exception. It will not handle.
+
+	Instead of handling try catch in each of the method we can handle the exception in the method in which it is called. Using throws keyword we are throwing the exception to the method it is calling.
+This is for Checked Exception only.
+
+throw -> Forcefully throw the error.
+
+finally block:
+
+	Used to execute important code such as closing excel/DB connection etc.,
+	Even if you don't handle the exception, before terminating the program, JVM will execute the finally block.
+	Only one finally block is allowed.
+
+When finally block will execute?
+1. Exception not occurred
+2. Exception occurred but not handled.
+3. Exception occurred and Handled.
+
+System.exit(0); will prevent finally block from executing.
+
+
+
+ 
+
+
+
+
+
+Throw
+Throws
+It’s a keyword that is used to throw an Exception explicitly in the code inside the method.
+Throws is used in method signature to declare an exception which might be thrown by the method while execution of code.
+Syntax: throw keyword followed by the instance of Exception to be thrown
+Syntax:  In the method signature throws keyword followed by the Exception class name to be thrown
+E.g: throw new InvalidAgeException();
+E.g: public void method() throws IOException
+
+=====================================================================================================================================================================================
+Day: 14
+-------
+Java Packages:
+Package Creation,Structuring and Organizing code.
+Collections:
+Introduction to Collections API
+What is Collection Framework?
+ArrayList,Vector,Stack,list,set& Map
+Hashmap,Hashtable,TreeMap
+
+
+Java Packages:
+	It's a group of similar types of classes, interface and sub-packages.
+	2 types:
+		1. Built-in E.g: Java, util, lang, awt, io, sql etc.,
+		2. User defined.
+
+E.g: java.util.Scanner;
+
+java -> main package
+util -> sub-package
+Scanner -> Class
+
+Advantages:
+	1. Used to categorize the classes and interface so that we can easily maintain.
+	2. Provides access protection
+
+How to access package from another package?
+
+	-> 3 ways
+		1. import package.className;
+		2. import package.*;  --> all the classes and interface of this package will be 						accessible. But not the sub package classes.
+
+com.sample -- main 
+	Student.java  --> class of main package
+	com.sample1   --> sub
+		Student1.java	--> class of sub package
+		
+		3. fully qualified class name E.g: com.smaple.Student.Student obj = new Student();
+			Only declared class of this package will be accessible. No need to import. 			But need to use the fully qualified name everytime when accessing the 				class or interface.
+
+
+Collections:
+	Collection API - concept
+	Collection - interface
+	Collections - class
+
+Collection API (Concept) --> Introduced to overcome the drawbacks of array.
+	Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+
+Collection: 
+	It provides many interfaces (List,Set,Queue,Deque) and classes (ArrayList,LinkedList,Vector,HashSet,LinkedHashSet,TreeSet etc.,)
+
+
+List Interface:
+ 	-> Its an Interface
+	-> Dynamic in nature
+	-> Based on insertion order
+	-> Allow duplicates
+
+	-> Implementation Classes:
+		1. ArrayList
+		2. LinkedList
+		3. Stack
+		4. Vector
+
+
+ArrayList:
+	-> It maintains insertion order
+	-> It works based on index
+	-> Searching is faster and easy.
+	-> Non-synchronized.
+	-> Random access of element.
+
+Wrapper class -->  Is a class that wraps one or more primitive data types.
+Integer
+String
+Boolean
+Float
+Double
+Object -> when you have to store all types of data.
+
+Common methods:
+	add() --> add the element
+	size() --> to get the size of the element
+	get() --> to retrive the value of the particular index	
+
+LinkedList:
+	-> It allows duplicates
+	-> Maintains insertion order
+	-> Non-synchronized.
+	-> Searching of element is difficult.
+	-> It uses node
+
+Converting Arrays to List:
+	1. Using Arrays.asList() 
+	2. Using Collections.addAll()
+	3. Lists.newArrayList()
+
+Stack:
+	-> LIFO (Last In First Out)
+	-> push, pop, search
+
+Vector: 
+	-> Its synchronized.
+	-> Supports lots of other methods for operation.
+ 
+Set:
+	-> Its an Interface
+	-> Does not allow duplicates.
+	-> It's Dynamic in nature
+
+	-> Implementation Classes:
+		-> HashSet
+		-> LinkedHashSet
+		-> TreeSet
+
+HashSet:
+	=> Uses Hashing algorithm
+	=> Gives random result/fast result
+
+LinkedHashSet:
+	=> Maintains insertion order.
+
+TreeSet:
+	=> Ordered result --> Based on ASCII order.
+======================================================================================================================================================================
+Day: 15
+-------
+Hashmap, Hashtable, TreeMap
+Java Streams
+
+Map Interface:
+	-> Does not extend collection interface, its a part of collection API.
+	-> Instead of index to value we can have name i.e: Key .
+		We can have key for each value
+	-> Elements are stored in Key-Value pair.
+	-> Each key-value pair is an Entry.
+	-> 3 implementation Classes:
+			1. HashMap --> Random order
+			2. LinkedHashMap --> Maintains Insertion Order
+			3. TreeMap  --> Ordered Result
+	-> Map has put() to add elements
+	-> Keys are unique but values can be duplicated.
+		-> Keys are Set and Values are List.
+
+HashMap:
+	It is not thread safe and unsynchronized.
+	It is fast
+	Allows one null key.
+	Allows more than one null value.
+	No insertion order
+
+HashTable:
+	-> Thread safe and synchronized
+	-> It's slow
+	-> Allows no null key/Value.
+	-> No insertion order
+
+LinkedHashMap:
+	-> One null key and multiple null value.
+	-> It's non synchronized
+	-> Maintains insertion order.
+
+TreeMap:
+	-> It cannot have a null key but can multiple null values.
+	-> Maintains ascending order.
+
+Streams API:  --> Lambda Expression to perform operation
+	-> Without changing the exsisting value to work with the original data we go for stream
+	-> stream() 
+	-> Once you use the stream, you can't reuse it.
+	-> To iterate -> we have foreach()
+	-> To filer -> filter()
+	-> map()
+	-> sorted()
+
+Using Collections: 
+1) String name ="Guvi Geek" - 
+	Remove the duplicates.
+	
+2) Find Intersection: 
+Pseudo Code
+	
+	 * a) Declare An array for {3,2,11,4,6,7};	 
+	 * b) Declare another array for {1,2,8,4,9,7};
+	 * c) Declare for loop iterator from 0 to array length
+	 * d) Declare a nested for another array from 0 to array length
+	 * e) Compare Both the arrays using a condition statement
+	 
+	 *  f) Print the first array (shoud match item in both arrays)
+	 */
+3) Pseudo code 
+	 
+	 * a) Use the declared String text as input
+		String text = "We learn java basics as part of java sessions in java week1";		
+	 
+	 * b) Displaying the String without duplicate words	
+	 */
+
+4. Word count using Map
+
+String text ="Welcome Welcome to Guvi Java Java Java course"
+===============================================================================================================================================================================

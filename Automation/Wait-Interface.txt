@@ -1,0 +1,78 @@
+Wait->Interface
+===============
+Wait has 2 types
+
+
+1. Static Wait
+==============
+It will wait for mentioned time even if locator is find, this will make performance issue
+Thread.Sleep(milliseconds)
+
+
+2. Dynamic Wait
+============
+It wont wait for the maximum time if the locator is found
+
+It has 2 types,
+-Implicit wait
+-Explicit wait
+
+Implicit wait
+=============
+Implicit wait is common for all the locators
+we can pass different time units
+We can mention only once in a method
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+This is wait command to wait for the complete web page to load, Implicit wait will wait for findElement and findElements function only
+driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
+Explicit wait
+=============
+It is applicable only for specific locator, so we need to mention again and again when there is a need
+It has 2 categories
+-WebDriverWait
+-FluentWait
+
+WebDriverWait -> Class
+======================
+It wont wait for the maximum time if the locator is found within a mentioned time
+It is applicabel only for specific locator
+WebDriverWait accepts only seconds
+we cant set time interval
+
+We can ask webdriver to wait until below condition is satisfied, we can give lot of conditions.
+WebDriverWait w = new WebDriverWait(driver, 20);
+		w.until(ExpectedConditions.alertIsPresent());
+		w.until(ExpectedConditions.elementToBeClickable(locator);
+		w.until(ExpectedConditions.visibilityOfElementLocated(locator);
+                w.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName("iframes")));
+
+FluentWait  -> Class
+====================
+Similar as WebDriver Wait, But here we can give polling time for the fluent wait to go and check the DOM structure
+default polling time 500milli seconds (This will make performance issues)
+Also we can handle exceptions
+
+Wait<WebDriver> q = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(50)).pollingEvery(Duration.ofSeconds(5)).ignoring(Exception.class);
+
+
+👉 Implicit Waits:
+✅ Allows Selenium to wait for a certain amount of time before throwing a "NoSuchElementException".
+✅ Improves script stability by waiting for elements to appear.
+✅ Implemented globally for all elements in the script.
+
+👉 Explicit Waits:
+✅ Provides more control over wait conditions compared to implicit waits.
+✅ Allows waiting for specific conditions (e.g., element visibility, clickability) before proceeding.
+✅ Enhances script efficiency by reducing unnecessary waiting time.
+
+👉 Fluent Waits:
+✅ Dynamically adjusts the wait time based on specific conditions.
+✅ Allows customizing polling frequency and timeout duration.
+✅ Ideal for scenarios where elements may appear/disappear unpredictably.
+
+👉 WaitUntil:
+✅ A powerful feature in Selenium WebDriver.
+✅ Enables waiting until a certain condition becomes true.
+✅ Offers flexibility in defining custom conditions for waiting.

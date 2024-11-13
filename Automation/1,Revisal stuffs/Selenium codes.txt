@@ -1,0 +1,29 @@
+          @Runwith(Cucumber.class)
+          @Cucumberoptions(features = "path" , monochrome = True , dryRun = true , glue = "package name" plugin = "pretty")
+
+          public static void launch(String url){
+
+                   WebdriverManager.ChromeDriver.setup;
+                                 or
+                   System.setProperty("webdriver.chrome.driver" , "Driver path")
+
+                   WebDriver driver = new ChromeDriver();
+                         driver.get("url")
+                  }  
+         
+        public static void get(Webelement element){
+
+                 Webelement ref = driver.findElements(By.id("element"));
+                        String name = ref.getText();
+                        System.out.printLn(name);
+
+                        String name = ref.getAtrribute();
+                        System.out.printLn(name);
+                }
+
+       public static void fill(Webelement element){
+
+              WebElement ref = driver.findElements(By.xpath("element"));
+                   ref.sendKeys("value");
+
+               }

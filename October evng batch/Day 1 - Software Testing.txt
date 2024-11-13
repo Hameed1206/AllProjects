@@ -1,0 +1,63 @@
+Software Testing
+================
+Software testing is the process of evaluating a software application or system to ensure that it meets its specified requirements and functions correctly. The main objective of software testing is to identify any defects or bugs in the software before it is released to the end-users.
+Software testing is a way to assess the quality of the software and to reduce the risk of software failure in operation
+
+Why testing is mandatory ?
+->To ensure the specified requirements are met. 
+->To improve the quality of the software. 
+->To reduce the risk of software failure. 
+->To ensure that the software is secure. 
+->To ensure compliance with industry standards (accessibility, data privacy, and safety) 
+->To increase customer satisfaction and confidence.
+
+If software is not working fine means this will 
+-Affects the confidence of user
+-Loss of money
+-Loss of time
+-Affect the Business reputation
+
+
+SDLC
+====
+Software Development lifecycle (SDLC)
+
+Client/Customer will provided the requirement to BA.
+Business Analyst (BA)
+BA will prepare the Business Requirement document(BRD)/ Business Requirement specification(BRS)
+BA will conduct meeting with Team Leads and discuss about the Requirement.
+
+SDLC Phases, , ,
+1, Requirement Analysis
+2, Design 
+3, Development
+4, Testing & Error addressing (Defect) and Fixing  -> Retest  
+5, Deployment    -> Real world
+6, Maintenance
+
+
+Requirement Analysis
+====================
+Requirement gathering / Analysis of requirement
+Designer, Developer and Tester all should analyse what is the requirement and deliverable.
+Based on requirement only designer will design the webpage,
+Developer will develop the website and its functions,
+Tester will do testing based on requirement
+
+BA will explain the requirement to everyone, if any doubts we have means we can clarify there itself.
+
+Two major approach for Testing:
+-------------------------------
+1, Manual Testing
+Write and execute the test cases without any help of tool support.
+
+2, Automation Testing
+Write and execute the test Scripts with the help of tool support.
+
+Two major types of testing:
+---------------------------
+1, Functional Testing
+2, Non Functional Testing
+
+Functional -> Validating fields
+Non Functional -> Validating time of response

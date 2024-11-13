@@ -1,0 +1,50 @@
+TestNG Report
+
+Extent Report
+
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
+
+ExtentSparkReporter crtreport;
+	ExtentReports extent;
+	ExtentTest test;
+	public TestExecution1() {
+		
+		crtreport = new ExtentSparkReporter("C:\\Users\\91936\\eclipse-workspace\\TestNextGen\\Reports\\FirstReport.html");
+		crtreport.config().setDocumentTitle("Facebook");
+		extent = new ExtentReports();
+		extent.attachReporter(crtreport);
+		
+	}
+
+
+	public void test() throws InterruptedException, IOException {
+		TestExecution1 t = new TestExecution1();
+		test = extent.createTest("SignUp");
+		driver.findElement(By.xpath("//a[text()='Create new account']")).click();
+		Thread.sleep(2000);
+		String title = driver.getTitle();
+		System.out.println(title);
+		test.addScreenCaptureFromPath(captureScreenshot(), title);
+		test.log(Status.PASS, title);
+		extent.flush();
+	}
+
+
+
+	public static String captureScreenshot() throws IOException {
+		TakesScreenshot tk = (TakesScreenshot)driver;
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		File file = tk.getScreenshotAs(OutputType.FILE);
+		//long timeMillis = System.currentTimeMillis();
+		//String title = driver.getTitle();
+		//String snapPath = "C:\\Users\\91936\\eclipse-workspace\\CURA_Healthcare_Service\\Snaps\\"+title+"-"+timeMillis+".jpg";
+		String path = "C:\\Users\\91936\\eclipse-workspace\\TestNextGen\\Reports\\snap.jpg";
+		File path1 = new File(path);
+		Files.copy(file, path1);
+		return path;
+	}

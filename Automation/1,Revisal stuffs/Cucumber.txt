@@ -1,0 +1,226 @@
+Cucumber
+========
+We have two types of Frameworks
+Test Driven Development (TDD) & Behaviour Driven Development (BDD)
+
+Cucumber is BDD Framework  Hybrid framework
+This is advanced and most used framework in Industry
+Cucumber supports Agile methodolgy
+
+Whay we say Behaviour DD ?
+We can create test cases based the behaviour of application
+In Plain English language (Gherkin) in colourful format
+
+3 main files of cucumber
+------------------------
+
+Feature file -> To create test Case in Plain English (Gherkin) Language
+Step Definition class -> To write testscripts
+TestRunner class -> To trigger the execution
+
+Feature file
+============
+file name should be name.feature 
+Keywords ->
+--------
+Feature:    Overall Functionality
+Scenario Outline:  Passing Multiple Set of data by using Example Keyword using Pipelines | name | value |
+Examples:    To add values for the header we gave in test cases like this ( <header> / "<Header>", "<Header1>" ) under scenario outline
+
+Scenario:   Detailed Functionality for each module
+Given       Pre condition
+When        Actions to be performed
+And, but    Additional actions
+Then        Validation to verify whether the process is complete
+Background: To execute before all scenarious like a common steps for all scenarious
+
+
+Runner class
+============
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+@Runwith(Cucumber.class) 
+@CucumberOptions(features ="src//test/java//com//package//feature",					
+                     glue ="com//package//stepdefinition")
+	       monochrome = true
+		   dryRun = false
+		   strict = true
+                     tags = "@TestTagName"	
+                   plugin = {'pretty" , reports}
+                 Snippets = SnippetType.Camelcase
+==========@CucumberOptions ---> to map feature & step definition each & every steps shd be in stpdefnition
+==========Now run ---> then copy the console & paste in stepdefinition
+
+    monochrome = true   ----> to display the console in a proper readable format to remove all the special characters from the console caused by feature file colors(Given,When...)
+	dryRun = true   ----> to check whether all steps in .feature file is present in Step definition
+        strict = true   ----> to stop the process, if any mismatch between the feature file & Stepdefiniton
+	tags   =              to give the TestCases Tag Name which is mentioned in the Every Feature at top before Feature Key word
+      Plugin   = "Pretty" --> To get detailed console
+      Plugin   = "usage" --> To get detailed Time
+we cannot use pretty and usage at a time
+Tags :
+------
+tags          = "@tags1, tags2, tags3" To include these scenarious
+AND condition = {"@tag1","@tag2"} Both should present
+OR condition  = {"@tag1, @tag2"} Any one should present
+NOT condition = {"~@tag1"} To skip a particular scenario
+
+
+Data Table
+==========
+Storing data in a table format and going to access as rows and columns
+Also maintain data in feature file to avoid hard coding
+
+1 Dimensional is either row or column
+2 Dimensional both row and column
+
+1D with Header / Map & 1D without Header / List
+2D with Header / Map & 2D without Header / List
+
+   Scenario Outline                               Data Table
+--------------------------------------------------------------------
+Values common for all steps                only for particular step
+we use examples keyword                       No keyword required
+
+1D without Header / List ->
+---------------------------
+Feature file
+Given       Pre condition
+When        Actions to be performed
+|value1|value2|value3|
+Then        Validation(to verify whether the process is complete
+
+public void Actions_to_be_performed (io.cucumber.datatable.DataTable refName) {
+
+
+List<String> li = refName.asList(String.class);
+li.get(0);   -> value1
+li.get(1);   -> value2
+li.get(2);   -> value3
+
+1D with Header / Map ->
+-----------------------
+Feature file
+Given       Pre condition
+When        Actions to be performed
+| user |password| email|
+|value1| value2 |value3|
+Then        Validation(to verify whether the process is complete
+
+public void Actions_to_be_performed (io.cucumber.datatable.DataTable refName) {
+Map<String , String> mp = refName.asMap(String.class , String.class);
+mp.get("user");       -> value1
+mp.get("password");   -> value2
+mp.get("email");      -> value3
+
+2D without Header / List ->
+---------------------------
+Feature file
+Given       Pre condition
+When        Actions to be performed
+|Value0|Value5|value4|
+|value1|value2|value3|
+Then        Validation(to verify whether the process is complete
+
+public void Actions_to_be_performed (io.cucumber.datatable.DataTable refName) {
+
+
+List<List<String>> li = refName.asLists(String.class);
+li.get(0).get(0);   -> value0
+li.get(0).get(1);   -> value5
+li.get(0).get(2);   -> value4
+li.get(1).get(0);   -> value1
+li.get(1).get(1);   -> value2
+li.get(1).get(2);   -> value3
+
+2D with Header / Map ->
+-----------------------
+Feature file
+Given       Pre condition
+When        Actions to be performed
+| user |password| email|
+|value1| value2 |value3|
+|Value0| Value5 |value4|
+Then        Validation(to verify whether the process is complete
+
+public void Actions_to_be_performed (io.cucumber.datatable.DataTable refName) {
+List<Map<String , String>> mp = refName.asMaps(String.class , String.class);
+ 
+mp.get(0).get("user");     -> Value1
+mp.get(0).get("password"); -> Value2
+mp.get(0).get("email");    -> Value3
+mp.get(1).get("user");     -> Value0
+mp.get(1).get("password"); -> Value5
+mp.get(1).get("email");    -> Value4
+
+======================================================================================================================================================
+Architecture of Cucumber
+
+-> Create one package To have BaseClass reusable methods.
+-> Create another package to have POM class to maintain locators.
+-> Create another package to Hooks class and Step Definition class.
+-> Create another one package to have runner class.
+
+============================================================================================================================================================
+src/main/java
+   src/main/resources
+
+   src/test/java
+        -->org.repository
+                 1. maintain locators using pom
+        -->org.resources
+                 1. reusable methods as Base Class
+        -->org.stepdefinition
+                 1. Hooks Class
+                 2. StepDefinition
+        -->org.testrunner
+                1. TestRunner
+                2. ReRunner
+        --org.reports
+                1.GenerateReport
+
+   src/test/resources
+         --> feature files
+
+   failed test screenshots
+   rerun
+     >failed scenarios.txt file
+
+   target
+      xml report
+      json report
+      html report
+
+   pom.xml
+============================================================================================================================================================
+Tagged Hooks
+@before ("smoke")
+@after("smoke")
+If we give like above in hooks class, then this @before and @after will be triggered only for scenario has tagname @smoke
+because of this @Before and @After annotation , control is going to trigger this method each and everytime before and after for every scenarios
+
+The flow will be @before ("smoke") -> @before -> @after("smoke") -> @after
+
+To give priority we can give @Before(order=1)   @After(order=1)
+@Before works in Incremental order eg., (0,1,2,3)
+@After works in decremental order  eg., (3,2,1,0)
+             Execution Order
+@Before(order=1)           @After(order=3)
+@Before(order=2)           @After(order=2)
+@Before(order=3)           @After(order=1)
+
+
+Reports
+=======
+
+Once execution completed refresh the project to get the report
+
+html report -> Inside Plugin = {html:"target/cucumber-report"} -> This will create report in this folder (filename - Index.html)
+json report -> Inside Plugin = {json:"target/cucumber-report/cucumber_report.json"} -> Here same as above but need to give filename too.
+xml report  -> Inside Plugin = {junit:"target/cucumber-report/cucumber_report.xml"} -> Here same as above but need to give filename too
+
+By using json report we will create 3rd party report
+JVM report / Allure HTML report -> we need to add plugin for it (cucumber report dependency)
+This dependency is from net.masterthought
+

@@ -1,0 +1,46 @@
+BASECLASS / Utilityclass / helper class / FuctionalLibrary / LibGlobal Class
+============================================================================
+
+It is a user defined class
+In Baseclass we can maintain the reusable codes/methods 
+
+==========================================================================================================
+
+POM - Page Object Model
+=======================
+we have to create no f classes equal to no f pages which we r going to validate
+
+Advantages:
+we can avoid performance issue
+we can remove lot of reworks
+we can avoid stale element reference exception
+
+2 types
+with Pagefactory
+without pagefactory
+
+Pagefactory has below annotations
+@FindBy
+@FindBys
+@FindAll
+@CacheLookup
+
+Pagefactory has a method initElements()
+this method to used to initialize all the locators from the DOM at a single shot
+
+How to handle StaleElementReferenceException >
+By using POM Framework
+
+Maintain locator separately in POJO Class (Plain Old Java Object), Declaring private variables and generate
+
+Initializing the WebElements before usage -> Declare a constructor and Inside use PageFactory.InitElements(arg1,arg2);
+PageFactory is a class and initElements is a static method in Pagefactory class , This method will initialize the WebElements (like new)
+arg1 -> WebDriver reference (Driver) to perform initialization operation
+arg2 -> (this) To initialize all locators present in the same class
+
+@cachelookup
+we can add this to other annotation as a add on
+It is memory management
+It is used to store/capture/maintain the cache of the webelement, so we can use it 
+(Again script wont go to DOM to get updated webelement, It will take from here)
+This may again cause stale element reference exception

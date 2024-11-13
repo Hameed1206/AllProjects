@@ -1,0 +1,100 @@
+Expectation
+-----------
+
+JD: Strong knowledge of software QA methodologies, tools, and processes
+Hands-on experience in automation using Cypress and Playwright with Core java.
+Hands-on experience in Cypress and Playwright using Core Java
+Good hands on in writing SQL queries
+API manual testing using Postman or similar tools.
+Hands on expiring in API Automation using Rest assured framework.
+Customize basic core functions of the Framework.
+Create all Framework Reusable Functions
+Test data set up.
+Test case dry run
+Experience in development & maintenance of test scenarios & automation scripts
+Working knowledge on Core java
+Knowledge to integrate Automation suite with DevOps pipeline and maintenance.
+Able to automate given work items within sprint.
+Familiar with Agile process
+
+
+Skills: Automation Testing,Java,Selenium,Cucumber
+2+ yrs into selenium with java and framework any one is must. such as - (TestNG or BDD or cucumger or Rest or soap)
+
+
+Detail Job Description –
+
+•             Very strong knowledge on Selenium test case development
+
+•             Strong knowledge on Core Java concepts
+
+•             Strong knowledge on Cucumber Feature file creation Hands on TestNG scripting In dept understanding of SQL & DB concepts
+
+•             Hands on expereince using Eclipse IDE
+
+•             Deep understanding of Microservices and its usage (API).
+
+
+
+? Experience in Test Automation using Java and Selenium
+? Working knowledge on BDD Cucumber
+? Work with stakeholders to produce testable acceptance criteria
+? Create and maintain automated tests.
+? Perform functional and acceptance testing working as part of a development team.
+? Provide close test support to the development teams including advice on testing as required.
+? Hands on coding of the automation test scripts
+? Review test cases, and execution
+? Should be Flexible to understand the existing framework and customize it as per client business needs, and developing automation scripts.
+? Client Facing and have excellent communication skills
+? Ready to work under minimal guidance for the allotted automation to be accomplished
+? Ready to learn new technologies and tools to achieve maximum automation possible across domains and technologies
+Primary Skills:
+? Selenium
+? Java
+Secondary Skills:
+? BDD/Cucumber
+? Good Communication Skills
+
+-------------------------------------------------------------------
+Job Description:
+We are seeking a MAnual API Test Engineer with 4-7 years of experience to join our dynamic team. The
+ideal candidate will have a strong foundation in testing methodologies and a keen interest in
+transitioning into automation testing. This role involves ensuring the quality of our software
+products through testing, while also learning and contributing to automation test scripts.
+Key Responsibilities:
+- Design, develop, and execute test cases and test plans.
+- Identify, record, and track bugs through to resolution.
+- Collaborate with cross-functional teams to ensure quality throughout the software
+development lifecycle.
+- Provide detailed and effective bug reports and test summaries.
+- Contribute to the maintenance and improvement of testing processes and procedures.
+- Begin to learn and engage with automated testing tools and scripts.
+- Assist in the development and implementation of automated testing strategies.
+- Stay updated with new testing tools and test strategies.
+Qualifications:
+- Bachelor’s degree in Computer Science.
+- 4-7 years of experience in software testing.
+- Expert in API Testing
+- Strong knowledge of software QA methodologies, tools, and processes.
+- Experience in writing clear, concise, and comprehensive test plans and test cases.
+- Excellent problem-solving and communication skills.
+- Ability to work in a fast-paced and dynamic environment.
+- Experience with Agile/Scrum development processes is preferred.
+
+Java Developer
+--------------
+JavaScript , Agile, CI/CD, Jenkins, DevOps, GitHub, JSON, SonarQube, Cypress, Jest/Enzyme, Java, Springboot. Familiarity with Google Cloud Platform (GCP)
+Requirements:
+4-6 years Technical/Software engineer or craftsmanship role
+High degree of self-motivation and ability to operate with limited supervision ·
+Candidate is up to date and knowledgeable of Technical standards and Industry wide best practices
+Results orientated with a customer focused attitude
+Knowledge of AGILE methodologies/tools including Rally
+Leadership/ability collaborate on technical solutions and designs
+Experience and appreciation for TDD and pair programming
+Serves as technical SME on product functionalities, integrations, and anticipated roadmap.
+Strictly adopts Technology and Architecture standards.
+Leverages tools to support DevOps and debug production issues.
+Provides and enforces software craftsmanship standards
+Serves as a liaison with other groups for specific technical competencies.
+Leads the adoption of new trends and methods.

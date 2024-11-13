@@ -1,0 +1,68 @@
+Interview
+=========
+String s = "Hameed';
+Map<Character , Integer> mp = new LinkedHashMap();
+for(i=0; i<s.length(); i++){
+Char c = s.charAt(i);
+if mp.containsKey(c){
+Integer i = mp.get(c);
+mp.put(c , i+1);  
+}
+else{
+mp.put(c , 1);
+}
+}
+System.out.Println(mp);
+
+
+String s = "capgemini";
+		Map<Character,Integer> mp = new LinkedHashMap();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (mp.containsKey(c)) {
+			Integer count = mp.get(c);
+			mp.put(c, count+1);
+			}
+			else {
+			mp.put(c, 1);
+			}
+			}
+		System.out.println(mp);
+	}
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.seconds);
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+===============================================================================
+WebDriverManager.ChromeDriver.SetUp();
+WebDriver driver = new ChromeDriver();
+String s = driver.getWindowHandle();
+Set<String> s1 = driver.getWindowHandles();
+for(WebElement windows : s1) {
+
+
+List li = new ArrayList();
+li.addAll(s1);
+
+for 
+
+driver.manage.timeouts().implicitlyWait(10, Timeunit.SECONDS);
+WebDriverWait w = new WebDriverWait(driver, 10);
+w.until(ExpectedCondition.elementToBeClickable);
+
+Wait w1 = new FluentWait(driver).
+
+
+
+data1 data2 data3  get(0).get(1)
+data4 data5 data6
+=================================================================================
+String s = "www.gaagle.com";
+        
+        //output Google
+       String s1 = s.replace("www.gaagle.com", "Google");
+        System.out.println(s1);
+        
+        String S2 = "India.Srilanka.Pakistan";
+            //output India
+                     Srilanka
+                     Pakistan

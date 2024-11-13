@@ -1,0 +1,51 @@
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class ExcelReadWriteExample {
+    public static void main(String[] args) {
+        String filePath = "path_to_your_excel_file.xlsx";
+        
+        try (FileInputStream inputStream = new FileInputStream(filePath);
+             FileOutputStream outputStream = new FileOutputStream(filePath)) {
+
+            Workbook workbook = new XSSFWorkbook(inputStream);
+            Sheet sheet = workbook.getSheetAt(0); // Assuming you want to work with the first sheet
+            
+            int numRowsToProcess = 125;
+            int startingRow = 1; // Skip first row
+            int startingColumn = 3; // Skip first 3 columns
+            int outputColumnIndex = 5; // 6th column (0-based index)
+            int outputRowIndex = 1; // 2nd row (0-based index)
+
+            for (int i = 0; i < numRowsToProcess; i++) {
+                Row inputRow = sheet.getRow(startingRow + i);
+                if (inputRow != null) {
+                    Cell inputCell = inputRow.getCell(startingColumn);
+                    if (inputCell != null) {
+                        String inputValue = inputCell.getStringCellValue();
+                        
+                        // Replace this with your processing logic
+                        String processedValue = "Processed_" + inputValue;
+
+                        // Write the processed value to the output cell
+                        Row outputRow = sheet.getRow(outputRowIndex + i);
+                        if (outputRow == null) {
+                            outputRow = sheet.createRow(outputRowIndex + i);
+                        }
+                        Cell outputCell = outputRow.createCell(outputColumnIndex);
+                        outputCell.setCellValue(processedValue);
+                    }
+                }
+            }
+
+            workbook.write(outputStream);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

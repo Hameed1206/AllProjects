@@ -1,0 +1,255 @@
+Testing: 
+Testing is an activity in which a system or component is executed under specified conditions: the results are observed and 
+recorded and an evaluation is made of some aspects of the system or component.
+
+Static Testing:
+The kind of verification we do on the software work products before the process of compilation and creation of an executable product
+is more of Requirement review, design review, code review, walkthroughs and audits.
+
+Dynamic Testing: 
+Here we test the software by executing and comparing the actual & ecpected results.
+
+White Box testing:
+White-box testing is a testing technique which checks the internal functionaing of the system. In this method, testing is based on coverage
+of code statements, branches, paths or conditions.
+
+Black box testing:
+In Black-box testing, a tester doesn't have any information about the internal working of the software symtem. Black box testing is a high level of testing that focuses on the behaviour of the software. It involves testing from an external or end-user prespective.
+
+Unit Testing: 
+Unit testing is done to check whether the individual modules of the siurce codeare working properly. i.e testing each and every unit of appliction separetly by the developer in developer's environment.
+
+Interface Testing:
+Interface Testing is done to check whether the individual modules are communicating properly one among the other as per the specifications.
+
+Integration Testing:
+Integration is done to check the connectivity by combining all the individual modules together and test the functionality.
+
+Types of Integration Testing:
+
+1. Big Bang Integration Testing:
+In Big Bang Integration Testing, the individual modules are not integrated until all the individual modules are ready. Then they will run to check whether 
+it is performing well.
+
+2. Top Down Integration Testing:
+In Top Down Integration Testing, the high level modules are integrated and tested first. i.e testing from main module to sub module. In this type of testing, Stubs are used as temporary module if a module as not ready for integration testing.
+
+3. Bottom Up Integration Testing:
+In Bottom up Integration Testing, the low level modules are integrated and tested first. i.e testing from sub module to the main module. In this type of testing, drivers are used as temporary module if a module as not ready for integration testing.
+
+
+Test Scenario:
+->Test Scenario is nothing but a high level test case which directly verifies a functional/business need without getting into too much of granual level testing.
+-> A test Scenario can be further broken down into many test cases.
+-> A good practice is to add both positive and negative test scenario's.
+-> Test scenario's are nothing but what to test.
+
+Test Cases:
+Test cases consists of input values, execution procedure, expected results and executed post condition, developed to cover certain test condition. Test cases are nothing but how to test.
+
+Error: The deviation from required logic,syntax or standards, requirements, ethics is called an error.
+
+Defect: An error found by the test engineer(Testing department) then it is called defect.
+Bug: If the defect is accepted by the developer then it convert to bug, it has to be fixed by the developer or postpone to the next release.
+
+How to raise a defect:
+
+Title of the Defect: Excludes tax is displaying on the Product details page.
+
+Steps to reproduce:
+1.Launch the browser and hit "https://www.demoblaze.com".
+2.On the Home Page, Click on any of the product.
+3. Verify the "Excludes tax" in the product details page
+
+Actual Result: Includes tax is displaying instead of excludes tax.
+Expectec Result: Excludes tax shoul be dsiplayed instead of Includes tax
+
+Note: Screenshot has attached for more reference.
+
+Defect Life Cycle:  https://www.guru99.com/defect-life-cycle.html
+
+Release Notes: Once the code has been deployed into the QA env, developer sends out an "Release Notes" which has the information like what are functionalites developed and what functionalites are yet to be developed/ not developed.
+
+Smoke Testing: It is done to make sure if the build we got is testable or not, i.e to check for the testability of the build also called as 
+"day 0" check. Done at the 'build level'.
+
+Sanity Testing: It is done during the release phase to check for the main functionalities without going deeper. Sometimes it is also called as subset of regression testing. When there is no rigourous regression testing is done to the build, sanity does a part of checking the major functionalties. This is "Done at the build level".
+
+Regression Testing: Testing your software application when it undergoes a code change to ensure that the new code has not affected other parts of the software.
+                               Regression testing is done to test whenther the changes made on the site have any impact on other modules which were earlier working fine.  
+Ex: New Requirement Change, Implemention of a new functionality are some of the scenario's where regression testing is effective. Regression testing can be automated using effected tools such as Selenium, QTP etc....
+
+Regression Suite: 
+1. Test Cases which cove major Functionlity
+2. End-to-End Test Cases
+3. Test Cases which are failed repeatledly
+
+Re-Testing: After a defect is detected and fixed, the software/application should be resteted to confirm that the original defect has been successfully removed. This is called Confirmation Testing or Re-Testing.
+                 In this type of testing, the tester re-tests the application which was earlier reported as a bug and now fixed by the developer. This bug can be due to functionality issues as well as design issues. Retesting the functionality of a button which was previuosly not working or any allignment issues of a page etc can be listed as examples for re-testing.
+
+Testing Technquines:
+
+1. Boundary Value Analysis: Boundary value testing is a technique to find whether the application is accepting the expected range of values and rejecting the values which falls out of range.
+Example:
+A user ID test box has to accept alphabet characters (a-z) with length of 4-10 characters.
+BVA is done like this, max value= 10 pass; max-1= 9 pass
+max+1= 11 fail; min = 4 pass; min+1= 5 pass; min-1=3 fail
+Likewise we check the corner values and come out with a conclusion whether the application is accepting the correct range of values.
+
+2. Equivalence Testing:
+It is normally used to check the type of object.
+Example:
+A user ID text box has to accept alphabet characters (a-z) with length of 4-10 characters.
+In +ve condition, we have to test the object by giving the alpahabets i.e, a-z char only, after that we need to check whether the object accepts the value, it will pass.
+In -ve condition, we have to test by giving other than alphabets (a-z) i.e, A-Z or 0-9 or special characters or balnk etc, it will fail.
+
+3. Comparision Testing: Comparison testing refers to a type of testing where the strength and weakness of the currently developed software produced is compared with already existing software products in the market.
+
+Testing Methodolgies:
+
+Load/Performance Testing: Testing an application under heavy loads, such as testing of a website under a range of loads to determine at what point the system's response time degrades or fails.
+
+Install/Uninstall testing: Covers the testing of full, partial or upgrades install/uninstall processess. Installation testing is done to verify whether the hardware and software are installed and configured properly.
+
+Recovery Testing: Tests how well a system recovers from crashes, hardware failures or other catastrophic problems.
+
+Compatability Testing: Compatability testing is to evaluate the application compatability with the computer environment like Operating System, Database, Browser Compatability, Backwards compatibility, computing capacity of the harware platform and compatability of the peripherals.
+
+Internationalization Testing: Helps in confirming that the application can be indeed be developed across different languages.
+
+Security Testing: Security testing is the process that determines that confidential data stays confidential.
+or 
+Testing how well the system protects from unauthorized internal or external access, willfull damages etc.
+
+End-to-End testing: End-to-End testing is a methodology used to test whether the flow of an application is performing as expected from start to finish. This testing involves ensuring that all the integrated components of an application functions as expected. The entire application is tested in a real world scenario such as communicating with Database, network, hardware and other applications.
+    Ex: For Gmail application- 1 Logging into the application 2. Accessing the inbox 3. Opening & closing the mailbox 4. Composing, replying or forwarding the     mail 5. Checking the sent items 6. Logging out the application.
+
+Tracebility Matrix: Tracebility Matrix is a document used for tracking the requirements, test cases and defects. This document is prepared to make the clients satisfy that the coverage done is complete as end to end. This document consists of Requirement/Baseline ref no. , Test cases/Test condition, defects/Bug id. Using this document one can track the requirement based on the defect id.
+
+Severity & Priority:
+The terms Priority and Severity are used in Bug Tracking to share the importance of a bug among the team to fix it.
+
+Severity: The Severity status is used to explain how badly the deviation affected the build. 
+              The Severity type is defined by the tester based on the written test cases and functionality.
+              Mainly it tells the seriousness/depth of the bug and it is completely application point of view.
+
+Priority: The priority status set by the tester to the developer mentioning the time frame to fix a defect. If High priority is mentioned then              the developer has to fix at the earliest.
+             The priority status is set based on the Customer requirements.
+             It tells which bug should rectify first. It is completely based user point of view. 
+
+Types of defects:
+High Severity and Low Priority
+High Severity and High Priority
+Low Severity and High Priority
+Low Severity and Low Priority
+
+High Severity and Low Priority: There is a bank application who gives interest of rs.2 for every 1000rs in account of the last day of the year. Last day means 31/12/YYYY, on that day bank will deposit 2rs interest for every 1000rs in account. Now bank found a bug that instead of 2rs, application is giving 4rs interest due to bug its going double. This bug is high severity. Due to the bug, interest is going double and may have thousands of accounts. So it is not profitable to the bank. This bug is low priority as interest is calculated 
+at the last day of the year. As we are beginning of the year, January there is a lot of time to fix the bug.
+
+High Severity and High Priority: Data entered in the front end of an application is not getting stored in the database.
+
+Low Severity and High Priority: If there is a mistake in the name of the Website.
+
+Low Severity and Low Priority: Cosmetic bugs.
+
+UAT- User Acceptance Testing: User Acceptance Testing or application testing, is the final stage of any software development life cycle before go-live. UAT meaning, the final stage of any development process to determine that thesoftware does what it was designed to do in the real-world scenario. It is done by the intended audience or business representatives.
+                                                                         (Or)
+                                                UAT is a type of testing performed by the end user or the client to verify/accept the software system before moving the application to the production environment. UAT is the final stage of testing after functional, integration and system testing is done. It is done by the clients in client environment.
+
+Exploratory Testing:  Exploratory testing allows you to think outside the box and come up with use cases that might not be covered in a test case. For example, you might perform one test and then ask yourself, " What if I tried this? What if I didn't do that?"
+
+Adhoc Testing:  Adhoc testing is concern with the Application testing without following rules or test cases. For Adhoc Testing one should have strong knowledge about the application.
+
+System Integration Testing: It verifies the different systems or componets of a system work together as intended. 
+
+Entry and Exit criteria:
+Entry Criteria- Entry Criteria is the process that must be present when a system begins, 
+SRS(Software Requirement Specification)
+FRS(Functional Requirement Specification)
+Usecases
+Test Cases
+Test Plan
+
+Exit Criteria: Exit criteria ensures whether testing is completed and the application is ready for release,
+Test Summary Report
+Metrics
+Defect Analysis Report
+
+Use Cases:
+Use Case Diagrams is an Overview graphical representation of the functionality in a system. It is used in the analysis phase of a project to specify the system to be developed.
+                In Use Case Diagrams, the whole system is defined a ACTORS,USE CASES and ASSOCIATIONS. The ACTORS are the external part of the system like users, computer software & hardware. USECASES is the behaviour or functionalitty of the system. When these ACTORS perform an action, the ASSOCIATIONS are the line drawn to show the connection between ACTORS and USECASES. One ACTOR can lnk too many USECASES and one USECASE can link too many ACTORS.
+
+Functional Testing:
+Functional Testing is basically defined as a type of testing that verifies each function of the software appication works in conformance with requirements and specifications. This testing is not concerned with the source code of the application. Each functionality of the software application is tested by providing appropriate test input, expecting the output and comparing the actual output with the expected output. This testing focuses on checking the user interface, API's, database and functionality of the application under test. 
+
+Non-Functional Testing:
+It is defined as a type of Software testing to check non-functional aspects(performance,usability,reliability,security, etc) of a software application. It is designed to test the readiness of a system as per non-functional parameters which are never addressed by functional testing.
+
+Defect Leakage: Defect leakage occurs at the Customer or the End user side after the application delivery. After the release of the application to the client, if the end user gets any type of defects by using that application then it is called as Defect Leakage. This Defect Leakage is also called as Bug Leakage.
+
+Test Plan: Test plan document is derived from product description, SRS or Use Case doc. It is usually prepared by Test Lead or Test Manager & focus of the document is to describe what to test, how to test, when to test and who will do what test.
+               A document describing the Scope, approach, resources and schedule of intended test activities. It identifies others test items, the features to be tested, the testing tasks, who will do each task, degree of tester independence, the test environment, the test design techniques, testing methodologies, entry and exit criteria to be used and any risks requiring contigenct planning. 
+
+Risk Analysis in Software Testing:
+In Software Testing, Risk Analysis is the process of identifying risks in application and priotizing them to test.
+----> In Software testing some unavoidable risk might takes place like:
+- Change in requirements or Incomplete requirements.
+- Time allocation for testing.
+- Developers delaying to deliver the build for testing.
+- Urgency from client for delivery.
+- Defect Leakage due to application size or completely.
+
+----> To overcome these risks, the following activities can be done:
+- Conducting Risk Assessment review meeting with development team.
+- Profile for Risk coverage is created by mentioning the importance of each area.
+- Using maximum resources to work on High Risk areas like allocating more num of testers for High risk areas and minimum resources for Medium and Low risk areas. Creation of Risk assessment database for future maintenance and management review.
+
+
+Test Strategy: A Test Strategy document is a high level document and normally developed by Project Manager. This document defines "Software Testing Approach" to achieve testing objectives. This testing document is normally derived from BRS doc. The test strategy document is a static document means, that is not updated too often. It sets the standards for the testing processes & activities and other documents such as Test Plan. Some companies include Test Strategy inside the Test Plan, which is fine and it is usually the case for small projects. However for large projects, Test Strategy and different number of Tes plans for each phase or level of Testing.
+Compenets of Test Strategy doc: Scope & Obj, Bussiness issues, Roles & Responsibilties, Test devliverables, Risk & Mitigation, Test Automation & Tools, Industry Standards to follow, Test Measurements & Metrics and Defect Reporting & Tracking.
+
+Metrics: Software Metrics are used to measure the quality of the project.
+https://www.softwaretestinghelp.com/software-test-metrics-and-measurements/
+https://www.guru99.com/software-testing-metrics-complete-tutorial.html
+
+Daily Status Report:
+
+Test Cases Planned
+Test Cases Executed
+Overall Execution Status/ Test Cases Status
+Defects Encountered on that day
+Total No. of defects- Still Open 
+Any Environmental Down time
+Show Stoppers
+
+Weekly Status Reports:
+https://www.softwaretestinghelp.com/how-to-write-software-testing-weekly-status-report/
+
+Test Summary report:
+https://www.softwaretestinghelp.com/test-summary-report-template-download-sample/
+
+Agile
+Estimations
+
+
+Scratch Projects 
+Enhancements 
+Change Requests
+Maintainence
+Production Support
+
+Fixed Bid
+T&M - Time and Material
+
+SOW/Ammendment/Client Agreement   -Statement of Work
+
+Service Based  
+Product Based
+
+
+Agile --------------------------
+The Agile methodology is a project management approach that involves breaking the project into phases and emphasizes continuous collaboration and improvement. 
+Teams follow a cycle of planning, executing, and evaluating.
+
+
+2. People and interactions are emphasized rather than process and tools.

@@ -1,0 +1,276 @@
+                    Object
+                      |
+                   Throwable
+                      |
+     |----------------------------------|
+  Error                             Exceptions
+   |                                   |
+   |-- JVM Error                       |-- Unchecked Exception
+   |-- Stack overflow error            |-- Checked Exception
+   |-- Assertion error
+
+
+Errors
+======
+Errors are usually caused by serious problems that are outside the control of the program, such as running out of memory or a system crash. 
+Errors are represented by the Error class and its subclasses. 
+Some common examples of errors in Java include:
+> OutOfMemoryError: Thrown when the Java Virtual Machine (JVM) runs out of memory.
+> StackOverflowError: Thrown when the call stack overflows due to too many method invocations.
+> NoClassDefFoundError: Thrown when a required class cannot be found.
+
+Since errors are generally caused by problems that cannot be recovered from, it’s usually not appropriate for a program to catch errors. Instead, the best course of action is usually to log the error and exit the program.
+
+Exceptions
+==========
+Exceptions, on the other hand, are used to handle errors that can be recovered from within the program. Exceptions are represented by the Exception class and its subclasses.
+There are two types of execution
+
+Unchecked Exception       -> Happens in runtime
+====================
+ArithmeticException
+StringIndexOutOfBoundsException
+ArrayIndexOutOfBoundsException
+InputMismatchException
+IndexOutOfBoundsException
+NullPointerException
+NumberFormatException
+
+Checked Exception        -> Throws during code development
+=================
+FileNotFoundException
+IOException
+SQLException
+ClassNotFoundException
+InterruptedException
+
+
+Examples:
+=========
+ArithmeticException
+-------------------
+-> Occurs when an illegal arithmetic operation is performed, such as division by zero.
+
+public static void main(String[] args) {
+		
+		System.out.println(5/0);
+	}
+Console
+=======
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+
+
+StringIndexOutOfBoundsException
+-------------------------------
+-> Thrown when an attempt is made to access a character at an index that is outside the bounds of a string.
+
+	public static void main(String[] args) {
+		String s = "Hello";
+		System.out.println(s.charAt(5));
+	}
+Console
+=======
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 5
+
+
+ArrayIndexOutOfBoundsException
+------------------------------
+-> Occurs when an array element is accessed using an illegal index that is either negative or greater than the array's size.
+
+	public static void main(String[] args) {
+		int[] irr = {1, 2, 3};
+		System.out.println(irr[3]);
+	}
+Console
+=======
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+
+
+InputMismatchException
+----------------------
+-> Thrown when a user inputs data that doesn't match the expected type, commonly seen with Scanner in Java.
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int nextInt = s.nextInt();
+		System.out.println(nextInt);
+	}
+Console
+=======
+Java
+Exception in thread "main" java.util.InputMismatchException
+
+
+IndexOutOfBoundsException
+-------------------------
+-> A general exception thrown when trying to access an invalid index in a list, string, or array.
+
+	public static void main(String[] args) {
+		List<String> l = new ArrayList();
+		l.add("Java");
+		l.add("Selenium");
+		System.out.println(l.get(2));
+	}
+Console
+=======
+Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
+
+
+NullPointerException
+--------------------
+-> Occurs when an application attempts to use an object reference that has not been initialized (i.e., it's null).
+
+	static String s;
+	public static void main(String[] args) {
+		
+		System.out.println(s.length());
+	}
+Console
+=======
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "org.java.automation1.Exceptions.s" is null
+
+
+NumberFormatException
+---------------------
+-> Thrown when an attempt is made to convert a string to a number but the string does not have a valid numeric format..
+
+	public static void main(String[] args) {
+		String s = "123a";
+		int intValue = Integer.parseInt(s);
+		System.out.println(intValue);
+	}
+Console
+=======
+Exception in thread "main" java.lang.NumberFormatException: For input string: "123a"
+
+
+
+
+
+
+Exception handling
+==================
+Java exception handling is managed via five keywords: try, catch, throw, throws, and finally.
+
+Try ->>>>> Whenever exception occurs, try block will throw the error
+Catch ->>> Catch block will catch the exception and handles it
+
+Finally -> The finally block is optional. It always gets executed whether an exception occurred in the try block or not. If an exception occurs, then it will be executed after try and catch blocks. And if an exception does not occur, then it will be executed after the try block. The finally block in Java is used to put important codes such as clean-up code e.g., closing the file or closing the connection.
+
+-->> For each try block, there can be zero or more catch blocks, but only one final block.
+
+we can use like
+try, finally
+try, catch
+try, multiple catch
+try, catch, finally
+try, multiple catch, finally
+
+Example:
+--------
+1,
+static String s = "Hello";
+	public static void main(String[] args) {
+	
+    try {
+    	System.out.println(s.charAt(5));
+	}  
+   
+    catch (StringIndexOutOfBoundsException h) {
+		h.printStackTrace();
+		System.out.println(h.getClass());
+		System.out.println(h.getMessage());
+            }
+    finally {
+    	System.out.println("Hello");	
+    }
+console
+-------
+java.lang.StringIndexOutOfBoundsException: String index out of range: 5
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:1517)
+	at AugustBatch/org.java.automation.Practise.main(Practise.java:19)
+class java.lang.StringIndexOutOfBoundsException
+String index out of range: 5
+Hello
+
+2,
+static String s;
+	public static void main(String[] args) {
+	
+    try {
+    	System.out.println(s.length());
+	}  
+    catch(NullPointerException e) {
+		e.printStackTrace();
+		System.out.println(e.getClass()+" Null Pointer Exception");
+		System.out.println(e.getMessage());
+	}
+-->
+Exception is super class for all exception, so it will handle all the exceptions
+catch (Exception n) {
+		n.printStackTrace();
+		System.out.println(n.getClass());
+		System.out.println(n.getMessage());
+	}
+Throw:
+------
+The throw keyword in Java is used to explicitly throw an exception from a method or any block of code. We can throw either checked or unchecked exceptions. The throw keyword is mainly used to throw custom exceptions. 
+
+Example: : See customized exception
+
+Throws:
+-------
+Throws is a keyword in Java that is used in the signature of a method to indicate that this method might throw one of the listed type exceptions. The caller to these methods has to handle the exception using a try-catch block. 
+Exception list is a comma separated list of all the exceptions which a method might throw.
+
+Example:
+--------
+public static void main(String[] args) throws FileNotFoundException , IOException{
+        File f = new File(path);
+        FileInputStream fis = new FileInputStream(f);
+}
+
+Custom Exception or User Defined Exception:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Java provides us the facility to create our own exceptions which are basically derived classes of Exception. Creating our own Exception is known as a custom exception or user-defined exception. 
+Why do we create custom exceptions?
+Business logic exceptions: These are the exceptions related to business logic and workflow. It is useful for the application users or the developers to understand the exact problem.
+In order to create a custom exception, we need to extend the Exception class that belongs to java.lang package.
+
+Example::
+---------
+In below the pin entered is incorrect, rather throwing pre-defined exception, we customized a user defined exception with proper message
+
+public class LoginFailureException extends Exception {
+
+	public LoginFailureException(String message) {
+		super(message);
+	}
+	public void method() throws LoginFailureException {
+		
+		Scanner s = new Scanner(System.in);
+		int a = s.nextInt();
+		if (a==1234) {
+			System.out.println("User logged in succesfully");
+		} else {
+         throw new LoginFailureException("Pin enterred is incorrect, please try again");
+		}      }
+	public static void main(String[] args) {
+		LoginFailureException l = new LoginFailureException("Pin enterred is incorrect, please try again");
+		try {
+			l.method();
+		} catch (LoginFailureException e) {
+			e.printStackTrace();
+			System.out.println(e.getClass());
+			System.out.println(e.getMessage());
+		}	}       }
+
+Console: :
+- - - - - -
+1231
+org.java.automation.LoginFailureException: Pin enterred is incorrect, please try again
+	at AugustBatch/org.java.automation.LoginFailureException.method(LoginFailureException.java:22)
+	at AugustBatch/org.java.automation.LoginFailureException.main(LoginFailureException.java:28)
+class org.java.automation.LoginFailureException
+Pin enterred is incorrect, please try again

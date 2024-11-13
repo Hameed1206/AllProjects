@@ -1,0 +1,45 @@
+Protractor
+==========
+https://juliemr.github.io/protractor-demo/
+
+
+https://voidChetan.github.io/hotel_booking_angular.git
+git clone https://github.com/juliemr/protractor-demo.git
+cd protractor-demo
+npm install
+
+npm start
+webdriver-manager start
+
+
+1. npm install:
+Purpose:
+
+npm install is used to install all the dependencies listed in a project's package.json file. These dependencies are typically necessary for running, developing, or building the project.
+What It Does:
+
+When you run npm install, npm (Node Package Manager) reads the package.json file in the current directory and installs all the packages listed under the dependencies and devDependencies sections.
+The installed packages are placed in a node_modules directory inside your project.
+If there is a package-lock.json file, npm uses it to install the exact versions of dependencies specified in it, ensuring consistency across different environments.
+Typical Use Case:
+
+You run npm install after cloning a repository or when a project’s dependencies need to be installed for the first time.
+It can also be used to install a new package and add it to the package.json file by running npm install <package-name>.
+
+
+2. npm start:
+Purpose:
+
+npm start is used to run a script defined in the package.json file under the scripts section, typically to start a Node.js application.
+What It Does:
+
+When you run npm start, npm looks for a start script in the scripts section of the package.json file and executes it.
+The start script can be anything, but it is commonly used to start a web server, a development environment, or an application.
+If no start script is defined, npm will try to run node server.js by default.
+Typical Use Case:
+
+You use npm start to launch your application after setting up the environment and dependencies.
+It's often used in combination with npm install, where you install the dependencies first and then start the application.
+
+
+describe and it: These are functions from Jasmine, a behavior-driven development framework for testing JavaScript code. describe is used to group related tests, while it is used to define an individual test case.

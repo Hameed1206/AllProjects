@@ -1,0 +1,70 @@
+Inheritance
+===========
+Accessing methods from different classes / Inherit methods from different classes
+We can access one class methods from another class using extends keyword
+
+Advantages:
+-----------
+Code reusable purpose
+avoid memory wastage
+Hierarchy between classes
+Uses Extends Keyword
+
+Types of Inheritance
+--------------------
+1, Single inheritance
+2, Multilevel inheritance
+3, Hierarchical inheritance
+4, Multiple inheritance         ->  
+5, hybrid inheritance
+
+
+1, Single inheritance :
+-----------------------
+Combination of One parent class  and One child class 
+
+      class A  (parent)
+          | extends
+      class B  (child)
+
+
+2, Multilevel inheritance
+--------------------------
+More than one parent class accessing the child class in tree level structure
+
+ClassA    ->    ClassB    ->    ClassC
+Grand Parent     Parent          Child
+
+A -> B -> C -> D -> E -> F -> G -> H
+
+Example ::
+----------
+Class A has 2 methods
+class b has 2 methods
+
+B extends A
+class B has both methods from A and B -> 4 methods
+
+Class C has 2 methods
+C extends B
+Now C has 6 methods from all A, B and C
+
+       class A    great grand parent
+          |
+       class B    grand parent
+          |
+       class C    parent
+          |
+       class D    Child
+
+In class D we can access for all above 3 class methods
+
+3, Hierarchical inheritance
+----------------------------
+one parent class is accessed by more than one child class / Multiple child class
+
+                            class A (Parent)
+          -------------------------|------------------------
+         |                |                |                |
+         |extends A       |extends A       |extends A       |extends A 
+      class B           class C          class D          class E

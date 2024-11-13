@@ -1,0 +1,36 @@
+Java Questions
+==============
+
+Classname c = new Classname();
+Here's what each part represents:
+
+Classname: This is the name of the class from which you are creating an object. The class defines a blueprint or a template for objects.
+
+c: This is the name of the variable that refers to the object. You can think of c as a reference or handle to the object.
+
+new: This keyword is used to allocate memory and create an instance of the class. It is responsible for creating the actual object in memory.
+
+Classname(): This is the constructor of the class. Constructors are special methods within a class that are called when an object is created. They initialize the object, set default values, or perform any necessary setup. The new keyword is followed by the constructor, and it is invoked to create and initialize the object.
+
+So, in summary, the line Classname c = new Classname(); creates a new object of the Classname class, allocates memory for it, and assigns a reference (c) to that newly created object. The constructor of the Classname class is called during this process to initialize the object.
+
+===========================================================================================================================================================================================
+Constructor:
+============
+In Constructor,
+Classname and construtor name should be same
+Constructors are special methods within a class that are called when an object is created
+It dont have any return type
+Once object created it will invoke itself , no need to create object
+It will automaticaly invoke the default constructor
+It will support method overloading , not overriding
+It has 2 types,
+1. Non Parameterized constructor / default construtor
+2. Parameterized constructor / argument based construtor
+
+Constructor chaining
+====================
+To call one constructor in another constructor is constructor chaining
+This will reduce no of object creation
+this()         -> To call current class construtor
+super()        -> To call parent class construtor

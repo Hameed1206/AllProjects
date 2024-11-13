@@ -1,0 +1,51 @@
+DataDriven Framework
+=======================
+
+We use to access data from any file like excel
+We use DDF to fetch test data from Excel , we can Read, Write and Update values
+
+Add POI OOXML Jar/Dependency
+
+To access the file from location -> File class -> Create object
+To access the file               -> FileInputStream / FileOutputStream
+To access the Excel workbook     -> Worbook Interface Create object with XSSFWorkbook class
+To access particular sheet       -> Workbook ref.getSheet method It will return Sheet interface
+To access particular row         -> Sheet ref.getRow method It will return Row Interface
+To access particular cell        -> Row ref.getCell method It will return Cell Interface
+
+File f = new File("Location of file");
+FileInputStream fi = new FileInputStream(f);  To Read the file == File ref to access the file
+FileOutputStream fo = new FileOutputStream(f)  To write the file  == File ref to access the file
+Workbook w = new XSSFWorkbook(fi);   == To access the workbook fileInputStream ref
+Sheet s = w.getSheet("sheetname");                                      Sheet s1 = w.CreateSheet("sheetname");
+Row r = s.getRow("rowindex to get particular row");                     Row r1 = s1.createRow(0);
+Cell c = r.getCell("cellindes to get particular cell");                 XSSFCell cell = row.createCell(0);
+String s = c.getStringCellValue();  ----  To get String values          cell.setCellValue("Name"); 
+Double d = c.getNumericCellValue(); ---- To get Numerical values        w.write(fo); This method only writes the value in excel
+Need to type cast above Long l = (Long)d;    
+Date dt = c.getDateCellValue():  ----- To get Date type values  -- This will print date in normal system format
+
+To identify cell type (*below points need update*)
+Int i - c.getCellType();
+If 1 means String , 0 means Numeric
+
+To check if date value is present
+DateUtil is class in that we have a static method isCelldateFormatted();
+Using If condition
+If(DateUtil.isCelldateFormatted(c)){
+SimpleDateFormat sf = new SimpleDateformat(dd/mm/yyyy);     -> To get output is expected format
+String str = sf.format(dt);
+
+
+To access mutiple row and cell
+
+Intl i1 = s.getPhysicalNumberOfRows();
+Intl i2 = r.getPhysicalNumberOfCells();
+
+for (i=0 i<i1 i++){
+Row r = s.getRow(i);
+
+for (j=0 j<i2 j++){
+Cell c = r.getCell(j);
+}
+}

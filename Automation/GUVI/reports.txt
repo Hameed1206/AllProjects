@@ -1,0 +1,40 @@
+static Statement stmnt;
+	public void connectToSQL() throws SQLException {
+		//Connect to SQL Database
+		Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/organization", "organization", "Hameed@12");
+		stmnt = connect.createStatement();
+	}
+	
+	//A, Write a query to display employee name and salary of employees whose salary are greater than or equal to 2200.
+	public void firstQue() throws SQLException {
+		System.out.println("           1st Question");
+		System.out.println("           ============");
+		//Query statement to execute
+		ResultSet set = stmnt.executeQuery("select EName, Sal from Employee where Sal>=2200;");
+		//getting the salary value as float and formatting to 2 decimal values , Print name and salary
+		while (set.next()) {
+		float float1 = set.getFloat(2);
+		String format = String.format("%.2f", float1);
+		System.out.println(set.getString(1)+"     "+format);
+	}
+		System.out.println("");	    
+	}
+
+
+ExtentSparkReporter crtreport;
+	ExtentReports extent;
+	ExtentTest snap;
+
+String reportPath = "C:\\Users\\91936\\eclipse-workspace\\Best_Buy\\target\\"+timeMillis+".html";
+		crtreport = new ExtentSparkReporter(reportPath);
+		crtreport.config().setReportName(name);
+		crtreport.config().setDocumentTitle("Web Test Results");
+		
+		extent = new ExtentReports();
+		extent.attachReporter(crtreport);
+
+snap = extent.createTest("ValidateCreateNewAccountFunction");
+
+snap.addScreenCaptureFromPath(captureScreenshot(), "ValidateCreateNewAccountFunction");
+		snap.log(Status.PASS, Msg);
+		extent.flush();

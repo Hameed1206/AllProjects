@@ -1,0 +1,75 @@
+STLC (Software Testing Life Cycle) is a process performed by Testing team to validate and ensure the software Quality.
+
+Stages in STLC:
+1. Requirement Analysis:
+-> In Initial stage, Testing team will work with Product Owner to understand the requirement of application.
+-> Requirement will be done from testers point of view. Like, Checking whether the requirement can be tested or not.
+-> Main objective is to understand the requirement specifications of software and making sure whether we can able to perform testing in all fields.
+
+2. Test Planning:
+-> Test planning is a stage where we do planning on how to conduct test, and what kind of tools required and, also how many resources needed.
+-> Also, we will decide to choose which approach of testing technique has to be implemented for each requirement.
+-> Test Estimation , deciding the test approach and techniques also entry and exit criteria.
+
+3. Test case preparation:
+-> Test cases will be developed with test steps for each and every scenario.
+-> Test case will be developed with following contents,
+Test case ID, Scenario headline, Test case title, Preconditions, Test steps, Expected result, Actual result, Status(pass/fail), comments.
+-> Test case will be reviewed and approved by PO.
+
+4. Test Environment setup:
+-> We need a test environment to test the application, which will be similar to production environment.
+-> Environment setup has to be made with respective configuration and infrastructure that is required for testing.
+-> If needed test data also prepared and loaded in this environment.
+
+5. Test Execution:
+-> Test execution is stage where we actually performs the testing actions we wrote in test cases.
+-> As per test case and requirement, all the field will be validated and if any discrepancy found we need to raise a defect and report it.
+-> We have to make sure that test results are recorded and documented.
+
+6. Defect logging and tracking:
+-> We will raise a defect if we found any issues or discrepancy in software application.
+-> We will use a tool to log a defect and track it, like JIRA.
+-> We have yo prioritize the defects as per severity and priority.
+-> In JIRA or other defect tracking tool, we can track the defect status and to get resolution from developers.
+-> Once defect is fixed, we do retest and validate it.
+
+7. Test Reporting:
+-> Test reporting involves generating test reports to communicate the progress, results, and quality of the testing effort to stakeholders.
+-> Based on testing report the stakeholders will take a decision on software release.
+-> Test report will include Test coverage, defect density and execution report.
+
+8. Test Closure:
+-> Test closure marks the end of the testing phase.
+-> It involves evaluating the testing process, identifying lessons learned, and documenting best practices and areas for improvement.
+-> Test closure also includes obtaining sign-off from stakeholders indicating that testing is complete and the software is ready for release.
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+Risk factors that need to include in test plan
+
+When creating a test plan for a web-based application, it's important to consider various risk factors that could affect the functionality, security, performance, and usability of the application.
+Risks factors called as RAID block. Risks Assumptions issues dependencies
+
+-If we depend on any team if they did not deliver the work this will affect our schedule
+-If we need any equipment's or tools from client or management, then we depend on that, If its not delivered on time that will affect our execution.
+-Also we need to plan resources, if anyone is not available means that will also affect the deliver
+-If there is sudden requirement change has been told means, we need to plan such cases also.
+-And Natural Disaster also a risk factor in test planning.
+Like above we can assume lot of list factors depends on our application
+
+Some of the common risk factors we need to take care every time.
+
+-> Functional Risks:
+
+Misunderstanding the requirement, we need to ensure that we understand the requirement completely.
+
+-> Security Risks:
+Unauthorized access to sensitive data or resources due to security vulnerabilities. we should plan a clear strategy and risks factors when it comes to security testing.
+
+-> Performance Risks:
+There might be performance issues like slow down, late response due to inadequate server.
+There might be a chance of environment failure, then we should plan to do testing in different environment
+
+-> Compatibility Risks:
+Need to check in all browsers and platforms to make sure application functions as expected in all areas

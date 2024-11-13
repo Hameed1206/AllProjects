@@ -1,0 +1,111 @@
+OOPS
+====
+Polymorphism
+
+Poly - Many
+Morphism - forms
+
+to perform maths operations - Calc
+to take pictures - camera
+to contact someone - phone
+
+Smart phones - All the above
+A mobile can be used in multiple
+
+We are use methods in more than one forms
+
+Polymorphism gives multiple way to have a method, also execute
+
+1, Method Overloading (Compile time polymorphism / Static binding / Static polymorphism)
+   - One Class
+   - Same method name
+   - Different Arguments(parameters)
+     - Depends on type
+     - Depends on count
+     - Depends on order
+
+2. Method Overriding  (Runtime polymorphism / Dynamic binding / Dynamic polymorphism)
+   With single class its not possible, we need inheritance
+   - Two different Class
+   - Same method name
+   - same Arguments(parameters)
+
+
+Program : 1
+============
+package org.automation;
+
+public class FifthDay {
+
+     //method overloading	
+	public void student(int a) {
+		System.out.println("Student 1 ID is "+a);
+	}
+    public void student(String s, int a) {
+		System.out.println("Student 1 Name is "+s+" and age is "+a);
+	}
+     public void student(char g, String d) {
+ 		System.out.println("Student 1 gender is "+g+" email is "+d);
+    }
+     public void student(char g, float i) {
+  		System.out.println("Student 1 gender is "+g+" height is "+i);
+     }
+     public void student(double i, boolean t) {
+   		System.out.println("Student 1 weight is "+i+" is he married : "+t);
+      }
+     
+	public static void main(String[] args) {
+		
+		FifthDay f = new FifthDay();
+		f.student(101);
+		f.student("Hari", 23);
+		f.student('M', "Hari@gm.com");
+		f.student('M', 6.3f);
+		f.student(55.5, true);
+
+	}
+}
+
+
+Program 2
+=========
+class 1 -----
+package org.automation;
+
+public class Sixthday {
+
+	public void employee(String s, int i, String l) {
+		System.out.println("Employee name is "+s+", ID is "+i+", Laptop model "+l);
+	}
+	public void newOne() {
+		System.out.println("first");
+	}
+	
+	public static void main(String[] args) {
+		
+		Sixthday ss = new Sixthday();
+		ss.employee("Anu", 33, "Dell_IP123");
+	}
+
+}
+
+class 2 -------
+package org.automation;
+
+public class SixthDay2 extends Sixthday{
+
+	
+	public void employee(String s, int i, String l) {
+		System.out.println("Employee name is "+s+", ID is "+i+", Laptop model "+l);
+	}
+	public void newOne() {
+		System.out.println("Second");
+	}
+	
+	public static void main(String[] args) {
+		
+		SixthDay2 d = new SixthDay2();
+		d.employee("Swapna", 234, "Dell_IP123");
+		d.newOne();
+	}
+}

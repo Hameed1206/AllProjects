@@ -1,0 +1,69 @@
+package org.frameworks;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DataDriven {
+
+	public static void main(String[] args) throws IOException {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		FileInputStream fis = new FileInputStream("C:\\Users\\91936\\eclipse-workspace\\SeleniumAutomation\\Excel File\\Book1.xlsx");
+     	Workbook book = new XSSFWorkbook(fis);
+//		Sheet sheet = book.getSheet("Sheet1");
+//		Row row = sheet.getRow(1);
+//		Cell cell = row.getCell(0);
+//		//Date dateCellValue = cell.getDateCellValue();
+//		//System.out.println(dateCellValue);
+//		SimpleDateFormat ss = new SimpleDateFormat("dd-MM-yyyy");
+		//String format = ss.format(dateCellValue);
+		//System.out.println(format);
+		/*Cell cell1 = row.getCell(1);
+		String s1 = cell1.getStringCellValue();
+        System.out.println(s1);
+	    driver.get("https://www.facebook.com/");
+	    WebElement element = driver.findElement(By.id("email"));
+	    element.sendKeys(s);
+	    WebElement element2 = driver.findElement(By.id("pass"));
+	    element2.sendKeys(s1);
+		
+		
+		
+		for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
+			Row row2 = sheet.getRow(i);
+			
+			for (int j = 0; j < row2.getPhysicalNumberOfCells(); j++) {
+				Cell cell2 = row2.getCell(j);
+				String stringCellValue = cell2.getStringCellValue();
+				System.out.print(stringCellValue+" ");
+			}System.out.println("");
+		}*/
+		driver.get("https://www.facebook.com/");
+		WebElement element = driver.findElement(By.xpath("//h2[contains(text() , 'Facebook helps')]"));
+		String text = element.getText();
+		System.out.println(text);
+		FileOutputStream fos = new FileOutputStream("C:\\\\Users\\\\91936\\\\eclipse-workspace\\\\SeleniumAutomation\\\\Excel File\\\\Book1.xlsx");
+		Sheet sheet2 = book.createSheet("Sheet2");
+		Sheet sheet3 = book.getSheet("Sheet2");
+		Row row2 = sheet3.createRow(0);
+		Cell cell2 = row2.createCell(0);
+		cell2.setCellValue(text);
+		book.write(fos);
+	}
+}

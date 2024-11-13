@@ -1,0 +1,60 @@
+Test Reporting
+==============
+Once All the test cases executed and all defects are fixed, then testing process will be completed, we can proceed for deployment
+or
+If maximum defects are closed, we have only minor defects left that too won't affect the functionality means, then there will be a meeting to discuss on this and they will decide to go for deployment 
+
+As testers part in test reporting & closure, we should prepare all required documents that has to be provided for current release.
+Test Case document will execution results
+RTM Document will all related defects and updates
+and
+Release presentation document, which should consist of test metrics
+Lesson learned document, We will sit and discuss what went bad and mistakes that should be avoided, those things we will mention
+
+How to prepare Test metrics
+=========================
+Using Requirement and Test Cases we will do,
+Assume if,
+we have 20 requirements, for that 
+we have Drafted 300 test cases, so by average we have drafted 15 test cases per requirement
+
+Lets calculated how many test cases executed,
+                                   Count            Percentage          How to calculate percentage
+Test Cases executed                 285                95%              (Test cases executed /         * 100
+                                                                        Total no of test cases) 
+
+Passed Test cases                   210                70%              (Test cases Passed   /         * 100
+                                                                        No of test cases Executed)
+
+Failed Test cases                   75                 25%              (Test cases Failed   /         * 100
+                                                                        No of test cases Executed)
+
+Blocked Test cases                  15                 05%              (Test cases Blocked   /        * 100
+                                                                        Total no of test cases) 
+
+Lets calculated the defect counts,
+
+Total no of defects opened =  100
+                                   Count            Percentage          How to calculate percentage
+Critical Defects                    25                  25%             (Critical defects/             * 100
+                                                                        Total Defects)
+High Defects                        50                  50%             (high defects/                 * 100
+                                                                        Total Defects)
+Medium Defects                      25                  25%             (medium defects/               * 100
+                                                                        Total Defects)
+Defect leakage                      10                  10%             (Leaked defects/               * 100
+                                                                        Total Defects)
+
+Defects fixed                       90                  90%             (Fixed defects/                * 100
+                                                                        Total Defects)  
+Defects not fixed                   10                  10%             (InProgress defects/           * 100
+                                                                        Total Defects)           
+Rejected Defects                    10                  10%             (Rejected defects/             * 100
+                                                                        Total Defects)
+
+Defect Density          =     No of defects / No of requirements
+
+Defect age   =  fixed date - opened date
+
+
+

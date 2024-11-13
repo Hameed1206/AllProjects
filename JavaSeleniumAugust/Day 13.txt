@@ -1,0 +1,89 @@
+Day 13
+======
+String
+======
+String is collection of characters enclosed with "".
+String is pre defined class in java
+String is based on index
+index starts from 0, 1, 2 ...
+
+We have lot of functions in String to utilise it in multiple way
+
+                String s = "Java Selenium";
+		String s1 = "Java Selenium";
+		String s2 = "";
+		
+to get length of string
+		int i = s.length();
+		System.out.println("Length of string is "+i);
+to get particular character by giving its index
+		char c = s.charAt(6);
+		System.out.println("Character at index 6 is "+c);
+to get index value of particular character
+		int j = s.indexOf('v');
+		System.out.println("The index position of v is "+j);
+to get last index value of particular character
+		int k = s.lastIndexOf('e');
+		System.out.println("Last occurence of charcter e is "+k);
+to change all characters to uppercase
+		String case1 = s.toUpperCase();
+		System.out.println(case1);
+to change all character to lowercase
+		String case2 = s.toLowerCase();
+		System.out.println(case2);
+to check if strings starts with particular word / character 
+		boolean b = s.startsWith("Java");
+                System.out.println(b);
+to check if strings ends with particular word / character 
+		boolean d = s.endsWith("Selenium");
+		System.out.println(d);
+		
+to check if strings contains particular word / character 
+		boolean e = s.contains("l");
+		System.out.println(e);
+to check if two strings are equal in value
+		boolean f = s.equals(s1);
+		System.out.println(f);
+to check two strings value , without considering case sensitivity
+		boolean g = s.equalsIgnoreCase(s1);
+		System.out.println(g);
+to check is string is empty
+		boolean empty = s2.isEmpty();
+		System.out.println(empty);
+to check is string is blank
+		boolean blank = s1.isBlank();
+		System.out.println(blank);
+to compare two strings using ASCII value
+		int compareTo = s1.compareTo(s);
+		System.out.println(compareTo);
+to replace a word/character in string
+		String replace = s.replace("Java", "C++");
+		System.out.println(replace);
+to replace all similar character in string
+		String replace2 = s.replace("a", "e");
+		System.out.println(replace2);
+to replace complete string
+		String replaceAll = s.replaceAll(s, "Python Playwright");
+		System.out.println(replaceAll);
+to remove unwanted space in start and end
+		String trim = s1.trim();
+		System.out.println(trim);
+to replace space with empty string
+		String replace3 = s1.replace(" ", "");
+		System.out.println(replace3);
+to get values from particular index
+		String substring = s.substring(5);
+		System.out.println(substring);
+to get values from in between 2 index values
+		String substring2 = s.substring(2, 8);
+		System.out.println(substring2);
+to join 2 strings
+		String concat = s.concat(s1);
+		System.out.println(concat);
+
+
+ASCII Value for characters
+==========================		
+A to Z -> 65 - 90
+a to z -> 97 - 122
+0 to 9 -> 48 - 57

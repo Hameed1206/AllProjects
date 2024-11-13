@@ -1,0 +1,132 @@
+Agile Methodology
+=================
+Agile model is an iterative and incremental approach. 
+
+Iterative   - Repeating same process again and again.
+Incremental - Adding new features every time / Every release.
+
+So basically how we work in Agile process, 
+If customer is asking a application with 100 features means, We won't develop all 100 features at one time and deliver. Also we won't take long time to deliver a application. 
+Rather than what we will do is, We will initially develop 10 features, and give a first version of application to the client and the client will start using the first version of application, In the meanwhile what we'll do, we will again develop another 10 features, and provide a updated application with new features. This is how the Agile process will happen
+
+Agile principles
+-----------------
+-> Customer no need to wait for long time. 
+-> We develop, test, and release piece of software to a customer with few number of features. 
+-> We can accept, accommodate, and recommend changes. 
+-> There will be good communication between customer, business analyst, developer, and tester. 
+
+Advantages
+----------
+-> Recommend changes are allowed in any stage of development Or we can accommodate requirement changes in the middle of development. 
+-> Releases will be very fast. Customer no need to wait for long time. 
+-> Good communication between team. 
+-> It is very easy model to adopt.
+
+Disadvantage
+------------ 
+-> Less focus on design and documentation, since we deliver software very faster.
+
+==========================================================================================================================================================================================
+Scrum Framework
+===============
+
+*Agile is a process model. 
+*Scrum is a framework.
+
+In Scrum framework, We will build software product by following Agile principles
+
+In agile process, Requirement will be given in the form of user stories
+PO - Product Owner , He is the person who gets the requirement from clients and prepare as a User stories
+User story is a scenario of what user wants.
+
+Scrum Team will consists of below people, , ,
+> Product Owner
+> Scrum Master
+> Developer
+> Tester
+
+Product Owner(PO):
+------------------
+> Define the features of the product. 
+> Prioritize features according to market value. 
+> Adjust features and priority every iteration as needed. 
+> Accept or reject work results.
+> Maintains the product backlog
+
+Scrum Master:
+-------------
+> The main role is facilitating and driving the Agile process.
+> Scrum master is the one, who move the user stories for current sprint from product backlog to sprint backlog after sprint planning meeting.
+> Organizing meetings
+> Act as a intermediate for developer and tester, And also for PO and scrum team.
+
+Developer and Tester
+--------------------
+Develop and test the application
+
+Agile and Scrum Terminologies
+=============================
+1, User Story :: a feature or module in a software 
+2, Epic :: collection of similar user stories 
+3, Product Backlog :: contains list of user stories prepared by product owner 
+4, Sprint Backlog :: contains current sprint user stories. List of committed stories by dev QA for specific sprint also accepted by PO.
+5, Sprint :: Fixed Cyclic period of time to complete the user stories decided by the product owner and team, usually 2 to 4 weeks of time
+6, Velocity :: Total story points taken for current sprint
+7, Poker card technique :: Used during sprint planning meeting to estimate and finalize the story points
+8, Story points :: Weightage of the user story, Defined using Fibonacci series - 1,2,3,5,8,13....
+
+9, Agile Ceremonies : Meetings conducted in agile process
+  1, Sprint Grooming : Happens before starting the sprint. PO will explain the User stories, we need understand the requirement.
+  2, Sprint Planning : Happens as a starting point of sprint. Estimating story points and finalize it. Moving stories from Product backlog to Sprint backlog.
+  3, Scrum call : Daily stand up call : To update the work status.
+  4, Sprint Review : Happens at the end sprint : Developers and Testers need to give a demo to PO on what they did and the outcomes in the sprint.
+  5, Sprint Retrospective : Happens after end of sprint. Analyzing the sprint, What went Right? & What went Wrong? like a self analysis to improvise 
+
+10, Effort :: Approximate Time required to Do/Complete a work
+
+11, Sprint Burndown chart : Burn-down chart shows how much work remaining in the sprint, maintained by Scrum Master daily.
+                           -> Visual representation of the work remaining in a sprint.
+                            We can able to see,
+                           -> The total amount of work planned for the sprint.
+                           -> The amount of work completed.
+                           -> The amount of work remaining.
+============================================================================================================================================================================================
+How a sprint works ?
+====================
+Sprint will be 2 to 4 weeks.
+
+Initially sprint grooming meeting will occur
+1, Sprint Grooming : 
+ -> PO will explain the user stories, similar to requirement analysis.
+ -> We need to understand the user stories and requirements, Also what is expected from the current sprint, what are the features and functions client expect for the current sprint. 
+ -> If we have doubt, we can clear it with the product owner.
+
+2, Sprint Planning Meeting :
+ -> All the people from scrum team will discuss and analyze user stories.
+ -> Each team will give a specific point to a user stories, and they will discuss and decide internally to freeze one point. 
+ -> Finally, they will decide how many user stories can be committed for the current sprint. 
+ -> PO will also give his expected stories. So, with both of the things, finally, we will decide how many stories can be taken for the sprint.
+ -> Finalized user stories will be moved from product backlog to sprint backlog by scrum master
+
+3, Now Each team will start their work
+   On daily basis, we have a scrum call / stand up call conducted by Scrum Master to update work status.
+We will discuss,
+What did we did yesterday? 
+What did we do today? 
+do we have Any barriers in our way.
+
+Once Development and Testing activities completed
+
+4, Sprint Review Meeting :
+ -> We will give demo to PO
+ -> PO will decide , whether to accept or decline , to deploy or not.
+
+  Application Deployment
+
+5, Sprint Retrospective Meeting :
+ -> Meeting occurs after completion of sprint. 
+ -> Purpose of meeting is to reflect on the team’s processes and identify ways to improve. 
+ -> Assessing what went well, what didn’t, and how the team can improve for the next sprint.
+ -> Action items aimed at improving team performance and collaboration in the next sprint.
+

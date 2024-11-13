@@ -1,0 +1,16 @@
+Task 2 
+======
+
+Create array with int, float , string and character.
+
+try to add values during initialization, also using index value
+try to print particular index value
+try to print all values
+
+try to use scanner class for adding values
+
+create 2 dimensional arrays and add values to it and print using int and string
+try to print it as table format
+Use foreach loop to get values
+
+Declare a string and perform all method operations to it

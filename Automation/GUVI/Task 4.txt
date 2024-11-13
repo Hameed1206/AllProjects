@@ -1,0 +1,103 @@
+Task 4
+------
+
+Question: 1 (1) -> Describe the difference between smoke testing and sanity testing
+
+Answer:
+
+Smoke Testing:
+
+-> Smoke testing, also known as build verification testing (BVT), is performed early in the software development lifecycle to verify whether the software build is stable enough to proceed with further testing. Ensuring that the critical and essential functionalities of the application are working correctly after a new build or release. 
+-> The primary goal of smoke testing is to identify major defects or showstopper issues that could prevent further testing or deployment of the software build. Smoke testing does not go indepth of any functionalities but focuses on the overall stability of the application. 
+
+Sanity Testing:
+
+-> Sanity testing is performed in replace for regression testing due to lack of time or time consumption. Focusing only on specific functionalities or areas of the application have been fixed or updated after changes or modifications. Also verifying the specific functionalities or features that have undergone changes, enhancements, or fixes, rather than testing the entire application comprehensively. 
+-> The purpose of sanity testing is to ensure that the recent changes or modifications have not adversely affected the stability or behavior of the application, and it is ready for further testing or deployment. Sanity testing involves more targeted and focused testing of the specific features or functionalities to ensure their correctness and stability.
+
+Question: 1 (2) -> Describe the difference between validation and Verification
+
+Answer:
+
+Verification:
+
+Verification is the process of verifying the software meets the specified requirements and design. Verification focuses on ensuring that the software is built correctly according to the defined specifications, design documents, and requirements. It also include reviewing and inspecting software artifacts such as requirements documents, design specifications, source code, and test cases to check for consistency, correctness, and adherence to standards.
+
+Validation:
+
+Validation is the process of evaluating whether the software product satisfies the user's needs and expectations. Main focus is to ensure that the software product meets the user's requirements and delivers the expected functionality and usability. Validation activities include testing the software in real-world scenarios, gathering feedback from users and stakeholders, and perform testing to verify that the software meets user needs and business objectives.
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+Question: 2 -> Explain about Agile Methology
+
+Answer:
+
+Agile methodology is an iterative approach to software development, where we divide a Huge amount of work in to small pieces. Once each set of work is completed, we are going for product release/deployment. And In Agile, we work with all other department people, collabrating with them and finding the issues early and working on its Fix. Main thing is, we will be collabrating with Customer thorughout the process to have a smooth and clear progress. Agile supports changes in requirement which makes customer satisfy and happy. 
+On a whole in software development, Agile methodology is one, which is very flexible, making way for people collabration and working together to identify issues early and rectify. Due to this iterational approach we are able to give continous delivery & improvement to the product and also by accepting changes, we ensures customer satisfaction.
+
+Principles of Agile Testing
+---------------------------
+1.	Constant response
+2.	Less documentation
+3.	Continuous Testing
+4.	Customer Satisfaction
+5.	Easy and clean code
+6.	Involvement of the entire team
+7.	Test-Driven
+8.	Quick feedback
+
+In Agile methodology, there are several approaches or frameworks that we can adopt to implement Agile principles and practices effectively. The most commonly used Agile frameworks are Scrum and Kanban
+
+Scrum:
+
+-> Scrum is one of the most widely used Agile frameworks, which have a fixed time interval called sprint, lasting 1-4 weeks for every release
+-> Scrum having some set of rules which will be strictly followed, We have a fixed set of people who involves in scrum process
+Product owner
+Scrum master
+Development team
+QA Team
+above are the main key participants in scrum based project.
+-> Key components of Scrum include sprint planning, daily stand-up meetings, sprint reviews, and sprint retrospectives ceremonies
+
+Kanban:
+
+-> Kanban is an Agile approach that focuses on visualizing work, limiting work in progress (WIP), and optimizing flow.
+-> Kanban boards visually represent the workflow, with columns representing different stages of work and cards representing individual tasks or user stories.
+-> Teams use pull-based systems to manage work, with tasks pulled into the workflow only when there is capacity to handle them.
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+Question: 3 -> Explain about Epic and User Stories
+
+Answer:
+
+EPIC:
+
+-> Epic is a large body of work which can be break in to small pieces of work.
+-> Any Function that can be further divided into multiple small pieces is Epic, the branches under the functions is nothing but the User stories.
+-> Epics provide a overview of the particular set of functionalities and help stakeholders understand the overall direction and objectives of the project.
+
+EG., In Amazon website we can see options like electronics, mens wear, womens wear, kids wear, home appliances.
+     All these where whole functions (EPIC). Below that we have lot of small functions or divisions which is User stories
+EPIC ->>   ELectronics->     Mens wear->       
+             Mobile            Shirts 
+             Laptop            T Shirts
+             Head phone        Jeans pant
+
+
+User Story:
+
+-> User Story describes a piece of functionality or a feature from an end-user's perspective.
+-> User Stories are written from the perspective of the user.
+-> Each User Story follows a simple template: "As a user, I want [some goal or objective], so that [some benefit or value]."
+-> User Stories capture the "who," "what," and "why" of a feature, focusing on the user's needs, requirements, and desired outcomes.
+-> User Stories are small, manageable units of work that can be implemented and tested within a single iteration or sprint.
+-> Under User stories we will be having lot of sub tasks.
+
+EG., In Amazon website we can see options like electronics, mens wear, womens wear, kids wear, home appliances. All these options can be further divided in to small pieces. Those each valuable functions will be tested from user point of view, which is nothing but User Stories.
+     
+EPIC ->>      ELectronics->     Mens wear->       
+User Stories    Mobile            Shirts 
+                Laptop            T Shirts
+                Head phone        Jeans pant

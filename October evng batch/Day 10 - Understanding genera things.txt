@@ -1,0 +1,42 @@
+Kt -> Knowledge transition
+or Transition 
+
+Built - Developed / Updated application
+
+Domain
+======
+
+E Commerce  - Amazon, Flipkart, snap deal, myntra
+Insurance domain - 
+Banking = Secured domain
+Cards & Services domain
+Social media/ Entertainment 
+Ticket booking
+Travel/ Airline domains
+
+
+Different testing
+=================
+Web application - User Interface testing  - Front end testing
+
+Backend Testing - API Testing (Request - Response)
+
+Complete Backend -  Database Testing
+
+Every application will have a server and database
+Server - where the application is hosted
+database - stores all the information
+
+Tools for testing
+=================
+Web UI = Selenium, Playwright and Cypress  
+API Testing - Postman, SOAP UI, and Rest Assured(Automation)
+Backend = ETL Testing 
+
+Mobile = Appium
+
+Desktop = UFT
+
+Performance testing = JMeter or load runner
+
+

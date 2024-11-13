@@ -1,0 +1,76 @@
+String
+======
+
+We can declare string in 2 types
+
+        String s = "Hello";
+
+This will be stored in String pool/constant inside heap memory
+	
+	String ss = new String("Hello");
+
+String is immutable -> Value is cannot be changed
+
+== -> This will compare the memory of object
+equals -> This will compare the values
+
+        String ss = new String("Hello");
+	
+	String s = "Hello";
+	String s2 = "Hello";
+	
+	boolean equals = s.equals(ss);
+	System.out.println(equals);              -> True
+	
+	boolean equals2 = s.equals(s2);
+	System.out.println(equals2);             -> True
+	
+	if (s==ss) {                             -> False
+		System.out.println(s+" and "+ss+" are equal");
+	} else {
+		System.out.println("Not equals");
+	}
+
+Keywords
+========
+
+Static , Final and abstract
+---------------------------
+
+abstract - > We cannot instantiate the class
+             We cannot write method body
+             We cant declare variable as abstract
+
+Final -> Final class cannot be inherited
+         Final methods cannot be Over ride
+         Final variable value cannot be changed
+
+static -> If we declare method as static , we can call them without creating object in same class and in different we can call using classname.methodname
+          If we declare Variable as static, we can call them without creating object in same class and in different we can call using classname.variablename
+         
+
+return, break and continue
+---------------------------
+
+return -> it will return value which we declared with return keyword
+
+break -> break the loop once the condition is met
+
+continue -> It will skip the particular iteration and performs the rest, when the condition is met
+
+
+Variables
+=========
+Local            -> It is declared inside a method, it has power only inside the method , when we call method it will be utilised.
+                    Local variable need to be initialised
+Global/Instance  -> Its declared outside the method, inside the class, Not need to initialize, it will take default value
+                    Its will have power once object is created
+Static           -> Its declared outside the method using static keyword, inside the class, Not need to initialize, it will take default value
+                    It will have power once the class is active
+
+Difference between Static and normal/Instance methods
+-----------------------------------------------------
+Instance methods can access the instance methods and instance variables directly.
+Instance methods can access static variables and static methods directly.
+Static methods can access the static variables and static methods directly.
+Static methods can’t access instance methods and instance variables directly. They must use references to objects.

@@ -1,0 +1,47 @@
+Abstraction / Hiding
+=====================
+
+Hiding the business logic
+
+Two types of Abstraction:
+
+Partial Abstraction (Abstract class)  -> Methods with business login and also without business logic.
+Fully Abstraction (Interface)          -> Methods only without business logic
+
+Partial Abstraction (Abstract class)
+------------------------------------
+If you declare a method as abstract ,
+-> You should not have method body
+-> You should declare class as abstract class
+-> If you declare a class as abstract , then you cannot instantiate the class(you can't create the object)
+
+
+Fully Abstraction (Interface)
+------------------------------
+->You should have methods only without body (unimplemented methods)
+-> for interface , you cannot instantiate the class(you can't create the object)
+-> We will use implements keyword
+
+======================================================================================================================
+Day 6
+=====
+Condition statements / Control Statements
+==========================================
+
+if (conditions){
+}
+else {
+}
+
+age < 18 {
+
+we can have only if (or) one if and one else (or) one if , more than one else if , one else
+
+
+nested If
+=========
+you can have a if else condition inside a if condition.
+
+
+
+

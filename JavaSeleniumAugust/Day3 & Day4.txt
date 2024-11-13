@@ -1,0 +1,102 @@
+4 Main pillars OOPS:
+====================
+
+Inheritance
+polymorphism
+Abstraction / Hiding
+Encapsulation
+
+
+Inheritance
+===========
+Accessing methods from different classes / Inherit methods from different classes
+
+Code Reusable
+Hierarchy between classes
+
+Types of Inheritance
+=====================
+
+1, Single inheritance
+-----------------------
+ A extends B
+single class accessing property of other class
+
+       class B  (parent)
+          | extends
+       class A  (child)
+
+2. Multilevel Inheritance
+--------------------------
+
+Class A has 2 methods
+class b has 2 methods
+
+A extends B
+class A has both methods from A and B -> 4 methods
+
+Class C has 2 methods
+C extends A
+Now C has 6 methods from all A B and C
+
+       class A    great grand parent
+          |
+       class B    grand parent
+          |
+       class C    parent
+          |
+       class D    Child
+
+In class D we can access for all above 3 class methods
+
+3. Hierarchical inheritance
+----------------------------
+   
+    There one parent class is accesses by more than one child class
+
+                          class A (Parent)   -> execution started
+         |               |              |             |
+      class B         class C        class D       class E
+
+4. Multiple heritance
+----------------------
+
+  This is not possible with class in Java
+  We can access multiple Interface parallelly
+
+5. Hybrid Inheritance
+------------------------
+
+  Combination Single and Multiple
+
+==================================================================================================
+POLYMORPHISM
+============
+
+Poly ->  Many
+Morphism -> Ways
+
+Polymorphism gives multiple way to have a method, also execute
+
+1, Method Overloading (Compile time polymorphism / Static binding / Static polymorphism)
+   - One Class
+   - Same method name
+   - Different Arguments(parameters)
+     - Depends on type
+     - Depends on count
+     - Depends on order
+
+2. Method Overriding  (Runtime polymorphism / Dynamic binding / Dynamic polymorphism)
+   With single class its not possible
+   - Two different Class
+   - Same method name
+   - same Arguments(parameters)
+
+=====================================================================================================
+
+Access specifiers
+=================
+public    -> It can be accessed globally (both inside and outside the package) (either you should extends / you should create object for class holding the method)
+private   -> It can be accessed only in class (Restricted)
+default   -> It can be accessed only inside the package , not outside the package
+protected -> It can be accessed inside package , but outside we can access with child class ( you should use extends keyword )

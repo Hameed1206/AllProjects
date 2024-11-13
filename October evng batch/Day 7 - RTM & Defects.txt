@@ -1,0 +1,80 @@
+Requirement: (What is needed)
+=============================
+A requirement is a specific, documented need or functionality that the software must fulfill. It defines what the system should do, including features, capabilities, or conditions necessary for the product to satisfy user needs or business objectives. Requirements can be functional (defining what the system should do) or non-functional (defining how the system should behave, like performance or security).
+
+Example: 
+--------
+The system must allow users to log in using a username and password.
+
+Acceptance Criteria: (When we should accept)
+========================
+Acceptance criteria are the conditions or standards that a software product must meet to be accepted by the user, customer, or stakeholders. They outline the specific behavior and outcomes required for a feature or requirement to be considered complete and functional.
+
+Example:
+--------
+>Users should be able to log in with a valid username and password.
+>If the username or password is incorrect, an error message should be displayed.
+>The login process must complete within 2 seconds.
+
+Acceptance criteria ensure that the developed feature meets the expectations and provides a clear benchmark for testing and validation.
+
+Acceptance criteria, when I need accept the functions, conditions that must be satisfied to close the test for particular function
+
+RTM - Requirement Traceability matrix
+=====================================
+The Requirement Traceability Matrix (RTM) is a document that links requirements throughout the validation process to ensure that all requirements are tested. It provides a way to track the completeness of the testing process by mapping each requirement to its corresponding test cases.
+
+>Ensures that all requirements are covered by test cases.
+>Helps identify missing or redundant test cases.
+>Assists in tracking the progress of testing and verifying that each requirement has been fulfilled.
+An RTM typically has columns like Requirement ID, Requirement Description, Test Case ID, and Test Status to maintain clear visibility from requirements to their verification.
+
+compare my test case with my requirement and check whether all possible scenarios covered
+
+
+Defect / Bug
+=============
+
+Defect  - During testing you find expected not met with actual , you found a defect, you will intimate developer.
+Developer agreed the defect means , it converted bug
+
+we will track the bugs until it resolves
+
+Status for a bug
+----------------
+New
+Open
+Assigned
+In progress
+Fixed
+In Validation
+Verified
+After 3 days Close
+
+How to create defect
+====================
+
+-Defect subject : Continue button is in enabled state before entering a valid value
+-severity : Critical/
+           High/
+           Medium/
+           Low
+-date  :   todays date
+-assigned team - responsible team
+-environment = L3/L2
+
+Defect Description :
+--------------------
+Steps to reproduce
+==================
+I opened the app in google chrome
+I clicked sign in button
+I clicked in mobile no field
+then I found, continue button is enabled, before entering any value
+Attach Screenshot
+
+
+Severity and priority
+----------------------
+How much it affects the function/delivery is commonly called as severity
+Priority means, on those severity defect, which is on high priority to address first

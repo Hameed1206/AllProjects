@@ -1,0 +1,46 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ShadowRootExample {
+    public static void main(String[] args) {
+        // Set the path to the chromedriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Launch the Chrome browser
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the webpage
+        driver.get("https://example.com");
+
+        // Locate the parent element with shadow root
+        WebElement parentElement = driver.findElement(By.cssSelector("your-parent-element-selector"));
+
+        // Use JavaScriptExecutor to open the shadow root
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        WebElement shadowRoot = (WebElement) jsExecutor.executeScript("return arguments[0].shadowRoot", parentElement);
+
+        // Locate an element within the shadow root
+        WebElement elementInShadowRoot = shadowRoot.findElement(By.cssSelector("your-element-inside-shadow-root-selector"));
+
+        // Perform actions on the element within the shadow root
+        elementInShadowRoot.click();
+
+        // Close the browser
+        driver.quit();
+    }
+}
+
+
+In the above code, replace "path/to/chromedriver" with the actual path to the chromedriver executable on your system. 
+You also need to replace "your-parent-element-selector" with the CSS selector of the parent element that contains the shadow root, 
+and "your-element-inside-shadow-root-selector" with the CSS selector of the element you want to interact with within the shadow root.
+
+The code uses Selenium's JavascriptExecutor to execute the JavaScript code arguments[0].shadowRoot on the parent element. 
+This code retrieves the shadow root associated with the parent element. Once you have the shadow root, 
+you can locate elements within it using standard Selenium findElement methods, 
+as shown with shadowRoot.findElement(By.cssSelector("your-element-inside-shadow-root-selector")).
+
+Remember to ensure that you have the necessary Selenium dependencies and have set up the WebDriver correctly for your browser of choice.

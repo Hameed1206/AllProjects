@@ -1,0 +1,81 @@
+Abstraction
+===========
+Abstraction - Hiding
+
+Hiding the business logic
+
+Two types of Abstraction:
+
+Partial Abstraction (Abstract class)  -> Methods with business login and also without business logic.
+Fully Abstraction (Interface)          -> Methods only without business logic
+
+Partial Abstraction (Abstract class)
+------------------------------------
+If you declare a method as abstract ,
+-> You should not have method body
+-> You should declare class as abstract class
+-> If you declare a class as abstract , then you cannot instantiate the class(you can't create the object)
+
+
+Fully Abstraction (Interface)
+------------------------------
+->You should have methods only without body (unimplemented methods)
+-> for interface , you cannot instantiate the class(you can't create the object)
+-> We will use implements keyword
+
+
+Partial abstraction
+====================
+
+Class 1 
+--------
+public abstract class SeventhDay {
+
+	public void test1() {
+		System.out.println("Abstract class");
+	}
+	
+	public abstract void test2();
+
+Class 2
+-------
+public class SeventhDay1 extends SeventhDay{
+
+	public void test2() {
+		System.out.println("Implementation done");
+	}
+	
+	public static void main(String[] args) {
+		SeventhDay1 s = new SeventhDay1();
+		s.test1();
+		s.test2();
+	}
+============================================================================
+
+Fully Abstraction
+==================
+
+Interface
+----------
+public interface FullyAbstarction {
+
+	void test2();
+	
+	void test3();
+}
+
+Class 1 
+-------
+public class FullyAbstract implements FullyAbstarction {
+
+	
+	public void test2() {
+		System.out.println("First method");
+	}
+	
+	public static void main(String[] args) {
+		
+		FullyAbstract ff = new FullyAbstract();
+		ff.test2();
+		ff.test3();
+	}

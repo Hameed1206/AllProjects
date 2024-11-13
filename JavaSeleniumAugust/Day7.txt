@@ -1,0 +1,146 @@
+Switch Case:
+============
+
+The switch statement is a multiway branch statement. It provides an easy way to dispatch execution to different parts of code based on the value of the expression. 
+
+switch (expression)
+{
+  case value1:
+    statement1;
+    break;
+
+  default:
+    statementDefault;
+}
+
+-------------------------------------------------------------------
+Coding Example
+------------------------------------------------------------------
+package org.java.automation;
+
+public class SwitchCase {
+
+	//In a hostel canteen we have schedule of tiffin available everyday, whatever day we chooses we will get food respective to that day
+	public static void main(String[] args) {
+		
+		String day = "Wednesday";
+		int count = 3;
+		
+		switch (day) {
+		
+		case "Monday":
+			System.out.println("Monday Menu is Idli and sambar");
+			break;
+			
+		case "Tuesday":
+			System.out.println("Tuesday Menu Dosai and chutney");
+			break;
+			
+		case "Wednesday":
+			System.out.println("Wednesday Menu Poori and channa");
+			break;
+			
+		case "Thursday":
+			System.out.println("Thurday Menu Chappathi and Daal");
+			break;
+		
+		case "Friday":
+			System.out.println("Friday Menu Pongal and Vada");
+			break;
+
+		default:
+			System.out.println("Food not available, Kindly reach to general canteen");
+		}
+
+		-----------------------------------------------
+                // This switch cases servers as count of plates 
+                ------------------------------------------------
+		switch (count) {
+		case 1:
+			System.out.println("server only one plate");
+			break;
+			
+		case 2:
+		    System.out.println("serve two plates");
+		    break;
+		    
+		case 3:
+			System.out.println("serve 3 plates");
+			break;
+
+		default:
+			System.out.println("Requested food not available");
+			break;
+		}
+	}
+}
+========================================================================================================================================================
+OPERATORS:
+==========
+Arithmetic operators
+--------------------
+
+Addition + , Subtraction - , Multiplication * , Division / , modulus %
+
+Examples:
+=========
+A=20 and B=10
+
+Addition will add the values (A+B) = 20+10 -> 30
+Subtraction (A-B) = 20-10 -> 10
+Multiplication (A*B) = 20*10 -> 200
+Division (A/B) = 20/10 -> 2 (returns Quotient Value)
+Modulus (A%B) = 20/10 ->0 (returns remainder value)
+
+
+Comparison operator
+-------------------
+Equal to == , returns true if LHS equal to RHS
+Not Equal != , returns true if LHS not equal to LHS
+less than < , returns true if LHS less than RHS
+greater than > , returns true if LHS Greater than RHS
+less than or equal to <= , returns true if LHS less than or equal to RHS
+grater than or equal to >= , returns true if LHS Greater than or equal to RHS
+
+
+Logical operators
+-----------------
+AND &&, both condition should satisfy
+OR ||, Any one condition should satisfy
+NOT ! , Inverse operation, to change the result direct opposite
+
+AND Operator: (&&, both condition should satisfy)
+
+Condition 1          Condition 2         Result
+   True                 True              True
+   True                 False             False
+   False                True              False
+   False                False             False
+
+
+OR Operator: (||, Any one condition should satisfy)
+
+Condition 1          Condition 2         Result
+   True                 True              True
+   True                 False             True
+   False                True              True
+   False                False             False
+
+Example:
+--------
+
+A=10 B=20 C=30
+
+if(B>A && B>C){
+    B is greatest of all
+}
+In above B is greater than A but not greater than C , AND operator expects both condition to be satisfied, so above case is false
+
+
+if(B>A || B>C){
+    B is greater than atleast one value
+}
+In above B is greater than A but not greater than C , OR operator expects anyone condition to be satisfied, so above case is True, since B is greater than atleast one value A.
+
+
+

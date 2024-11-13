@@ -1,0 +1,45 @@
+TestNG -> Test Next Generation / Test New Generation
+-----------------------------------------------------
+
+Its a Framework, Its is providing a for our project
+
+4 packages
+Base  -> BaseClass   > startup and teardown
+utils -> HelperClass > To maintain reusable methods
+pages -> BrowserPages > To maintain locators
+test -> TestExecution > Trigger our execution
+
+
+Advantages:
+-----------
+1, TestNG will generate default HTML report
+2, We can prioritize the test cases
+3, We can also run one particular test multiple times
+4, Data Parameterization is possible
+5, Achieve bulk data testing
+6, Parallel testing
+7, Cross browser testing is possible
+
+Annotations
+===========
+@Beforesuite
+@BeforeTest
+@Beforeclass      - runs only ones in class before all test
+@BeforeGroups
+@Beforemethod     - run everytime before test
+@Test             -  Real test case
+@Aftermethod      - run everytime after test
+@AfterGroups
+@Afterclass       - runs only once in a class after all test
+@AfterTest
+@AfterSuite
+
+
+@Test(priority = 1)
+@Test(dependsOnMethods = "testThree")
+@Test(dependsOnMethods = {"testOne","testThree"})
+@Test(invocationCount = 5)
+
+@Test(groups = {"smoke","regression"})
+@Test(dependsOnGroups = "smoke")
+@Test(alwaysRun = true)

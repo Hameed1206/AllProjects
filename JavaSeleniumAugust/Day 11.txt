@@ -1,0 +1,67 @@
+Day 11
+=======
+Arrays:
+-------
+To store multiple value under same reference , we will use Array
+In Java, Array is a group of like-typed variables referred to by a common name. 
+Arrays may be stored in contiguous memory [consecutive memory locations].
+Since arrays are objects in Java, we can find their length using the object property length. 
+A Java array variable can also be declared like other variables with [] after the data type.
+The variables in the array are ordered, and each has an index beginning with 0.
+Java arrays can also be used as a static field, a local variable, or a method parameter.
+An array can contain primitives (int, char, etc.) and object (or non-primitive) references of a class depending on the definition of the array. In the case of primitive data types, the actual values might be stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment. 
+
+The Arrays class in the java.util package is a part of the Java Collection Framework. This class provides static methods to dynamically create and access Java arrays. It consists of only static methods and the methods of Object class. The methods of this class can be used by the class name itself.
+
+
+	Example:
+        ========
+We can declare array in more than one way,
+
+Either we can declare with size and add values after e.g, below int[]
+Or we can directly add values e.g., below String []
+
+		int[] irr = new int[5];
+		String[] srr =  {"java", "Selenium", "Python", "C#", "SQL", "JavaScript"};
+		int[] arr = new int[10];
+		
+		irr[0] = 23;
+		irr[1] = 35;
+		irr[2] = 65;
+		irr[3] = 75;
+		irr[4] = 95;
+		
+		int a = 1;
+		
+          for (int i = 0; i < arr.length; i++) {
+        	  
+        	  arr[i] = a+i;
+		}
+          for (int i = 0; i < arr.length; i++) {
+        	  System.out.print(arr[i]+" ");
+		}
+=====================================================================================================
+Scanner 
+=======
+
+Lets break System.out.println();
+
+System -> is a Final class
+out -> a static field from System class, also an object of printstream class
+println(); -> method from printstream class (It prints the argument passed to it and moves the cursor to the next line (i.e., it includes a newline at the end).
+
+Scanner class is used to get the input from user for the operation, we will get inputs in runtime
+
+To access scanner class and its functions, we need to create object for it, and in parameter we have to pass System.in
+Scanner obj = new Scanner (System.in);
+
+System -> is a final class
+in -> input stream 
+System.in , a standard input stream, reads user input from keyboard
+
+methods in scanner:
+===================
+s.nextInt() -> this will accept integer value
+s.nextFloat() -> accepts float value
+s.next() -> accepts string value (only one word, if you mention any space, it wont consider the words after space)
+s.nextLine() -> accepts string value in a complete line including spaces

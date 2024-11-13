@@ -1,0 +1,137 @@
+Principles of Testing:
+=====================
+Testing shows the presence of defects
+Exhaustive testing is not possible
+Early testing
+Defect clustering
+Pesticide paradox
+Testing is Context-Dependent
+Absence of Errors fallacy
+
+
+1. Testing shows the Presence of Defects
+The goal of software testing is to make the software fail. Software testing reduces the presence of defects. Software testing talks about the presence of defects and doesn’t talk about the absence of defects. Software testing can ensure that defects are present but it can not prove that software is defect-free. Even multiple tests can never ensure that software is 100% bug-free. Testing can reduce the number of defects but not remove all defects.
+
+2. Exhaustive Testing is not Possible
+It is the process of testing the functionality of the software in all possible inputs (valid or invalid) and pre-conditions is known as exhaustive testing. Exhaustive testing is impossible means the software can never test at every test case. It can test only some test cases and assume that the software is correct and it will produce the correct output in every test case. If the software will test every test case then it will take more cost, effort, etc., which is impractical.
+
+3. Early Testing
+To find the defect in the software, early test activity shall be started. The defect detected in the early phases of SDLC will be very less expensive. For better performance of software, software testing will start at the initial phase i.e. testing will perform at the requirement analysis phase.
+
+4. Defect Clustering
+In a project, a small number of modules can contain most of the defects. The Pareto Principle for software testing states that 80% of software defects come from 20% of modules.
+
+5. Pesticide Paradox
+Repeating the same test cases, again and again, will not find new bugs. So it is necessary to review the test cases and add or update test cases to find new bugs.
+
+6. Testing is Context-Dependent
+The testing approach depends on the context of the software developed. Different types of software need to perform different types of testing. For example, The testing of the e-commerce site is different from the testing of the Android application.
+
+7. Absence of Errors Fallacy
+If a built software is 99% bug-free but does not follow the user requirement then it is unusable. It is not only necessary that software is 99% bug-free but it is also mandatory to fulfill all the customer requirements.
+
+
+
+Testing Technique
+=================
+
+1, Boundary Value Analysis: Focuses on testing at the boundaries between partitions (e.g., minimum, maximum, just inside/outside boundaries). Since errors often occur at the boundaries, this technique helps ensure correctness at these critical points.
+
+Example:
+--------
+Assume we are going to apply for license - Age limit is 18 to 60
+Now we should ensure that this corner case is working properly
+we should check   age = 18 -> Positive output
+                age+1 = 19 -> Positive output
+                age-1 = 17 -> Negative output (Should not be allowed)
+                    
+                  age = 60 -> Positive output
+                age-1 = 59 -> Positive output
+                age+1 = 61 -> Negative output (Should not be allowed)
+Likewise we check the corner values and come out with a conclusion whether the application is accepting the correct range of values.
+
+
+2, Equivalence Partitioning: Divides input data into partitions where all values in a partition are expected to behave similarly. Testing one value from each partition can validate the behavior for all values in that group. This reduces the total number of test cases.
+
+Example:
+--------
+Education institute is having a application form, depends on age the course will change
+Age 0-5  -> Primary                  eg., 3
+    6-10 -> Mid-School                    7
+   11-15 -> High School                   13
+   16-20 -> Diploma/Graduate              17
+   21-25 -> Post Graduation               22
+Now in this case we should pickup one value from each partition and check whether we are getting the exact output, that one value represent all other values of its range.
+
+
+3, Decision Table Testing: Represents different combinations of inputs and corresponding outputs in a tabular form. It helps in testing complex business rules by covering all possible conditions and decision outcomes systematically.
+
+Example:
+--------
+Assume a login functionality
+
+username     valid           invalid         Valid           invalid
+password     valid           valid           invalid         invalid
+
+Result      Homepage          error           error           error  
+
+We should validate with different combination of inputs and observe the results
+
+
+4, State Transition Testing: Tests how the system transitions between different states based on inputs. This is useful for systems that have distinct states and depend on previous inputs to determine the next state (e.g., login systems).
+
+Example:
+--------
+Take banking website and try access it with both valid and invalid credentials
+
+               valid       invalid   
+Attempt1 (a1)    a4           a2       Initially, If we enter valid credentials we will be navigated to homepage(a4) / 
+                                       If credentials are invalid means we will get error and given second chance(a2)
+
+Attempt2 (a2)    a4           a3       Now in second chance If we enter valid credentials we will be navigated to homepage(a4) / 
+                                       If again credentials are invalid means we will get error and given a third chance(a3)
+  
+attempt3 (a3)    a4           a5       Now in third chance If we enter valid credentials we will be navigated to homepage(a4) / 
+                                       If again credentials are invalid means then the account will be blocked(a5)
+Homepage (a4)
+
+Blocked  (a5)
+
+Here the state of the application is changing from one to one, validating this is called as state transition testing
+
+5, Syntax Testing: Validates that the software can correctly handle inputs according to a defined syntax or format (e.g., validating email format). It ensures the system handles both valid and invalid syntax appropriately.
+
+Example:
+--------
+Lets take a login function where the email ID is expected to have,
+5 letters initially 
+1 @ symbol
+3 letters after @
+1 . symbol
+2 letters after .
+above all mandatory
+
+Valid email : javaj@gma.co
+
+So how we will validate this , , ,
+first we should check by passing 4letters    ,    java@gmail.com   , ensure system should not accept this, we should get error
+next try without @                           ,    javasgmail.com   , ensure system should not accept this, we should get error
+next try with less than 3 letters after @    ,    javas@gm.com     , ensure system should not accept this, we should get error
+next try without . symbol                    ,    javas@gmacom     , ensure system should not accept this, we should get error
+next try with less than 2 letters after .    ,    javas@gmail.c    , ensure system should not accept this, we should get error
+
+likewise we should ensure the syntax that was defined is satisfied for a valid email
+
+
+Below mentioned techniques is mostly done by experienced people, depends on their experience. They will check on which module they might expect more issues. 
+Also we should think like users and explore the software with some guesses and intuition, we should try in both positive and negative scenario.
+
+6, Error Guessing: Involves leveraging the tester's experience to guess potential areas where defects might occur. By focusing on likely error-prone areas, this technique increases the chance of finding bugs based on intuition and past knowledge.
+
+7, Exploratory Testing: A simultaneous process of learning, test design, and execution where the tester explores the system dynamically without predefined test cases. It's particularly useful for discovering unknown issues or testing creatively beyond formal test scripts.
+
+8, Use Case Testing: Derives test cases based on the user scenarios outlined in use cases. It ensures that the software's functionality aligns with user expectations and covers all potential user actions.
+
+9, Ad-hoc Testing: Informal, unstructured testing where the tester tries to break the system by using unconventional inputs and actions. There’s no planning or documentation, but it can reveal defects not covered by formal testing techniques.
+
+    

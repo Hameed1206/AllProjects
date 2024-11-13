@@ -1,0 +1,27 @@
+Pre-requisites
+
+JDK 11
+Eclipse oxygen or IDE
+
+To configure Cucumber in Eclipse
+
+Help --> market place --> cucumber --> install and restart eclipse
+
+Download Jars 
+
+mvnrepository.com 
+
+search cucumber java (io.cucumber) 6.10 -- download jar
+search cucumber junit (io.cucumber) 6.10 -- download jar
+
+create a new java project
+
+add downloaded jars -- right click -- build path -- config. build path --> libraries-->
+add external jars --> select downloaded 2 jars (open)-- apply and close
+
+new Folder (Feature)
+
+
+
+
+

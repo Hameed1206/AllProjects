@@ -1,0 +1,102 @@
+Selenium
+========
+> It is suite, which has lot of functions to automate web browser
+> It is open source
+> Easy to learn
+> Supports multiple language like Java, Python, JavaScript, C# etc.
+> Supports multiple browsers and platforms (OS)
+> Selenium is very extensible and can be integrated with other tools and frameworks like TestNG, JUnit, Cucumber, etc.
+> Selenium can be integrated into CI/CD pipelines to automate the testing of each code change. 
+
+Disadvantages:
+--------------
+> Cannot automate desktop and mobile applications
+> Cannot automate OTP, Captcha and images
+> Don't have any in-built report
+
+Components of selenium:
+-----------------------
+> Selenium IDE (Integrated development environment)
+> Selenium RC (Remote control)
+> Selenium Webdriver
+> Selenium Grid
+
+Selenium 3 Architecture:
+------------------------
+Selenium 3 Architecture is made up of four major components:
+> Selenium Client library / Language Bindings (download)
+> JSON wire protocol over HTTP
+> Browser Drivers (download)
+> Browsers (download)
+
+Selenium 4 Architecture is made up of four major components:
+> Selenium Client library / Language Bindings (download)
+> W3C protocol
+> Browser Drivers (download)
+> Browsers (download)
+
+Features of Selenium 4 , , ,
+	1. Enhanced Selenium Grid
+	2. Upgraded Selenium IDE
+	3. Relative Locators in Selenium 4
+	4. Improved Documentation
+	5. Support for Chrome Debugging Protocol
+	6. Better Window/Tab Management in Selenium 4
+	7. Deprecation of Desired Capabilities
+	8. Modifications in the Actions Class
+
+W3C protocol was introduced because all the web browsers followed the W3C standards better communication with the browsers, stability, and common code 
+(i.e. no browser specific code required). 
+Due to W3C there is a direct transfer of information between client and server.
+Major components of selenium 4 are selenium client and webdriver language bindings.
+And also all the browser drivers followed the W3C standards. To standardize the communication, JSON wire protocol was replaced by W3C. 
+
+We are going to use selenium webdriver to automate the web applications
+
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+
+Maven
+=====
+-> It is a open source build tool or a project management tool
+-> As a build automation tool, it automates the source code compilation and dependency management, assembles binary codes into packages, and executes test scripts. Maven translates and packages your source code so that it becomes an executable application. 
+-> Maven is generally used to build software application, manage dependencies, running test and generate reports
+-> In real time we may use 20 or more Jar file, To overcome this we are using maven. 
+
+In maven execution starts from pom.xml file, ,
+pom.xml, which will contains all dependencies
+POM -> Project object model
+Dependency management
+
+A POM is the basement of the Maven framework. It’s a type of XML file that accommodates data from your project and the configuration details. It includes the project, group ID, POM model version, artifact ID (project ID), and version
+
+Goal of Maven:
+--------------
+-> Clean - It will uninstall the old version
+-> Install - It will install the updated version
+-> Test - It will execute our code in newly installed version
+
+Types of Repository
+-------------------
+>> Local Repository : The local repository is a directory on your local machine where Maven stores all downloaded dependencies. When you build a project, Maven first checks the local repository to find the required dependencies. It is located on your local machine, typically in the .m2 directory.
+>> Central Repository : The central repository is maintained by the Maven community and is the default repository Maven uses if the dependency is not found locally. It contains a large collection of libraries, plugins, and other resources that Maven can download to build your project.
+>> Remote Repository : Remote repositories are additional repositories that developers or organizations can configure. They are typically hosted by third parties or internally within an organization. Remote repositories can be used to store custom libraries, company-specific artifacts, or even additional open-source libraries that may not be available in the central repository.
+
+Maven Life Cycle
+----------------
+	Validate: It authorizes your project’s correctness and ensures necessary data are available.
+	Compile: It compiles the source code of your project.
+	Test: It tests your compiled source codes with the unit testing frameworks.
+	Package: In this phase, your source code will be packaged as a deliverable.
+	Verify: It ensures your code’s quality with an integration test.
+	Install: Your code will be installed in the local repository.
+	Deploy: Finally, the code is ready to share with the other developers. 
+
+
+An archetype is a model, pattern, or symbol that is universally understood and used as a prototype for others to copy, emulate, or pattern.
+Maven Archetype is a Maven plugin that makes it possible to create a project structure based on a template. These archetypes are essentially project templates that Maven generates when you create a new project. 
+Archetype is a Maven project templating toolkit 
+
+In Software industry the application were deployed like, Application developed will be converted to Artifacts , 
+Artifacts will be deployed to server
+Maven is a build tool , So they deploy maven artifact

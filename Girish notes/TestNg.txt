@@ -1,0 +1,111 @@
+Java:
+=======
+Programming language
+
+Selenium:
+============
+Automation tool
+
+DataDriven:
+===========
+Excel Read & Write
+
+
+TestNG: Test Next Generation
+=============================
+It is an advanced version of--->JUnit
+Test Next Generation--->TDD(Test Driven Development)
+
+
+Features:
+===========
+1.  Simple Annotations --->STCM
+2.  Ignore
+3.  Priority
+4.  Grouping
+5.  Dependency
+6.  Invocation count(multiple times)
+7.  Time out
+8.  Exception Test
+9.  Parallel Test
+10. Parameterized Test
+11. Data Provider(multiple set of datas)
+12. Cross Browser Test
+13. Report 
+14. Failed test
+15. IRetryAnalyzer 	1. testng-failed.xml (it stores failed test cases)
+			2. IRetryAnalyzer (I)
+			3. IAnnotationTransformer-----> IRetryAnalyzer
+
+
+Simple Annotation:
+=======================
+@BeforeSuite
+	@BeforeTest
+		@BeforeCLass
+			@BeforeMethod
+				 @Test
+			@AfterMethod
+		@AfterClass
+	@AfterTest
+@AfterSuite
+
+
+
+
+Amazon Register:
+=================
+1. Setup
+2. BrowserLaunch
+3. EnterUrl
+4. Login
+5. SearchLapTop --> @Test 1
+5. SearchMobile --> @Test 2
+6. VerifyHomePage
+7. LogOut
+8. CloseBrowser
+9. Delete Cookies
+
+Execution process:
+====================
+@BeforeSuite
+@BeforeTest
+@BeforeCLass
+@BeforeMethod
+	@Test 1
+@AfterMethod
+@BeforeMethod
+	@Test 2
+@AfterMethod
+@AfterClass
+@AfterTest
+-----------------
+@AfterSuite
+
+
+JUnit:
+=======
+Annotations
+@BeforeClass
+	@Before
+		@Test
+	@After
+@AfterClass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

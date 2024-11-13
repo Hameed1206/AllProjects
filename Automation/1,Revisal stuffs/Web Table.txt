@@ -1,0 +1,125 @@
+Web Table
+=========
+
+This is how the DOM Structure for web table
+
+<table>                  -> Here the table starts
+ <tbody>                 -> This is table body locator
+   <tr>                  -> table row - Inside table body we will have n of rows
+     <th> header </th>   -> table head - In the 1st row we will have header of the table (depends on application)
+     <th> header </th>   -> In between header tags we will have header value and tags will be closed
+     <th> header </th>   -> We need to locate this row(1st row or row having header values) to access header values
+   </tr>                 -> After all header values tne particular header row tag will be closed and move to next row 
+   <tr>                  -> Here we are moving to 2nd row
+     <td> data </td>     -> table data - Here we have datas present in 2nd row 
+     <td> data </td>     -> In between data tags we will have data value and tags will be closed
+     <td> data </td>     -> We need to locate this row to access datas present inside this row
+   </tr>                 -> Particular row tag is closed here , like this we will have N no of rows and datas inside.
+ </tbody>                -> After all the rows, Table body is closed
+</table>                 -> Then Table tag will be closed.
+
+Web Table is index based
+we can access any row/data by its index
+tr - row  ,   td - data / column 
+========================================================================================
+For eg.,
+========
+<table id = "customer">
+ <tbody>
+   <tr> . . . . </tr>             - 1st row
+   <tr>                           - 2nd row starts
+     <td> value 1 </td>
+     <td> value 2 </td>
+     <td> value 3 </td>
+   </tr>                          - 2nd row ends
+   <tr> . . . . </tr>             - 3rd row
+   <tr>                           - 4th row starts
+     <td> data 1 </td>
+     <td> data 2 </td>
+     <td> data 3 </td>
+   </tr>                          - 4th row ends
+   <tr> . . . . </tr>             - 5th row
+   <tr> . . . . </tr>             - 6th row
+   <tr> . . . . </tr>             - 7th row
+ </tbody>
+</table>
+------------------------------------------------------------------------------------------------
+scenario-1
+==========
+Now I want to access to 4th row 2nd data , How I will write xpath
+table[@id = 'customers']/tbody/tr[3]/td[1]    -> With this I can access the particular data.
+In above the index for 4th row is 3 and 2nd data is 1.
+
+WebElement element = driver.findElement(By.xpath("table[@id = 'customers']/tbody/tr[3]/td[1]"));
+system.out.printLn(element.getText());
+
+Console
+=======
+data 2
+
+
+table[@id = 'customers']/tbody/tr[3]/td[1]
+                                  |     |
+  By changing this index we can access any row and data in web table
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+scenario-2
+==========
+How to get all values
+
+List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers']/tbody/tr/td")); -> Here I am not giving any index , so it will access all
+
+for (WebElemnt x : element) {
+        system.out.printLn(x.getText());
+}
+
+Above code will print all the datas in web table (Note : if u give td in locator, this will print only datas not the header)
+
+Console
+=======
+value 1
+value 2
+value 3
+Note : All the data in table it will print
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What if we not gave td in xpath
+
+List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers']/tbody/tr")); -> Here I am not giving any index , so it will access all
+
+for (WebElemnt x : element) {
+        system.out.printLn(x.getText());
+}
+
+If we didnt gave td in xpath , control will be at row. so it will print as a row values
+
+Console
+=======
+value 1 value 2 value 3
+
+data 1 data 2 data 3
+
+Here iteration only happening with rows , not for datas , here the header values will also be printed 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to get size 
+
+To get row size
+List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers']/tbody/tr"));
+element.size();
+
+To get column size
+List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers']/tbody/tr/th"));
+element.size();
+
+To get data size
+List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers']/tbody/tr/td"));
+element.size();
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to customize rows and column
+
+If we want only last 3 rows
+List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers']/tbody/tr/td"));
+for(int i=element.size()-3; i< element.size(); i++) {
+ system.out.printLn(element.get(i)); 
+}
+
+

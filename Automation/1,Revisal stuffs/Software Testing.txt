@@ -1,0 +1,169 @@
+Software Testing
+================
+
+What is testing / Why testing is mandatory ?
+If software is not working fine means this will 
+-Affects the confidence of user
+-Loss of money
+-Loss of time
+-Affect the Business reputation
+
+Software testing is a way to assess the quality of the software and to reduce the risk of software failure in operation
+Risk - Something which may fail
+
+Activities in Testing:
+----------------------
+Test Planning
+Test Analysis
+Test Design
+Test Implementation
+Reporting test progress and results
+
+2 types of testing
+Dynamic Testing -> Run the product and find the defect
+Static Testing  -> Review the work products (Reviewing the documents RD, design, user stories, Code, Test case)
+
+Objectives of Testing:
+----------------------
+-> To verify all specified requirements are fulfilled
+-> To prevent defects early in lifecycle which may occur in later stages (Do static testing)
+-> To build confidence in the level of quality of the product
+-> To find defects to reduce the risk
+-> To provide sufficient information to the stakeholders about the quality of the software
+Note : Whoever interested in product are stakeholders
+-> To comply with contractual, legal and regulatory requirements.
+
+Testing and Debugging:
+----------------------
+Tester will find the defects and developer will debug the code to find the error and fix it
+ * Debugging is a development activity -> Finding, Analyzing and fixing the defects
+
+What is Errors, Defects, and failures
+
+A person who develops the the software can make Error(Mistake), this will cause a failure, so a defect(fault/Bug) is opened
+
+-----------------------------
+Seven principles of testing ||
+-----------------------------
+1, Testing shows presence of defects, but not their absence(Testing is not a prrof of correctness)
+2, Exhaustive testing is impossible
+3, Early testing saves time and money
+4, Defects cluster together (Identify particular module which may have more defects, so test those modules completly ASAP)
+5, Beware of the pesticide paradox (Pests in a app is killed by test cases and test execution) change approach of test / change test cases so we will get error in new function because same test case wont find defects
+6, Testing is context dependent
+7, Absence of error is fallacy
+
+------------------
+Levels of Testing
+------------------
+-Unit Testing
+ >Testing a particular unit of a application, Each and every unit is tested functional and Non functional.
+ >White Box unit testing is done by Developers
+ >Black box unit testing is done by testers
+
+-Integration Testing
+ >Units are integrated together, Here only integration is focused, whether connection done proper, how one unit affects other unit during integration, both Functional and Non funtional   wise, We will get only defects related to integration only mostly
+
+-System Testing
+ >End to End flow of application is tested here, all possible end to end flow is tested.
+ >Testing done in a copy of live server
+
+-Acceptance Testing
+ >This done by customers
+ >Testing will be done in their server or copy of production server
+ >Checking the requirements and making sure whether appliaction is fit to go live.
+
+-----------------
+Types of Testing
+-----------------
+
+White Box Testing
+-----------------
+Done by developers who develop the code
+He knows the internal module structure , Logic/coding behind the functions
+
+Black Box Testing
+------------------
+Done by Testers , without knowing internal structure and coding
+
+Smoke Testing
+-------------
+Hi level testing to ensure the build is fine, also critical functions sre working fine.
+
+Sanity Testing
+--------------
+Validating the critical functionalities after new build 
+Need to ensure before deploy all critical functions are working as expected
+
+
+Regression Testing
+------------------
+Will be done in intervals
+Existing functionaliities should not be affected by new development/ new updates.
+All test cases will be tested / executed during regression
+
+We check exising working functionalities is still working fine
+or
+Checking the consequenses in existing functions by new changes
+
+What is Functional testing
+??????????????????????????
+Whether its functioning as per requirement or not
+
+What is Non-Functional testing
+??????????????????????????
+Checking the behaviour of application
+
+Performance testing ->
+-------------------
+check the performance of application in terms of response time
+Standard response time is 3 sec
+
+Load Testing ->
+--------------
+Normal load will be given to application and measure the response time
+
+Sress Testing ->
+--------------
+We give stress to website in terms of user / extreme load given and measure the response time
+
+Volume Testing ->
+-----------------
+Extreme data load is given to applcation and measure the response time (this is data not user)- data in type of size(mb/kb/tb/gb)
+
+Portability Testing
+Security Testing
+Usability Testing
+Accessability Testing
+Recovery Testing
+30 to 35 types of testing available in performance testing
+
+===============================================================================================================================================
+SDLC -> Software Development Life Cycle
+=======================================
+We have some process to develop a application
+
+Traditional process -> Waterfall methodology (Sequential model)
+
+Requirement gathering
+Analysis of requirement
+Design as per requirement and analysis
+Implementation (Coding)
+
+V-Model -> Early testing is a moto
+
+Levels of Testing
+Unit Testing
+Testing a particular unit of a application
+-Integration Testing
+-System Testing
+-Acceptance Testing
+
+How a test case will be designed ?????
+Test case ID
+Test Case Description
+Prerequiste
+Expected
+Actual
+Status
+Comments

@@ -1,0 +1,7 @@
+SQL
+
+//Command to create database
+create database name;
+
+create database student;
+above line will create a database named student

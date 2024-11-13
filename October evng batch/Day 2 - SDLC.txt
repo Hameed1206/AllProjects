@@ -1,0 +1,104 @@
+SDLC
+====
+Software Development life cycle
+
+Requirement Analysis
+====================
+Client -> Requires application and approaching -> organization > I need a ticket booking application
+Client -> Giving requirement as location - India -> Transport mode - Bus, Train, Flight  -> Include All major cities -> In Homepage need Login & Registration option -> Based on requirement Organization will prepare Quotation-> Quotation and budget will be given to client
+
+Communication
+Client -> Organization(BA)
+BA ->  Business Analyst -> Design, Developer, Tester
+BA will explains the requirement to all the tech peoples, If they have doubt means they can ask and get it cleared
+
+
+Design 
+======
+Design the template of the application
+design is approved by client through mail or by any other means of communication they adopted
+
+
+Development
+============
+Will develop the application using,
+Coding -> Java, Python, JavaScript
+Lot of technologies
+
+In a team we will have More than one developers
+
+Assume we have 3 developers
+
+Each developer will develop a unit of functions and he will validate each unit after development (Unit Testing)
+
+All the 3 developed Modules will be combined and given to testers for further testing
+For Eg.,
+Developer 1 develops 3 functions(Login, registration etc)
+Developer 2 develops 4 functions(Ticket booking functions etc)
+Developer 3 develops 5 functions(Payment functions etc)
+
+They will combine all the modules and one proper application will be developed
+
+Testing
+========
+Testing environment , here only testing will happen
+This is our goal  -> Expected = Actual 
+
+Tester ensures whether , Requirement is fulfilled
+
+If he found discrepancy , he will raise a defect,
+Developer will fix the defect  -> Retest  -> if working fine means , we can close
+
+All types testing activities will be performed including functional and non-functional
+
+Tester will provide their Approval for deployment
+
+Deployment
+==========
+Application is deployed to real world users
+
+
+Maintenance
+===========
+Maintain the application
+
+==================================================================================================
+Methodologies
+--------------
+1, Waterfall model
+2, Agile Model
+
+
+Waterfall
+---------
+Sequential execution 
+
+Agile
+-----
+Parallel execution
+
+
+Waterfall 
+=========
+Requirement   (Full requirement)
+design
+develop
+test    ->   Changing requirement is not advisable
+deploy
+
+All above will be performed sequentially, one phase is dependant on other phase
+
+Agile 
+=====
+Design, development and testing process will start parallelly
+We have a fixed time interval called Sprint. For every sprint we will have small set of functions to be developed and tested 
+Full requirements is splitted in to multiple sprint
+1st 3 weeks   -> Login , registration, search field, add to cart, payment -> cash on delivery
+deployed
+2nd 3 weeks -> Electronics, mobile, payment -> credit card and debit card
+deployed
+If we have any issue in 1st sprint functions, we can change in next sprints, Even we can change requirements also if needed.
+Agile methodology will accept changes
+
+
+

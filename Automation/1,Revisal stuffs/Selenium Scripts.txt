@@ -1,0 +1,315 @@
+As a part of initial setup we need to add dependencies
+
+Selenium:
+---------
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.18.1</version>
+</dependency>
+
+Webdriver:
+----------
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version>
+</dependency>
+
+
+
+Selenium Scripts
+================
+
+If we are not using maven, then we have to add selenium library and driver file for each browser to do setup
+In below code, we have to give driver file path.
+
+                         System.setProperty("webdriver.edge.driver", "C:\\Users\\91936\\eclipse-workspace\\SeleniumAutomation\\target\\msedgedriver.exe");
+                         System.setProperty("webdriver.chrome.driver", "C:\\Users\\91936\\eclipse-workspace\\SeleniumAutomation\\target\\chromedriver.exe");
+
+                                                  or
+If we have maven, we can simply add the webdrivermanager dependency and use below code
+                         WebDriverManager.chromedriver().setup();
+                         WebDriverManager.edgedriver().setup();
+                         WebDriverManager.firefoxdriver().setup();
+                         WebDriverManager.safaridriver().setup();
+                         
+Driver Initialization
+                         WebDriver driver = new ChromeDriver();
+                         WebDriver driver = new FirefoxDriver();
+                         WebDriver driver = new EdgeDriver();
+                         WebDriver driver = new SafariDriver();
+
+WebDriver is a interface, we use classes like ChromeDriver to create object for it.
+
+Browser operations:
+===================
+
+To maximize the window
+                         driver.manage().window().maximize();
+To login to a URL
+                         driver.get(url);
+To get the page title
+                         String title = driver.getTitle();
+                         System.out.println(title);
+To get the current page URL
+                         String url = driver.getCurrentUrl();
+                         System.out.println(url);
+To close the particular window
+                         driver.close();
+To terminate the execution
+                         driver.quit();
+To navigate to a webpage
+                         driver.navigate().to(url);
+To go back to last page
+                         driver.navigate().back();
+To go forward to next page
+                         driver.navigate().forward();
+To refresh the current page
+                         driver.navigate().refresh();
+
+
+Element Operations:
+===================
+To get the locator of particular function
+Here WebElement is interface
+                WebElement element = driver.findElement(By.xpath(value));
+                WebElement element = driver.findElement(By.id(value));
+                WebElement element = driver.findElement(By.className(value));
+                WebElement element = driver.findElement(By.name(value));
+                WebElement element = driver.findElement(By.tagName(value));
+                WebElement element = driver.findElement(By.cssSelector(value));
+                WebElement element = driver.findElement(By.linkText(value));
+		WebElement element = driver.findElement(By.partialLinkText(value));
+
+To send a value/input to a textbox in web page using web element reference
+                element.sendKeys(value);
+	
+To click a button function in a web page using web element reference
+                element.click();
+
+To clear a existing / default value in a text bob in web page using web element reference
+                element.clear();
+	
+To get a text from a web page using web element reference
+                String text = element.getText();
+                System.out.println(text);
+	
+To get a value that is passed to the text box in web page using web element reference
+	        String attribute = element.getAttribute("value");
+	        System.out.println(attribute);
+
+Actions class:
+--------------
+To perform mouse and keyword actions
+Instantiate actions class and pad driver reference,
+	        Actions act = new Actions(driver);
+	        WebElement element = driver.findElement(By.xpath(value));
+
+To mouse over to particular element
+		act.moveToElement(element).perform();
+	
+To drag and drop a element
+		WebElement elementSrc = driver.findElement(By.xpath(value));
+		WebElement elementTgt = driver.findElement(By.xpath(value2));
+		act.dragAndDrop(elementSrc, elementTgt).perform();
+
+To perform right click
+		act.contextClick(element).perform();
+
+To perform double click
+		act.doubleClick(element).perform();
+
+To scroll up and scroll down
+                act.scrollToElement(element).perform();
+
+To press a key from keyboard like ctrl, shift and tab
+               > To send values in uppercase letters
+		act.keyDown(Keys.SHIFT).sendKeys(element, value).keyUp(Keys.SHIFT).perform();
+
+		act.keyDown(Keys.CONTROL).perform();
+                between this add any action you want to perform
+		act.keyUp(Keys.CONTROL).perform();
+                
+               > To move control to next tab
+		act.keyDown(Keys.TAB).perform();
+		act.keyUp(Keys.TAB).perform();
+
+Robot Class : 
+-------------
+This class from Java , not from selenium, to perform any key in keyboard we can use this.
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_DOWN);    - Press down arrow
+		robot.keyRelease(KeyEvent.VK_DOWN);  - Release down arrow
+		
+	        robot.keyPress(KeyEvent.VK_ENTER);   - press enter key
+       	        robot.keyRelease(KeyEvent.VK_ENTER); - release enter key
+
+	        robot.keyPress(KeyEvent.VK_TAB);     - press tab button
+	        robot.keyRelease(KeyEvent.VK_TAB);   - release tab button
+
+Alerts - Interface
+------------------
+To Handle the pop up we use alerts
+
+          Switch the control to pop up alert and accept it
+		Alert al = driver.switchTo().alert();
+		al.accept();
+	
+          I pop up is asking either to accept or dismiss, we can choose anyone
+	  To accept -> use the above
+          To dismiss
+		Alert al = driver.switchTo().alert();
+		al.dismiss();
+
+	  If pop up is asking any input means, send value and accept
+		Alert al = driver.switchTo().alert();
+		al.sendKeys(value);
+		al.accept();
+
+          To get the information from pop up alert
+		Alert al = driver.switchTo().alert();
+ 		String text = al.getText();
+   		System.out.println(text);
+    		al.accept();
+	
+JavaScriptExecutor - Interface
+------------------------------
+
+-> We can use JavaScriptExecutor to perform scroll actions, this will be more accurate than actions class
+-> Also we can perform sendKeys and click options using JavaScriptExecutor in such cases where we cannot achieve those with normal methods
+-> Some elements might not be interactable using standard Selenium methods due to issues like overlaying elements, hidden elements, or dynamically loaded content.
+-> JavaScriptExecutor provides a way to execute JavaScript commands directly within the browser.
+-> Selenium uses the browser’s JavaScript engine to execute the JavaScript code you provide. This code runs in the context of the web page’s DOM, just like if you were typing JavaScript into the browser’s developer console.
+
+   		WebElement element = driver.findElement(By.xpath(value));
+
+   		JavascriptExecutor jks = (JavascriptExecutor) driver;
+
+              >  To perform sendKeys operation, here value is a constant one, IPhone is the sendkeys value we want to pass
+		jks.executeScript("arguments[0].setAttribute('value', 'Iphone')", element);
+		
+              > To perform get attribute function
+                Object executeScript = jks.executeScript("return arguments[0].getAttribute('value')", element);
+		System.out.println(executeScript);
+	
+	      > To perform click function
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		jks.executeScript("arguments[0].'click'", element);
+	
+	      > To perform scroll down
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		jks.executeScript("arguments[0].scrollIntoView(true)", element);
+	
+	      > To perform scroll up
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		jks.executeScript("arguments[0].scrollIntoView(false)", element);
+	
+Select Class:
+-------------
+To perform drop down actions like to select a value from drop down we use select class
+Pass the element reference as select class parameter
+
+   		WebElement element = driver.findElement(By.xpath(value));
+
+		Select s = new Select(element);
+		s.selectByIndex(index);        - Select the value by its index position
+	
+		s.selectByValue("value");      - Select value by its value in DOM
+	
+		s.selectByVisibleText("text"); - Select value by the text available
+	
+              > To check whether dropdown is a multiple options selectable
+		boolean multiple = s.isMultiple();
+		System.out.println(multiple);
+
+	      > To print the first selected option
+		WebElement firstSelectedOption = s.getFirstSelectedOption();
+		System.out.println(firstSelectedOption);
+	    
+              > To print all selected options
+		List<WebElement> li = s.getAllSelectedOptions();
+		for (int i = 0; i < li.size(); i++) {
+			WebElement webElement = li.get(i);
+			String text = webElement.getText();
+			System.out.println(text);   }
+	
+              > To print all the options available in drop down
+		List<WebElement> li = s.getOptions();
+		for (int i = 0; i < li.size(); i++) {
+			WebElement webElement = li.get(i);
+			String text = webElement.getText();
+			System.out.println(text);   }
+
+              > To deselect the values
+                s.deselectAll();
+                s.deselectByIndex(Index);
+                s.deselectByVisibleText("text");
+                s.deselectByValue("Value");
+                
+Windows Handling:
+-----------------
+To handle multiple window, we need to get that window ID and switch to it
+
+              > To get the parent window ID
+		String windowHandle = driver.getWindowHandle();
+		System.out.println(windowHandle);
+	
+	      > To get the all windows ID
+		Set<String> windowHandles = driver.getWindowHandles();
+		System.out.println(windowHandles);
+              
+              > To switch to different window
+		for (String string : windowHandles) {
+              > If we have only 2 windows we can use this approach
+		   if (!string.equals(windowHandle)) {
+			driver.switchTo().window(string);    }
+
+              > To switch between multiple window
+              for (String string : windowHandles) {
+			driver.switchTo().window(string);    }
+               
+	      > To switch to parent window
+		driver.switchTo().defaultContent();
+	
+Frames:
+-------
+To perform any operation that has frames over it, we have switch to frames and do the action
+We can use,
+              > Frame index based on no of frames available
+		driver.switchTo().frame(index);
+
+              > ID/Name from the locator
+		driver.switchTo().frame(String ID/Name);
+        
+              > WebElement reference
+		WebElement element = driver.findElement(By.xpath(value));
+                driver.switchTo().frame(element);
+
+              > To get no of frames available in a webpage
+                List<WebElement> element = driver.findElements(By.tagName("iframe"/"frame"));
+                System.out.println(element.size());
+
+              > To switch to parent frame of current frame
+                driver.switchTo().parentFrame();
+
+              > To switch to the first topmost frame
+                driver.SwitchTo().defaultContent();
+
+TakesScreenshot - Interface
+---------------------------
+To take screenshot, cast the driver to TakesScreenshot interface
+              > To take screenshot of current page
+                TakesScreenshot tks = (TakesScreenshot) driver;
+		File file = tks.getScreenshotAs(OutputType.FILE);
+		File src = new File(location);
+		Files.copyFile(file, src);
+	
+	      > To take screenshot of particular element
+		TakesScreenshot tks = (TakesScreenshot) driver;
+                WebElement element = driver.findElements(By.xpath("value"));
+		File file = element.getScreenshotAs(OutputType.FILE);
+		File src = new File(location);
+		FileUtils.copyFile(file, src);
+

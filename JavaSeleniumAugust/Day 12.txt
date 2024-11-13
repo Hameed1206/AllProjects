@@ -1,0 +1,66 @@
+Day 12
+=======
+
+2 Dimensional Array
+===================
+int[][] irr = new int[3][3];
+
+The first [] denotes the row and the second [] denotes the column
+		
+This is how the index position will be 
+  0,0   0,1   0,2
+  1,0   1,1   1,2
+  2,0   2,1   2,2
+
+We can also use scanner class to add values
+	Scanner s = new Scanner(System.in);
+	
+		String[][] irr = new String[3][3];
+		
+		for (int i = 0; i < 3; i++) {
+			
+			for (int j = 0; j < 3; j++) {
+				irr[i][j]= s.next();
+			} 
+		}
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				System.out.print(irr[i][j]+" ");
+			}System.out.println("");
+		}
+				
+For Each loop
+=============
+String[] srr = {"Java", "Selenium", "Arrays", "String", "Float"};
+		for (String strings : srr) {
+			System.out.println(strings);
+		}
+In for each loop , we don't want index , initialization or condition.
+How it works,,
+In every iteration , it picks one value and utilize it
+1st Iteration  ->  String str = srr[0];  -> the value of srr[0] is stored in temporary variable str and it will use that for operation inside loop body
+2nd Iteration  ->  String str = srr[1]
+
+We can also pass logics to add value to array,,
+
+		int[][] irr = new int[3][3];
+		
+		for (int i = 0; i < 3; i++) {
+			
+			for (int j = 0; j < 3; j++) {
+				irr[i][j]= i+j;
+			} 
+		}
+While accessing two dimensional array for foreach loop,,
+
+In outer for loop , we will get the row and inner for loop we will access the values		
+				
+int[][] irr = new [3][3];
+1 2 3
+4 5 6
+7 8 9
+		for (int[] int1 : irr) {           -> It will take the first row
+			for (int int2 : int1) {    -> here it will access the values from rows
+				System.out.print(int2);
+			} System.out.println("");
+		}

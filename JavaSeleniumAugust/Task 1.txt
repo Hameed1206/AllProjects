@@ -1,0 +1,36 @@
+Task 1
+======
+1, Create two classes and create each class 3 methods and access them in one class using object creation
+Create classes to demonstrate Single, Multilevel and Hierarchial inheritance
+Create 3 interface and implement all method in one class
+2, Declare two integers perform operations addition, subtraction, multiplication, division and modulus of it
+3, Compare 2 integer values and print the greater value
+4, Create If else statement , have a integer value and find the senior citizen
+5, declare 3 integers and find the largest value
+
+Using for loop get below output
+Sample Output :
+11111
+11111
+11111
+11111
+11111
+
+Sample Output :
+* * * * *
+* * * * *
+* * * * *
+
+Sample Output :
+*
+* *
+* * *
+* * * *
+* * * * *
+
+Sample Output :
+*  *  *  *  *
+*  *  *  *
+*  *  *
+*  *
+*

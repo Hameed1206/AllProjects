@@ -1,0 +1,138 @@
+Day 8
+=====
+Looping statements
+==================
+Execute a set of codes repeatedly 
+
+3 major things
+
+1. Initialize       
+2. Condition        
+3. increment/decrement
+
+
+unary operator
+==============
+
+int a = 10;
+a++; -> In this step , while entering the value is 10 and while going out its incremented to 11 (this is post increment)
+
+++a; -> Here, while coming in itself the value is incremented to 11 (this is pre increment)
+
+
+a--; -> In this step , while entering the value is 10 and while going out its decremented to 9 (this is post decrement)
+
+--a; -> Here, while coming in itself the value is decremented to 9 (this is pre decrement)
+
+
+
+Different types of loops in java:
+================================
+1, While loop
+---------------
+it will first check the condition
+if its true
+then it will allow the body of codes to execute
+
+In a Repeated execution of same set of codes , one execution is called as one Iteration
+
+Example:
+--------
+                int a = 1;
+		
+		while (a<5) {
+		    System.out.println("Value is "+a);	
+		    a++;
+		}
+
+step 1            step 2                 step 3           step 4
+ a=1               1<5 true         print statement      a++ -> 1++ ->2
+ a=2               2<5 true         print statement      a++ -> 2++ ->3
+ a=3               3<5 true         print statement      a++ -> 3++ ->4
+ a=4               4<5 true         print statement      a++ -> 4++ ->5
+ a=5               5<5 false   -> Loop terminates
+
+
+2, Do while loop
+----------------
+Before checking the condition it will run the body code atleast once
+2nd iteration happens only if condition is true
+
+Example:
+--------
+                     int a = 1;
+                      do {
+			System.out.println("Value is "+a);
+			a++;
+		} while (a<5);
+
+step 1          step 2                    step 3                 step 4
+a=1          print statement            a++  -> 1++ -> 2       2<5  -> true  (it will allow the next iteration) 
+a=2          print statement            a++  -> 2++ -> 3       3<5  -> true  (it will allow the next iteration) 
+a=3          print statement            a++  -> 3++ -> 4       4<5  -> true  (it will allow the next iteration) 
+a=4          print statement            a++  -> 4++ -> 5       5<5  -> false -> loop terminated -> next iteration wont perform
+
+
+3, For Loop
+------------
+initialization , condition and increment will be declared same step
+
+Example:
+--------
+              for (int i = 1; i < 5; i++) {
+                  
+                      System.out.println(i);
+                }
+
+step 1            step 2                 step 3           step 4
+ i=1               1<5 true         print statement      i++ -> 1++ ->2
+ i=2               2<5 true         print statement      i++ -> 2++ ->3
+ i=3               3<5 true         print statement      i++ -> 3++ ->4
+ i=4               4<5 true         print statement      i++ -> 4++ ->5
+ i=5               5<5 false   -> Loop terminates
+
+
+
+Nested for loop
+---------------
+for loop inside a for loop
+
+		for (int i = 1; i < 5; i++) {
+		       
+			for (int j = 1; j <=i; j++) {
+				
+				System.out.print("* ");
+			}
+			System.out.println("");
+		}
+
+step 1            step 2                 step 3                      step 4               step 5                                step 6                 step 7              step 8
+ i=1             1<5 true         control moved to inner loop         j=1            1<=1 -> True                            print statement        j++ -> 1++ -> 2
+                                                                      j=2            2<=1 -> false -> inner loop terminated 
+                                                                                                                                                                          i++ -> 1++ -> i=2
+ 
+ i=2             2<5 true         control moved to inner loop         j=1            1<=2 -> True                             print statement       j++ -> 1++ -> 2
+                                                                      j=2            2<=2 -> True                             print statement       j++ -> 2++ -> 3
+                                                                      j=3            3<=2 -> false -> inner loop terminated                                            
+                                                                                                                                                                          i++ -> 2++ -> i=3
+ i=3             3<5 true         control moved to inner loop         j=1            1<=3 -> True                             print statement       j++ -> 1++ -> 2
+                                                                      j=2            2<=3 -> True                             print statement       j++ -> 2++ -> 3
+                                                                      j=3            3<=3 -> True                             print statement       j++ -> 3++ -> 4
+                                                                      j=4            4<=3 -> false -> inner loop terminated                                               i++ -> 3++ -> i=4
+
+ i=4             4<5 true         control moved to inner loop         j=1            1<=4 -> True                             print statement       j++ -> 1++ -> 2
+                                                                      j=2            2<=4 -> True                             print statement       j++ -> 2++ -> 3
+                                                                      j=3            3<=4 -> True                             print statement       j++ -> 3++ -> 4
+                                                                      j=4            4<=4 -> True                             print statement       j++ -> 4++ -> 5
+                                                                      j=5            5<=4 -> false -> inner loop terminated                                               i++ -> 4++ -> i=5
+ i=5             5<5 False -> Outer loop terminated 
+        
+Console output :
+================
+* 
+* * 
+* * * 
+* * * * 
+
+
+       
