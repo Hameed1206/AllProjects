@@ -1,7 +1,7 @@
 TestNG -> Test Next Generation / Test New Generation
 -----------------------------------------------------
 
-Its a Framework, Its is providing a for our project
+Its a Framework
 
 4 packages
 Base  -> BaseClass   > startup and teardown
@@ -34,7 +34,8 @@ Annotations
 @AfterTest
 @AfterSuite
 
-
+Attributes
+==========
 @Test(priority = 1)
 @Test(dependsOnMethods = "testThree")
 @Test(dependsOnMethods = {"testOne","testThree"})
@@ -43,3 +44,44 @@ Annotations
 @Test(groups = {"smoke","regression"})
 @Test(dependsOnGroups = "smoke")
 @Test(alwaysRun = true)
+
+
+
+Help -> Eclipse marketplace -> search TestNg -> Install TestNG
+Add testNG Dependency
+
+
+
+        @AfterMethod
+	public void methodAfter() {
+		System.out.println("From Method After");
+	}
+	@Test
+	public void methodOne() {
+		System.out.println("From Method One 1");
+	}
+	@Test
+	public void methodTwo() {
+		System.out.println("From Method Two 2");
+	}
+	@BeforeMethod
+	public void methodBefore() {
+		System.out.println("From Method Before");
+	}
+	@BeforeClass
+	public void methodBeforeClass() {
+		System.out.println("From Method Before class");
+	}
+	@AfterClass
+	public void methodAfterClass() {
+		System.out.println("From Method After class");
+	}
+
+
+@Beforeclass   ->  Runs only one in a class at starting
+@Afterclass    ->  Runs only one in a class at Ending
+
+@Beforemethod  ->  Runs once before all @Test 
+@Aftermethod   ->  Runs once after all @Test
+
+@Test          ->  Test cases

@@ -1,0 +1,47 @@
+Locators
+========
+id            - Best Locator
+name
+classname
+xpath         - Mostly 
+tagname
+linktext
+partial Linktext
+css selector  - Fastest than xpath
+
+
+
+
+Code
+=====
+
+package org.selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DayOne {
+
+	public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+		
+//		driver.findElement(By.id("email")).sendKeys("JavaSelenium@gmail.com");
+//		driver.findElement(By.id("pass")).sendKeys("SELENIUM123");
+//		driver.findElement(By.name("login")).click();
+		
+		WebElement element = driver.findElement(By.id("email"));
+		element.sendKeys("jjjjjjjjjj");
+		
+		//ctrl+2+l
+	}
+
+}

@@ -1,0 +1,139 @@
+Array is collection of elements of same data type(Homogenous data).
+We can store multiple values into a single variable
+
+Array accepts only similar datatypes, 
+
+heterogenous - mixed datatype
+
+Types of Array
+==============
+Single dimensional
+Two dimensional  / Multi dimensional
+
+
+Single Dimensional
+===================
+1, Declare an array
+   Two types to declare an array
+    Type 1 -> Declare length and add value
+
+              int[] irr = new int[5];
+                
+                irr[0] = 23;
+		irr[1] = 35;
+		irr[2] = 65;
+		irr[3] = 75;
+		irr[4] = 95;
+
+   Type 2 ->    Add value while declaring itself, this is more dynamic approach
+
+            String[] srr =  {"java", "Selenium", "Python", "C#", "SQL", "JavaScript"};
+
+
+2, Add values to array    
+     We can add value using index
+           irr[1] = 10;        
+
+
+3, find size of array
+          To print no of values in array
+             reference.length;
+             irr.length;
+we use array reference/variable to get the length of array
+length is called as property 
+
+
+4, Read single value from an array
+      To read single value pass the particular index
+             String[] srr =  {"java", "Selenium", "Python", "C#", "SQL", "JavaScript"};
+             sysout (srr[0])
+             Above will print -> java
+             sysout (srr[4])
+             Above will print -> SQL
+
+5, Read multiple values from array
+        here we can use for loop
+
+               int [] a = {1, 2, 4, 5, 5};
+
+          for (int i = 0; i < a.length; i++) {
+			 
+		System.out.println(a[i]);
+	}
+                       (or)
+
+            for (int i = 0; i <= a.length-1; i++) {
+			 
+		System.out.println(a[i]);
+	}
+		 
+
+        
+6, How to add values dynamically using for loop
+
+              int[] b = new int[5];
+
+          for (int i = 0; i < b.length; i++) {
+			
+        	    b[i] = i+1; 
+        	    System.out.println(b[i]);
+		}
+   Above will print
+      1
+      2
+      3
+      4
+      5
+I am adding value to array dynamically using for loop temporary index
+
+
+
+
+
+Two Dimensional
+================
+
+int[][] a = new int[2][2];                            12 12
+		                                      12 12
+	    a[0][0] = 12;
+	    a[0][1] = 22;
+	    a[1][0] = 33;
+	    a[1][1] = 50;
+
+To print particular value, , ,
+           sysout(a[1][0])  -> This will print -- 33
+
+To get row and column size, , ,
+           System.out.println(a.length+" "+a[0].length);
+a.length    -> No of rows
+a[0].length -> No of columns
+
+
+To print all values, , ,
+               for (int[] is : a) {
+	    	for (int is2 : is) {
+	    		System.out.println(is2);
+			}
+		}
+Output :
+12
+22
+33
+50
+
+
+To print in table format
+
+                        for (int i = 0; i < a.length; i++) {
+	    	
+			for (int j = 0; j < a[0].length; j++) {
+				 System.out.print(a[i][j]+" ");
+			}  
+                            System.out.println("");
+		      }
+
+Output :
+
+12 22 
+33 50 
+

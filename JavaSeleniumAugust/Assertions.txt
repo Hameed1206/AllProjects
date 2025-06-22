@@ -1,4 +1,5 @@
 Assertions
+===========
 Assertions helps us to verify the condition of the test and decide whether test is passed or failed. 
 
 Two types 
@@ -7,6 +8,8 @@ Soft Assertion
 
 Hard Assertion, 
 if there is any failure, it will not proceed further and stops the execution. 
+
+In hard assert all methods are static methods, we can call it using ClassName.methodName();
 Assert.assertTrue(true) = If the boolean value is true, assert will be true and test will pass. 
 Assert.assertFalse(false) = If the boolean value is false, assert will be true and test will pass. 
 Assert.assertEquals(Expectal, Actual) =  If the expected and actual value matches, assert will be true and test will pass. 
@@ -14,9 +17,54 @@ Assert.assertEquals(Expectal, Actual) =  If the expected and actual value matche
 Soft Assert, 
 if there is any failure, it will inform the failure and proceed further with the execution. 
 
-Soft Assert obj = new SoftAssert(); 
+SoftAssert obj = new SoftAssert(); 
 
 obj.assertTrue(true) = If the boolean value is true, assert will be true and test will pass. 
 obj.assertFalse(false) = If the boolean value is false, assert will be true and test will pass. 
 obj.assertEquals(Expectal, Actual) =  If the expected and actual value matches, assert will be true and test will pass. 
-obj.assertAll() = Cause and exception when assert fails should be mentioned in the end of the assert.
+obj.assertAll() =  should be mentioned in the end of the assert.
+
+
+
+package test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import base.BaseClass;
+
+public class Assertions {
+
+	//Assertions -- Verifications
+	
+	// If step 1 is pass , then we can proceed to step 2
+	
+	@Test
+	public void methodOne() {
+		
+		SoftAssert ss = new SoftAssert();
+//		String title = driver.getTitle();
+//		System.out.println(title);
+		
+		ss.assertTrue(false);
+		//Assert.assertEquals(title, "Facebook – log in or sign u");
+		
+		System.out.println("Successful");
+		
+		ss.assertFalse(true);
+		
+		System.out.println("Second one");
+		
+		ss.assertAll();
+	}
+	
+	@Test
+	public void methodTwo() {
+		
+		System.out.println("Hello method 22");  
+		System.out.println("Hello Method 33");
+	}
+}
+
+

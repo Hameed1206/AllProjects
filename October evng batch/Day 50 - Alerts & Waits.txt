@@ -1,0 +1,32 @@
+Day 50 - Alerts & Waits
+=======================
+
+Alert a = driver.switchTo(.alert();
+
+a.accept();
+a.dismiss();
+a.sendKeys();
+a.getText();
+
+https://demoqa.com/alerts
+
+driver.get("https://demoqa.com/alerts");
+		
+		WebElement element2 = driver.findElement(By.xpath("//div[text() = 'Book Store Application']"));
+		WebElement element = driver.findElement(By.id("timerAlertButton"));
+		Actions a = new Actions(driver);
+		a.scrollToElement(element2).perform();
+		element.click();
+		
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		w.until(ExpectedConditions.alertIsPresent());
+		Alert alert = driver.switchTo().alert();
+		//String text = alert.getText();
+		//System.out.println(text);
+		//alert.sendKeys("Java");
+		//Thread.sleep(2000);
+		alert.accept();
+		
+		Wait<WebDriver> ww = new FluentWait<WebDriver>(driver).pollingEvery(Duration.ofMillis(200)).ignoring(Exception.class);
+		ww.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+	/*	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -1,0 +1,28 @@
+Day 47 - Actions Class
+======================
+
+Drag and drop,
+
+https://jqueryui.com/droppable/
+https://www.globalsqa.com/demo-site/draganddrop/
+https://demo.guru99.com/test/drag_drop.html
+
+
+Actions act = new Actions(driver);
+		WebElement source = driver.findElement(By.id("draggable"));
+		WebElement destination = driver.findElement(By.id("droppable"));
+		act.dragAndDrop(source, destination).perform();
+
+
+Scroll up
+=========
+
+WebElement element = driver.findElement(By.xpath("//div[text()='ABOUT']"));
+act.scrollToElement(element).perform();
+
+
+Frame
+=====
+
+WebElement frame = driver.findElement(By.xpath("//iframe[contains(@class , 'demo-frame')]"));
+driver.switchTo().frame(frame);

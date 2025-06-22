@@ -1,0 +1,25 @@
+WebTable
+========
+
+table
+
+
+tr => table row
+th = table head
+
+tbody
+
+tr - table row
+td - table data
+
+https://www.tutorialspoint.com/selenium/practice/webtables.php
+
+To get all datas::
+//table[contains(@class , 'table')]//td
+
+To get the values from particular row
+//table[contains(@class , 'table')]//tr[2]/td
+
+to get particular column data ::
+//table[contains(@class , 'table')]//tr/td[4]
+

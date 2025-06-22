@@ -1,0 +1,38 @@
+Scanner Class
+=============
+Scanner class is used to get the input from user for the operation, we will get inputs in runtime
+
+To access scanner class and its functions, we need to create object for it, and in parameter we have to pass System.in
+Scanner obj = new Scanner (System.in);
+
+System -> is a final class
+in -> input stream 
+System.in , a standard input stream, reads user input from keyboard
+
+methods in scanner:
+===================
+s.nextInt() -> this will accept integer value
+s.nextFloat() -> accepts float value
+s.next() -> accepts string value (only one word, if you mention any space, it wont consider the words after space)
+s.nextLine() -> accepts string value in a complete line including spaces
+s.nextLong() -> accepts Long Value
+
+Scanner s = new Scanner(System.in);
+	     
+	     String next = s.next();
+	     String b = s.nextLine();
+	     int nextInt = s.nextInt();
+	     float nextFloat = s.nextFloat();
+	     long nextLong = s.nextLong();
+
+Lets break System.out.println();
+
+System -> is a Final class
+out -> a static field from System class, also an object of printstream class
+println(); -> method from printstream class (It prints the argument passed to it and moves the cursor to the next line (i.e., it includes a newline at the end).
+
+
+
+
+
+

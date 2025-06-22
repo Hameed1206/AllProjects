@@ -1,0 +1,44 @@
+https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml/5.2.5 
+
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.5</version>
+</dependency>
+
+
+
+FileInputStream fis = new FileInputStream("C:\\Users\\91936\\Desktop\\Selenium Automation\\Book1.xlsx");
+		  Workbook wb = new XSSFWorkbook(fis);
+		  Sheet sheet = wb.getSheet("Sheet1");
+		  System.out.println(sheet.getPhysicalNumberOfRows());
+		  for (int i = 1; i < sheet.getPhysicalNumberOfRows(); i++) {
+			  Row row = sheet.getRow(i);
+			  for (int j = 0; j < row.getPhysicalNumberOfCells(); j++) {
+				  Cell cell = row.getCell(j);
+				  if (cell.getCellType() == org.apache.poi.ss.usermodel.CellType.STRING) {
+					String stringCellValue = cell.getStringCellValue();
+					System.out.print(stringCellValue+"  ");
+				} else {
+				  double numericCellValue = cell.getNumericCellValue();
+				  long l = (long) numericCellValue;
+				  System.out.print(l+"  ");
+				}
+			} System.out.println("");
+		}
+
+
+
+Sheet sheet = wb.getSheet("Sheet1");
+Row row = sheet.getRow(1);
+Cell cell = row.getCell(0);
+String stringCellValue = cell.getStringCellValue();
+System.out.print(stringCellValue);
+
+or 
+
+double numericCellValue = cell.getNumericCellValue();
+long l = (long) numericCellValue;
+System.out.print(l);
+
+

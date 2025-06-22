@@ -1,0 +1,31 @@
+Array
+=====
+
+To store multiple values in to a single reference. We can go for array
+
+Array will store multiple values in single reference, based on index position
+we can get the value by giving reference with index position ref[index]
+
+We can declare array in more than one way,
+
+Either we can declare with size and add values after e.g, below int[]
+Or we can directly add values e.g., below String []
+
+		int[] irr = new int[5];
+                
+                irr[0] = 23;
+		irr[1] = 35;
+		irr[2] = 65;
+		irr[3] = 75;
+		irr[4] = 95;
+
+To print particular value,
+             sysout(irr[2])   => This will print 65
+
+
+		 String[] srr =  {"java", "Selenium", "Python", "C#", "SQL", "JavaScript"};
+Values stored in index position     0          1         2        3     4          5
+
+Index starts from 0
+
+             sysout(srr[1])    => This will print Selenium , value in index 1

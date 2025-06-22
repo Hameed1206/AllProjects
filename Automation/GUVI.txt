@@ -1,5 +1,6 @@
-20/03/2024 -> Jira ends and GIT Started
-21/03/2024 -> GIT commands
+19/03/2024 -> Jira ends and GIT Started
+20/03/2024 -> Jira one doubt and GIT Continues
+21/03/2024 -> GIT commands continuation
 22/03/2024 -> Git tokens and ended, Java Started, Intro, Basic Program, Datatypes, Main method
 25/03/2024 -> Datatypes , Operators 
 26/03/2024 -> Scanner, Static block, Bitwise operators, Control statements

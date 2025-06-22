@@ -1,0 +1,46 @@
+WEBSITE
+=======
+
+Database layer     -> Stores all data
+
+Backend        Business logic layer     -> 
+
+Frontend       Presentation     developed using 3 languages  (HTML, CSS, JavaScript)
+
+HTML -> Skeleton of webpage
+CSS -> It adds styles and colours
+JavaScript -> add dynamic behaviour
+
+
+Example ::
+==========
+<input        type="text"        class="inputtext _55r1 _6luy"       name="email"        id="email"        data-testid="royal_email"        placeholder="Email address or phone number" autofocus="1"        aria-label="Email address or phone number"        "Log in">
+
+In the above, input is tagname
+type, class, name, id, data-testid, placeholder, autofocus, aria-label   =   these all attribute name
+text, inputtext _55r1 _6luy, email, email, royal_email, Email address or phone number, 1, Email address or phone number   =  these all are attribute value
+Log in,  is text
+
+input = tagname
+
+attribute name  = type
+attribute value = text 
+
+//tagname[@attribute name = 'attribute value']
+
+//input[@type = 'text'] 
+
+//tagname[text() = 'textfromfunction']
+
+
+Two types of xpath
+==================
+Absolute xpath  - it will pass all over the DOM (travel from base html)
+Relative xpath  - Directly point to particular element
+
+
+//tagname[text() = 'Log in']
+WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));     
+
+
+

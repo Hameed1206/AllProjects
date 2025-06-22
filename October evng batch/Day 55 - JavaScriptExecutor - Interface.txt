@@ -1,0 +1,28 @@
+JavaScriptExecutor - Interface
+==============================
+
+Whenever we are facing issue in communicating with elements
+
+
+                driver.get("https://www.amazon.in/");
+		WebElement element = driver.findElement(By.id("twotabsearchtextbox"));
+		JavascriptExecutor jk = (JavascriptExecutor)driver;
+		 jk.executeScript("arguments[0].setAttribute('value', 'Iphone')", element);
+
+        public void javaScript0(WebElement refName) {
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		Object executeScript = jks.executeScript("return arguments[0].getAttribute('value')", refName);
+		System.out.println(executeScript);
+	}
+	public void javaScript1(WebElement refName) {
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		jks.executeScript("arguments[0].'click'", refName);
+	}
+	public void javscriptDown(WebElement refName) {
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		jks.executeScript("arguments[0].scrollIntoView(true)", refName);
+	}
+	public void javscriptUp(WebElement refName) {
+		JavascriptExecutor jks = (JavascriptExecutor) driver;
+		jks.executeScript("arguments[0].scrollIntoView(false)", refName);
+	}

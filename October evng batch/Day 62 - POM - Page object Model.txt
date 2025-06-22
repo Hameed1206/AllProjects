@@ -1,0 +1,118 @@
+POM - Page object Model - Design Pattern
+========================================
+
+
+3 packages
+
+1, Utility / Base class methods
+
+2, Locators          (Object Repository)
+
+3, Execution class
+
+
+==================================================================
+
+1,Utility Class
+===============
+
+package utils;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class UtilityClass {
+
+	public static WebDriver driver;
+	public static void launch(String url) {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	}
+	
+	public static void inputText(WebElement a, String b) {
+		a.sendKeys(b);
+	}
+	
+	public static void btnClick(WebElement a) {
+		a.click();
+	}
+}
+
+
+2, Locators
+===========
+
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utils.UtilityClass;
+
+public class HomePage extends UtilityClass {
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy (id = "email")
+	WebElement emailBox;
+	
+	@FindBy (id = "pass")
+	WebElement passBox;
+	
+	@FindBy (name = "login")
+	WebElement loginBtn;
+
+	public WebElement getEmailBox() {
+		return emailBox;
+	}
+
+	public WebElement getPassBox() {
+		return passBox;
+	}
+
+	public WebElement getLoginBtn() {
+		return loginBtn;
+	}
+		
+}
+
+
+3, Execution class
+==================
+package test;
+
+import pages.HomePage;
+import utils.UtilityClass;
+
+public class TestExecution extends UtilityClass {
+
+	
+	public static void loginTest() {
+		launch("https://www.facebook.com/");
+		HomePage h = new HomePage(driver);
+		
+		inputText(h.getEmailBox(), "Hameed@gmail.com");
+		inputText(h.getPassBox(), "987987987");
+		btnClick(h.getLoginBtn());
+	}
+	public static void main(String[] args) {
+		loginTest();
+	}
+	
+	
+}
+

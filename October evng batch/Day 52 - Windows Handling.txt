@@ -1,0 +1,36 @@
+Windows Handling
+================
+
+driver.get("https://www.amazon.in/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("samsung", Keys.ENTER);
+		List<WebElement> elements = driver.findElements(By.xpath("//div[@data-cy='title-recipe']//h2"));
+		
+		elements.get(0).click();
+		elements.get(1).click();
+		elements.get(2).click();
+		
+		String windowHandle = driver.getWindowHandle();
+		Set<String> windowHandles = driver.getWindowHandles();
+		
+		
+		for (String string : windowHandles) {
+			Thread.sleep(2000);
+			
+			driver.switchTo().window(string);
+			String title = driver.getTitle();
+			System.out.println(title);
+			System.out.println(string);
+		}
+
+
+    Only two window case
+
+                for (String string : windowHandles) {
+			Thread.sleep(2000);
+			if(!string.equals(windowHandle){
+			driver.switchTo().window(string);
+			String title = driver.getTitle();
+			System.out.println(title);
+			System.out.println(string); }
+		}

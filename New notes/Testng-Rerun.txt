@@ -1,0 +1,82 @@
+Testng
+
+How to rerun the failed test cases without using the TestNg.falied.xml file?
+
+1. Using IRetry Analyzer Interface
+TestNG provides the IRetryAnalyzer interface to retry failed test cases automatically.
+Steps to implement:
+Create a class implementing IRetryAnalyzer.
+Override the retry() method to define retry logic.
+Associate it with test methods using the @Test annotation.
+
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+public class RetryAnalyzer implements IRetryAnalyzer
+{
+private int retryCount = 0;
+private static final int maxRetryCount = 2; // Number of retry attempts
+@Override public boolean retry(ITestResult result)
+{
+if (retryCount < maxRetryCount)
+{ retryCount++; return true; // Retry the failed test }
+return false; // Stop retrying
+}
+}
+
+Attach RetryAnalyzer to test methods
+import org.testng.annotations.Test; public class SampleTest { @Test(retryAnalyzer = RetryAnalyzer.class) public void testMethod() { System.out.println("Executing test"); assert false; // Forcing failure to check retry } }
+
+2. Using Listeners (ITestListener)
+You can implement the ITestListener interface to track and rerun failed test cases dynamically.
+Steps to implement:
+Implement ITestListener and override the onTestFailure() method.
+Store failed test cases and trigger a re-execution.
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class RetryListener implements ITestListener {
+@Override
+public void onTestFailure(ITestResult result) {
+System.out.println("Test Failed: " + result.getName() + " - Retrying...");
+result.setStatus(ITestResult.FAILURE);
+}
+
+@Override
+public void onStart(ITestContext context) { }
+@Override
+public void onFinish(ITestContext context) { }
+@Override
+public void onTestStart(ITestResult result) { }
+@Override
+public void onTestSuccess(ITestResult result) { }
+@Override
+public void onTestSkipped(ITestResult result) { }
+}
+Attach Listener in testng.xml:
+xml
+CopyEdit
+<listeners>
+<listener class-name="RetryListener"/>
+</listeners>
+
+3:Using a Custom Test Runner (Dynamic Retry Execution)
+Instead of relying on TestNG’s built-in mechanisms, you can collect failed test cases and rerun them programmatically.
+Example Using Java Code:
+java
+CopyEdit
+import org.testng.TestNG;
+import java.util.Collections;
+
+public class TestRunner {
+public static void main(String[] args) {
+TestNG testng = new TestNG();
+testng.setTestClasses(new Class[] { SampleTest.class }); // Add test classes
+testng.run();
+
+if (!testng.hasFailure()) {
+System.out.println("Rerunning Failed Tests...");
+testng.run(); // Re-execute failed tests
+}
+}
+}

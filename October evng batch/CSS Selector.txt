@@ -1,0 +1,27 @@
+CSS Selector
+============
+
+Css is faster than xpath
+It can travel only in forward direction
+we can't use text to find css selector
+
+To access ID , we can use # with id value like #value
+
+To access class, we can use . with value  like .value
+
+also 
+we can use tagname#value for id
+           tagname.value for class
+
+input[id='password']
+
+
+div.value > div   -> immediate child
+div.value div  -> all descantants
+
+
+to point only childs--
+form[id='nav-search-bar-form'] > div:nth-of-type(3)
+
+to point all descantants
+form[id='nav-search-bar-form'] div:nth-of-type(3)

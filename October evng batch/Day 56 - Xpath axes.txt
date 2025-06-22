@@ -1,0 +1,69 @@
+Xpath
+=====
+Document object model [DOM]
+
+<div class="modal fade" id="staticEdit"   sample >
+</div>
+
+
+1, //tagname[@AttributeName = 'Attribute Value']
+   //div[@class = 'modal fade']
+
+2, //tagname[contains(@AttributeName , 'Attribute Value')]
+   //div[contains(@class , 'modal')]
+
+3, //tagname[text() = 'Text from webpage']
+   //div[text() = 'sample']
+
+4, //tagname[contains(text() , 'Partial text')]
+   //div[contains(text() , 'sam')]
+
+
+Child
+Parent
+Ancestor  (Grand parents)
+Siblings
+Preceding-sibling
+Following-sibling
+Descendant (Grand Child)
+
+We can use these relations to find unique web element
+
+Parent to child
+    PARENT                     CHILD
+//div[@class='col-sm-9']/input[@name='name']
+
+
+Ancestor to descentant
+   Ancestor                  descentant
+//div[@class='mb-3 row']//input[@name='name']
+
+//div[@class='mb-3 row']/div/input[@name='name']
+
+//div[@class='container']//div//input[@name='name']
+
+
+//input[@name='name']//parent::div
+
+//input[@name='name']//ancestor::div[@class='container']
+
+
+//div[text()='Surname']//following-sibling::input
+
+//input[@name='lastname']//preceding-sibling::div
+
+Inbetween if we use single slash '/' it will point to child/parent
+          if we use double slasg '//' it will point Ancestors/Descendant/parent/child
+
+
+Two types xpath
+===============
+Absolute xpath \   - This will travel in complete DOM to get one element
+Relative xpath \\  - This will directly point to the element
+
+
+Absolute xpath = 
+/html/body/div[1]/div[1]/div[1]/div[2]/div/div[2]/div/div/div[1]/form/div[1]/div[1]/div[1]/div[2]/div/div[1]/input
+
+
+Relative xpath = //div[@class = 'col-sm-9']

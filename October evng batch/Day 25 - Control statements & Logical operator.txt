@@ -1,0 +1,126 @@
+Control Statements
+==================
+
+1. if  ::: If statement is the most simple decision-making statement. It is used to decide whether a certain statement or block of statements will be executed or not i.e if a certain condition is true then a block of statements is executed otherwise not. 
+
+Syntax:
+-------
+if(condition) 
+{
+   // Statements to execute if
+   // condition is true
+}
+
+
+2. if-else ::: The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t. But what if we want to do something else if the condition is false? Here comes the else statement. We can use the else statement with the if statement to execute a block of code when the condition is false. 
+
+Syntax: 
+-------
+if (condition)
+{
+    // Executes this block if
+    // condition is true
+}
+else
+{
+    // Executes this block if
+    // condition is false
+}
+
+
+3. if-else-if ladder ::: Here, a user can decide among multiple options. The if statements are executed from the top down. As soon as one of the conditions controlling the if is true, the statement associated with that ‘if’ is executed, and the rest of the ladder is bypassed. If none of the conditions is true, then the final else statement will be executed. There can be as many as ‘else if’ blocks associated with one ‘if’ block but only one ‘else’ block is allowed with one ‘if’ block.
+
+if (conditions){
+    // Executes this block if
+    // condition is true
+}
+else if (conditions){
+    // Executes this block if
+    // condition is true
+}
+else if (conditions){
+    // Executes this block if
+    // condition is true
+}
+else if (conditions){
+    // Executes this block if
+    // condition is true
+}
+else {
+    // Executes this block if
+    // All above condition is false
+}
+
+--------------------------------------------------------------
+
+we can have,
+only if (or) 
+one if and one else (or) 
+one if and more than one else if and one else
+
+
+Example :::
+===========
+only if - > > >
+
+      if (age>18) {
+			System.out.println("Eligible for license");
+		}
+
+------------------------------------------------------------------
+if and else - > > >
+
+       if (age>18) {
+			System.out.println("Eligible for license");
+		}
+	else {
+			System.out.println("You're not Eligible");
+		}
+
+========================================================================================
+
+Logical Operators
+=================
+2 Boolean condition 
+
+AND Operator       &&
+-------------
+Condition 1       Condition 2           Result
+True                 True                 True
+True                 False                False
+False                True                 False
+False                False                False
+
+
+OR Operator         ||
+------------
+Condition 1       Condition 2           Result
+True                 True                 True
+True                 False                True
+False                True                 True
+False                False                False
+
+
+Example:::
+==========
+
+int age = 15;
+
+        if (age>=5 && age<=10) {
+			System.out.println("Go to kinder garden");
+		}
+	else if (age>10 && age<=15) {
+			System.out.println("Play chess and carrom");
+		}
+        else if (age>15 && age<=20) {
+			System.out.println("Play Cricket");
+		}
+        else if (age>20 && age<=25) {
+			System.out.println("Play snookers");
+		}
+	else {
+			System.out.println("You're not Eligible");
+		}
+
+
+

@@ -1,0 +1,38 @@
+Xpath syntax
+============
+
+//tagname[@attribute name = 'attribute value']
+
+//tagname[text() = 'text from DOM']
+
+//tagname[contains(text() , 'partial text')]
+
+//tagname[contains(@attribute name , 'partial attribute value')]
+
+
+To get a text from particular element.,,
+WebElement element = driver.findElement(By.xpath("//div[contains(text(),'incorrect')]"));
+		String text = element.getText();
+		System.out.println(text);
+
+Actions
+=======
+
+Actions a = new Actions(driver);
+
+                WebDriver driver = new ChromeDriver();
+		driver.get("https://www.flipkart.com/");       
+		driver.manage().window().maximize();                
+		String currentUrl = driver.getCurrentUrl();   
+		System.out.println("URL "+currentUrl);               
+		String title = driver.getTitle();         
+		System.out.println("Title "+title);    
+		//driver.findElement(By.xpath("//span[text()='✕']")).click();
+		WebElement element = driver.findElement(By.xpath("//span[contains(text() , 'Toys')]"));
+		Actions act = new Actions(driver);
+		act.moveToElement(element).perform();
+		Thread.sleep(3000);
+		WebElement element2 = driver.findElement(By.xpath("//a[text()='Baby Care']"));
+		act.moveToElement(element2).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(text() , 'Baby Gift')]")).click();

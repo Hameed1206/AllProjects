@@ -1,0 +1,141 @@
+Control Statements
+==================
+Nested-if ::: A nested if is an if statement that is the target of another if or else. Nested if statements mean an if statement inside an if statement. Yes, java allows us to nest if statements within if statements. i.e. we can place an if statement inside another if statement. 
+
+Syntax:
+------- 
+if (condition1) {
+   
+   if (condition2) 
+   {
+      // Executes when condition2 is true
+   }
+   else {
+     }
+}
+else{
+
+}
+
+Example :::
+===========
+                //Amazon - Prime member - some discount
+		int a = 2;  // Amazon prime member
+		int aa = 3; // SBI Credit
+		int b = 5;  // Non prime member and holding SBI card
+		
+		
+		if (a==2) {
+			if (aa==3) {
+				System.out.println("Prime member and has SBI Credit card so can avail 10%");
+			}
+			else {
+				System.out.println("Only prime member so can avail 5%");
+			}
+		}
+		else {
+			if (b == 5) {
+				System.out.println("Holding SBI Credit he can avail 3%");
+			}
+			else {
+				System.out.println("Not eligible for discount");
+			}
+		}
+
+==================================================================================================================================
+
+Switch Case
+===========
+Switch-case ::: The switch statement is a multiway branch statement. It provides an easy way to dispatch execution to different parts of code based on the value of the expression. 
+
+Syntax: 
+-------
+switch (expression)
+{
+  case value1:
+        statement1;
+    break;
+
+  case value2:
+        statement2;
+    break;
+
+  case value3:
+    statement3;
+    break;
+
+  default:
+    statementDefault;
+}
+
+Example :::
+===========
+                    String day = "Monday";
+		
+		switch (day) {
+		
+		case "Monday":  {
+		        System.out.println("Idli and Sambar");  
+		         break; }
+		
+		case "Tuesday":   {
+			System.out.println("Dosai and Chutney"); 
+			break;
+		}
+		case "Wednesday": {
+			  System.out.println("Poori and Channa");	
+			  break;
+			}
+		case "Thursday": {
+			  System.out.println("Chappathi and Daal");	
+			  break;
+			}
+		case "Friday": {
+			  System.out.println("Upma and Chutney");	
+			  break;
+			}
+		default:
+			System.out.println("Breakfast not available");
+			
+		}
+
+==============================================================================================================================================
+Increment & Decrement Operator 
+==============================
+
+int a = 10;
+
+Increment a++ and ++a
+Decrement a-- and --a
+
+a++ (Post increment)
+++a (Pre increment)
+a-- (post decrement)
+--a (pre decrement)
+
+
+If int a = 10;
+
+a++;
+ System.out.println(a)                  -> Here a is 11
+
+----------------------------------------------------------
+If int a = 10;
+
+++a;
+ System.out.println(a)                  -> Here a is 11
+----------------------------------------------------------
+If int a = 10;
+
+ System.out.println(a++)                  -> Here a is 10
+
+----------------------------------------------------------
+If int a = 10;
+
+ System.out.println(++a)                  -> Here a is 11
+
+
+
+Unary Operator   -> If we use only one variable
+Binary          -> If we use 2 variables
+Ternary         -> 3 or more variables

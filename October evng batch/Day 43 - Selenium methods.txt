@@ -1,0 +1,68 @@
+Selenium Methods
+================
+
+getCurrentUrl() > To get the current URL of the page
+getTitle()      > To get the title of the page
+
+getAttribute()  > To get the attribute values and also to get the values we sent through sendkeys
+
+close()         > Close the browser (Close the current window/Tab)
+quit()          > Quit the complete session (Terminate the complete session)
+
+
+driver.navigate().to(url) > To navigate to different URL
+driver.navigate().back > To go back to last page
+driver.navigate().forward > To go forward , when we came back
+driver.navigate().refresh > To refresh the current page
+
+
+
+
+Example:
+
+package org.selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DayOne {
+
+	public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");       
+		driver.manage().window().maximize();                
+		String currentUrl = driver.getCurrentUrl();   
+		System.out.println("URL "+currentUrl);               
+		String title = driver.getTitle();         
+		System.out.println("Title "+title);                 
+		
+		WebElement userName = driver.findElement(By.id("email"));     
+		userName.sendKeys("JavaSelenium@gmail.com");           
+		WebElement passWord = driver.findElement(By.id("pass"));         
+		passWord.sendKeys("SELENIUM123");                        
+		
+		String attribute = userName.getAttribute("value");      
+//		driver.findElement(By.name("login")).click();
+		System.out.println("Username : "+attribute);
+		String attribute2 = passWord.getAttribute("value");
+		System.out.println("Password : "+attribute2);
+		driver.navigate().refresh();
+		//driver.quit();
+//		driver.get("https://www.amazon.in/");
+//		
+//		driver.navigate().to("https://www.amazon.in/");
+//		driver.navigate().back();
+//		driver.navigate().forward();
+//		WebElement element = driver.findElement(By.id("email"));
+//		element.sendKeys("jjjjjjjjjj");
+		
+		//ctrl+2+l			
+	}
+}

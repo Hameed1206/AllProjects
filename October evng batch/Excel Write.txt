@@ -1,0 +1,25 @@
+Excel Write
+-==========
+
+                  File f = new File("C:\\Users\\91936\\eclipse-workspace\\MavenProjectOne\\Book1.xlsx");
+		  
+		  FileOutputStream fos = new FileOutputStream(f);
+		  Workbook wb = new XSSFWorkbook();
+		  Sheet sheet = wb.createSheet("Sheet1");
+		  Row row = sheet.createRow(1);
+		  Cell cell = row.createCell(1);
+		  cell.setCellValue("December 24");
+		  
+		  wb.write(fos);
+
+Base Class / Utility Class / Helper Class
+=========================================
+Long Application ====
+
+Ideal code
+
+Baseclass == selenium codes
+POM Class == All locators
+StartUp and tear down
+Run execution
+

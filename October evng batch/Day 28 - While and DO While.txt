@@ -1,0 +1,175 @@
+Control Statements
+==================
+
+Condition Statements
+
+Looping Statements
+==================
+
+Sysout("Hello")
+Sysout("Hello")
+Sysout("Hello")
+Sysout("Hello")
+
+1 to 100
+
+==============================================================================
+Execute a set of codes repeatedly 
+
+3 major things
+
+1. Initialize       -  When I will start
+2. Condition        - When I will stop 
+3. increment/decrement - How I going to update the value / Increment
+
+
+Different types of loops in java:
+================================
+1, While loop
+---------------
+it will first check the condition
+if its true
+then it will allow the body of codes to execute
+
+    Initialization 
+    While(Condition){
+      logics
+     increment/decrement
+}
+
+In a Repeated execution of same set of codes , one execution is called as one Iteration
+
+====================================================================================================================================
+
+Example:
+--------
+                int a = 1;
+		
+		while (a<5) {
+		    System.out.println("Value is "+a);	
+		    a++;
+		}
+
+step 1            step 2                 step 3           step 4
+ a=1               1<5 true         print statement      a++ -> 1++ ->2
+ a=2               2<5 true         print statement      a++ -> 2++ ->3
+ a=3               3<5 true         print statement      a++ -> 3++ ->4
+ a=4               4<5 true         print statement      a++ -> 4++ ->5
+ a=5               5<5 false   -> Loop terminates
+
+
+Examples
+========
+           int a = 1;
+		
+        while (a<=10) {
+         System.out.println("Java Selenium");
+	   a++;
+		}
+
+
+Step 1                   Step 2                   Step 3               Step 4
+
+int a = 1                a<=10
+                         1<=10 -> True           Sysout to print
+                                                 Java Selenium         a++ -> 1 -> 2    a=2                  1 iteration
+a=2                      2<=10 -> True           Java Selenium         a++  -> 2 -> 3   a=3                  2 iteration
+a=3                      3<=10 -> True           Java Selenium         a++  -> 3 -> 4   a=4                  3 iteration
+a=4                      4<=10 -> True           Java Selenium         a++  -> 4 -> 5   a=5                  4 iteration
+a=5
+a=6
+a=7
+a=8
+a=9                     9<=10 -> True            Java Selenium        a++ -> 9-> 10    a=10
+a=10                    10<=10 -> True           Java Selenium        a++ -> 10 -> 11    a=11
+a=11                    11<=10  -> False    -> loop Terminated (End of loop)
+
+
+
+
+println
+
+print my statement
+
+
+while (a<=10) {  // Condition -> Where I should stop
+			System.out.println(a+" Java Selenium");
+			 a++;          //Increment - Update
+		}
+
+
+Console
+=======
+1 Java Selenium
+2 Java Selenium
+3 Java Selenium
+4 Java Selenium
+5 Java Selenium
+6 Java Selenium
+7 Java Selenium
+8 Java Selenium
+9 Java Selenium
+10 Java Selenium
+
+
+
+===================================================================================================================================================
+
+       int a = 10
+;	
+        while (a>0) {
+         System.out.println("Java Selenium");
+	   a--;
+		}
+
+Step 1                             step 2                           step 3                          step 4
+
+a=10                        a>0  =  10 > 0  = true              Java Selenium                   a-- >> 10 -> 9
+a=9                         9>0               true              Java Selenium                    a--   9  ->  8
+a=8
+a=7
+a=1                         1>0  true                           Java Selenium                     a-- 1 -> 0
+a=0                        0>0    false      loop will terminated
+
+
+
+
+
+2 set of pairs
+==============
+Initialization -> int a = small (Should be a small value)
+condition      -> larger then a 
+increment ++   -> move forward
+
+
+Initialization -> int a = large (Should be a larger value)
+condition      -> small than a
+decrement --   -> Move backward
+
+=====================================================================================================================
+
+2, Do while loop
+----------------
+Before checking the condition it will run the body code atleast once
+2nd iteration happens only if condition is true
+
+Example:
+--------
+                     int a = 1;
+                      do {
+			System.out.println("Value is "+a);
+			a++;
+		} while (a<0);
+
+
+a=1       print    a++  2    2<0  false -> loop terminated
+
+do while at least runs logics once 
+Even the condition is false, do while will allow us to run once
+
+While loop won't allow even once if condition is false
+
+
+While loop is entry check loop > it will check while entering into loop     -> Metro train 
+
+DO while is a exit check loop > it will check while coming out              -> Gold shop

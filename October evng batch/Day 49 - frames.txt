@@ -1,0 +1,18 @@
+Frames
+======
+
+http://the-internet.herokuapp.com/nested_frames
+
+driver.get("http://the-internet.herokuapp.com/nested_frames");
+		WebElement frame1 = driver.findElement(By.name("frame-top"));
+		driver.switchTo().frame(frame1);
+		WebElement frame2 = driver.findElement(By.name("frame-right"));
+		driver.switchTo().frame(frame2);
+		WebElement rightText = driver.findElement(By.xpath("//body[contains(text() , 'RIG')]"));
+        System.out.println(rightText.getText());
+        driver.switchTo().parentFrame();
+        
+        WebElement frame3 = driver.findElement(By.name("frame-middle"));
+        driver.switchTo().frame(frame3);
+        WebElement midText = driver.findElement(By.xpath("//div[contains(text() , 'MID')]"));
+        System.out.println(midText.getText());

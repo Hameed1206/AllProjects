@@ -1,0 +1,170 @@
+LIST
+====
+package org.general;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class ListOne {
+
+	public static void main(String[] args) {
+		
+		//List is a Interface
+		
+		List<String> l = new LinkedList();
+		
+		l.add("hh"); //0
+		l.add("ff"); //1
+		l.add("gg"); //2
+		l.add("hh");
+		l.add("ff");
+		l.add("hh");
+		l.add("hh");
+
+               To replace
+		
+//		l.set(2, "bb");
+//		System.out.println(l);
+//		
+//		//System.out.println(l.indexOf("ff"));
+//		System.out.println(l.lastIndexOf("hh"));
+		
+            // to clear list
+//		l.clear();
+//		System.out.println(l);
+		
+//		boolean contains = l.contains("bb");
+//		System.out.println(contains);
+		
+
+           // to add value in between
+//		l.add(1, "tt");
+//		System.out.println(l);
+		
+          // to remove particular value
+//		l.remove(2);
+//		System.out.println(l);
+//		
+		
+		for (int i = 0; i<l.size(); i++) {
+			System.out.println(l.get(i));
+		}
+		//System.out.println(l);
+		
+//		List<String> ll = new LinkedList();
+//		ll.add("hh");
+//		ll.add("gg");
+//		ll.add("qq");
+//		System.out.println(l.size());
+//		System.out.println(ll);
+//		
+//		ll.retainAll(l);  // will retain only common values
+//		
+//		System.out.println(ll);
+		
+//		ll.removeAll(l);   remove the common value
+//		
+//		System.out.println(ll);
+	}
+}
+
+=================================================================================================================================
+SET
+===
+package org.general;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class SetOne {
+
+	public static void main(String[] args) {
+		
+		Set<String> s = new LinkedHashSet();
+		s.add("Ha");
+		s.add("Aa");
+		s.add("Sa");
+		s.add("Qa");
+		s.add("Qa");
+		System.out.println(s);
+		System.out.println(s.size());
+		
+		s.remove("Sa");
+		
+		System.out.println(s);
+		
+		System.out.println(s.contains("Sa"));
+		
+		Set<String> ss = new HashSet();
+		ss.add("Wa");
+		
+        ss.addAll(s);
+        System.out.println(ss);
+        
+        ss.removeAll(s);
+        
+        ss.retainAll(s);
+        System.out.println(ss);
+        
+        
+        // To print one by one
+        for (String string : s) {
+			System.out.println(string);
+		}
+	}
+
+}
+=====================================================================================================================================
+package org.general;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class MapOne {
+
+	public static void main(String[] args) {
+	
+		
+		Map <String, Integer> mp = new LinkedHashMap();
+		mp.put("CSK", 5);
+		mp.put("MI", 5);
+		mp.put("SRH", 3);
+		mp.put("RCB", 2);
+		mp.put("KKR", 3);
+		mp.put("RCB", 3);
+		
+		System.out.println(mp);
+		
+		System.out.println(mp.get("SRH"));
+		
+		System.out.println(mp.containsKey("RCB"));
+		System.out.println(mp.containsValue(4));
+		
+		mp.replace("SRH", 4);
+		System.out.println(mp);
+		
+		mp.remove("KKR");
+		System.out.println(mp);
+		
+		System.out.println(mp.keySet());
+		System.out.println(mp.values());
+
+		
+		System.out.println(mp.size());
+		
+		//entryset
+		
+		for ( Entry<String, Integer> h : mp.entrySet()) {
+			// System.out.println(h);
+//			System.out.println(h.getKey());
+//			System.out.println(h.getValue());
+			System.out.println(h.getKey()+" -> "+h.getValue());
+			
+		}	
+	}
+}
+

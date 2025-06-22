@@ -1,0 +1,104 @@
+Day 33 - String Problems
+========================
+
+for (int i = 0; i <= 5; i++) {
+			
+			for (int j = 0; j <= 5; j++) {
+				
+				if (i==j ) {
+					System.out.print("*");
+				}
+				else {
+					System.out.print(" ");
+				}
+			  }    System.out.println("");
+			  
+		}
+
+	}
+Output
+======
+*     
+ *    
+  *   
+   *  
+    * 
+     *
+
+Print character one by one
+==========================
+
+String s = "Java"
+
+for (int i = 0; i < s.length(); i++) {
+			System.out.println(s.charAt(i)); 
+		}
+
+Output
+======
+J
+a
+v
+a
+
+
+Print character in reverse
+===========================
+
+for (int i = s.length()-1; i >= 0; i--) {
+			System.out.println(s.charAt(i)); 
+		}
+
+Output
+======
+a
+v
+a
+J
+
+
+Print words one by one in strings
+=================================
+
+         String s = "Java Selenium October Batch";
+
+              String[] split = s.split(" "); 
+              
+              for (int i = 0; i < split.length; i++) {
+				   
+	          System.out.println(split[i]);
+				 
+              }  
+
+Output
+======
+Java 
+Selenium 
+October 
+Batch
+
+
+
+Print a word by skipping one word
+=================================
+ 
+      String s = "Java Selenium October Batch";
+
+              String[] split = s.split(" "); 
+
+             for (int i = 0; i < split.length; i++) {
+
+		   if (!split[i].equals("Java")) {
+
+			System.out.println(split[i]);
+
+				}  
+              }  
+
+
+
+Output
+======
+Selenium 
+October 
+Batch

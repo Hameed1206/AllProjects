@@ -1,0 +1,189 @@
+SQL Q&A
+=======
+1, Write an SQL query to fetch the EmpID and name of all the employees working under manager with ID 986. 
+
+     Select EmpId, Name from Employee where ManagerId = 986;
+
+2, Write an SQL query to fetch the different projects available from the salary table. 
+
+    Select Distinct(Project) from Salary;
+
+3, Write an SQL query to fetch the count of employees working in project P1.
+
+    Select count(*) from Salary where Project = 'P1';
+    SELECT COUNT(*) AS employee_count FROM salary WHERE project_name = 'P1';
+
+
+4, Write an SQL query to find the maximum, minimum, and average salary of the employees. 
+
+    Select Max(Salary), Min(Salary), AVG(Salary) from Salary;
+    SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary, AVG(salary) AS avg_salary FROM employees;
+
+5, Write an SQL query to find the employee ID whose salary lies in the range of 30,000 and 40,000.
+
+    Select EmpId, Salary from Salary where Salary between 30000 and 40000;
+
+6, Write an SQL query to fetch those employees who live in Chennai and work under Manager with ManagerID 986. 
+
+    Select EmpId, City, ManagerId from Employee where City = 'Chennai' and ManagerId = 986;
+
+7, Write an SQL query to fetch all the employees who either live in Chennai or work under the Manager with ManagerID 321. 
+    
+    Select EmpId, City, ManagerId from Employee where City = 'Chennai' Or ManagerId = '321';
+
+8, Write an SQL query to fetch all those employees who work on project other than P1 .
+
+    Select EmpId, Project from Salary where Project != 'P1';
+    Select EmpId, Project from Salary where Project <> 'P1';
+    Select EmpId, Project from Salary where Not Project = 'P1';
+    SELECT employee_id, employee_name, project_name FROM salary WHERE project_name NOT IN ('P1');
+
+
+9, Write an SQL query to display the total salary of each employee, adding the salary with variable value .
+
+    Select EmpId, Salary+Variable as Total_Salary from Salary;
+
+10, Write an SQL query to fetch the employees whose name begins with any two character, followed by a text “vi” and ending with any sequence of characters .
+
+    Select EmpId, Name from Employee where Name like '__vi%';
+
+11, List out the employees who are not receiving commission. 
+
+    Select * from Employee where commission is Null;
+    SELECT employee_id, employee_name FROM employees WHERE commission IS NULL OR commission = 0;
+
+12, List out the employees who are working in Department 10 and draw the salaries more than 3500. 
+
+    Select * from Employee where DeptId = 10 and Salary > 3500;
+
+13, List out the employee ID, name in descending order based on salary column. 
+    
+    Select EmpId, Name, Salary from Employee order by Salary desc;
+
+14, How many employees who are working in different departments vice in the organisation. 
+ 
+    Select DeptId, count(*) from Employee group by DeptId;
+
+15, List out the department ID having at least 3 employees. 
+    
+    Select DeptId, Count(*) from Employee where count(DeptID) >= 3;    ??????????
+    Select DeptId, Count(*) from Employee group by DeptId having count(*) >= 3; 
+  Having always followed by group
+
+16, List out the employees who got the maximum salary. 
+
+    Select EmpId, Max(Salary) from Employee;                           ??????????
+    Select * from Employee where salary=(select Max(Salary) from Employee); 
+
+17, List out the employees who are working in sales department. Sales from another table. Both table has common column department ID
+
+    Select * from Employee where DeptId IN (Select DeptId from Department where name = 'Sales');         
+  IN will be used for multiple values, here we can also use = if only one value
+
+    SELECT e.employee_id, e.employee_name, e.department_id FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE d.department_name = 'Sales';
+
+18, Display the employees who are working in new York -> here 3 tables
+
+   Select * from Employee where DeptId = (Select DeptId from Department where LocationId = ( Select LocationId from Location where Regional_Group = 'NEW YORK'));
+
+
+19, 
+
+   Update Employee set Salary = Salary*(10/100) where JobId = (Select JobId from JOB where Function = 'Manager');
+
+
+20, 
+
+   Delete From Employee where DeptId = (Select DeptId from Department where Name = 'ACCOUNTING');
+
+21, 
+ 
+   Select Max(Salary) from Employee;
+   Select Salary from Employee order by Salary desc limit 1;
+   Select Top 1 Salary from Employee order by Salary desc;
+
+22, 
+
+   Select Max(Salary) from Employee where Salary < (Select Max(Salary) from Employee);
+
+   Select Salary from Employee where Salary In (Select Salary from Employee order by Salary desc limit 2) order by Salary limit 1;
+   Select Salary from(Select Salary from Employee order by Salary desc limit 2) emp order by Salary limit 1;
+
+   Select Top 1 Salary from Employee where Salary in (Select Top 2 Salary from Employee order by Salary desc) order by Salary;
+   Select Top 1 Salary from(Select Top 2 Salary from Employee order by Salary desc) emp order by Salary;
+
+
+23, 
+
+   Select Max(Salary) from Employee where Salary < (Select Max(Salary) from Employee where Salary < (Select Max(Salary) from Employee));
+
+   Select Salary from Employee where Salary In (Select Max(Salary) from Employee order by Salary desc limit 3) order by Salary limit 1;
+   Select Salary from(Select Salary from Employee order by Salary desc limit 3) emp order by Salary limit 1;
+
+   Select Top 1 Salary from Employee where Salary in (Select Top 3 Salary from Employee order by Salary desc) order by Salary;
+   Select Top 1 Salary from(Select Top 3 Salary from Employee order by Salary desc) emp order by Salary;
+
+24, 
+
+   Select salary from Employee e1 where n-1 = (Select count(distinct salary) from Employee e2 where e2.salary > e1.salary);
+
+
+SELECT salary from employee ORDER BY salary DESC LIMIT 1,1; 
+
+will also give 28000/- i.e. 2nd highest salary.
+
+if we want 3rd highest salary 
+
+SELECT salary from employee ORDER BY salary DESC LIMIT 2,1;  this will skip first 2 record and return 3rd record
+
+To Find nth highest salary- select salary from employee order by salary desc limit n,1;
+To Find nth Lowest salary- select salary from employee order by salary limit n,1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

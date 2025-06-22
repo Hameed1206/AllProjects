@@ -1,4 +1,5 @@
 TestNG Report
+=============
 
 Extent Report
 
@@ -38,13 +39,32 @@ ExtentSparkReporter crtreport;
 
 	public static String captureScreenshot() throws IOException {
 		TakesScreenshot tk = (TakesScreenshot)driver;
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		File file = tk.getScreenshotAs(OutputType.FILE);
-		//long timeMillis = System.currentTimeMillis();
-		//String title = driver.getTitle();
-		//String snapPath = "C:\\Users\\91936\\eclipse-workspace\\CURA_Healthcare_Service\\Snaps\\"+title+"-"+timeMillis+".jpg";
 		String path = "C:\\Users\\91936\\eclipse-workspace\\TestNextGen\\Reports\\snap.jpg";
 		File path1 = new File(path);
 		Files.copy(file, path1);
 		return path;
+	}
+
+
+
+
+
+public class TestNGReports extends BaseClass {
+
+	@Test
+	public void methodOne() throws IOException {
+		
+		ExtentSparkReporter ex = new ExtentSparkReporter("C:\\Users\\91936\\eclipse-workspace\\MavenProjectOne\\Snaps\\Report1.html");
+		ExtentReports rep = new ExtentReports();
+		rep.attachReporter(ex);
+		
+		ExtentTest test = rep.createTest("Facebook Login");
+		driver.findElement(By.id("email")).sendKeys("JAVA");
+		driver.findElement(By.id("pass")).sendKeys("Python");
+		test.log(Status.PASS, "Login Succesfull");
+		test.addScreenCaptureFromPath(screenshot(), "Facebook snap");
+		rep.flush();
+	}
+	
 	}

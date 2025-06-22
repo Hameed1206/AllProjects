@@ -1,0 +1,63 @@
+Selenium
+========
+Free        => You can download in free of cost
+Open source => Any person can contribute 
+Supports multiple language, Browsers and OS.
+Parallel testing
+
+Selenium Suite has 4 components namely:
+1. Selenium WebDriver
+2. Selenium IDE
+3. Selenium RC
+4. Selenium Grid
+
+
+Selenium Webdriver
+=================
+tool -> Take instructions(Script) from Eclipse to google chrome
+
+Drawbacks
+=========
+Selenium can automate only web application, Not Mobile or desktop apps
+Selenium wont support OTP, Captcha, images
+Selenium by default don't have any report, we need to plugins for report
+
+How to create Maven project ?
+
+
+File > Project > Maven > Maven Project
+
+select == simple maven project and add project to working sets
+Group ID = Package name
+Artifact ID = Project name
+
+To add Selenium to my project
+
+In Google search > Java Selenium dependency > 1st link (https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java) > choose a version older than 3 months and has more no of downloads
+Copy the dependency
+In project -> Open pom.xml file
+before </project>
+create dependencies , inside paste the copied content and save the file
+now all the libraries for selenium is downloaded
+Create a Package and class under src/main/java
+
+In google search -> webdriver manager dependency -> copy and add it to pom.xml
+
+
+public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+
+	}
+
+
+
+
+
+
+
+
+

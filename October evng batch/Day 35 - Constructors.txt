@@ -1,0 +1,207 @@
+Return Keyword
+===============
+public String methodOne() {
+		String s = "Welcome";
+		
+		return s;
+	}
+	public int operation() {
+		int a = 12000;
+		int b = 8000;
+		int c = a-b;
+		
+		 return c;
+	}
+	public static void main(String[] args) {
+		
+		ReturnKeyword ss = new ReturnKeyword();
+		             
+                             Here this method returns s value
+		String sss = ss.methodOne()+" Home";
+		System.out.println(sss);                                     output : Welcome Home
+		System.out.println(ss.methodOne());                          output : Welcome
+		
+                           here method returns c value
+		int d = 12000 + ss.operation();
+		System.out.println(d);                                       output : 4000
+
+		
+	}
+
+Methods are 2 types
+===================
+1. User defined method (Manually we created)
+2. Pre defined method  (Available inside Java library)
+
+
+Constructor
+===========
+Constructor basically a super method , it takes the class name to create constructor
+Constructor will be implicitly invoked when object is created
+It doesn't have any return type
+It will support method overloading, But won't support method overriding
+
+We have 2 types,
+1. Default Constructor / Non parameterized constructor
+2. Parameterized constructor
+
+
+Example:
+========
+public class ConstructorOne {
+
+	int x;
+	int y;
+	String z;
+	String m;
+	
+	//default constructor
+	public ConstructorOne() {
+		System.out.println("Hello World..!!");
+		x = 10;
+		y = 20;
+	}	
+	// Parameterized constructor
+	public ConstructorOne(int a, int b) {
+		System.out.println("Parameterized 1");
+		x=a;
+		y=b;
+	}
+	public ConstructorOne(String b , String bb) {
+		System.out.println("String constructor");
+		m=b;
+		z=bb;
+	}
+	public static void main(String[] args) {
+		
+                //If I call default constructor , I will get values whatever it has
+		ConstructorOne w = new ConstructorOne();
+
+              // If I call parameterized constructor, I can pass any value I want
+		ConstructorOne s = new ConstructorOne(100, 200);
+                System.out.println(s.x+s.y);                                              output : 300
+
+                // Make sure you call the correct object reference
+		ConstructorOne ss = new ConstructorOne(200, 500);
+		System.out.println(ss.x+ss.y);                                            output : 700
+		
+		ConstructorOne q = new ConstructorOne("Hi", "Hello");
+		System.out.println(q.m + q.z);                                            output : HiHello
+	 
+		
+	}
+}
+
+
+
+What is this and super keyword
+==============================
+this keyword represents current class
+super keyword represents parent class
+
+Example
+=======
+        String s;
+	int i;
+	
+	ConstructorTwo(String s){
+	s=s;
+	}
+	
+	ConstructorTwo(int i){
+	i=i
+	}
+
+	public static void main(String[] args) {
+		
+		ConstructorTwo a = new ConstructorTwo("Name");
+                ConstructorTwo a = new ConstructorTwo(25);
+		
+                System.out.println(s+" "+i);	
+	}
+In above case, Both instance and local variables are same, if I try to assign local variable to instance variable, it will confuse
+
+Console:
+========
+null 0
+
+To fix above , , , , , , , 
+
+        String s;
+	int i;
+	
+	ConstructorTwo(String s){
+	this.s=s;
+	}
+	
+	ConstructorTwo(int i){
+	this.i=i
+	}
+
+	public static void main(String[] args) {
+		
+		ConstructorTwo a = new ConstructorTwo("Name");
+                ConstructorTwo a = new ConstructorTwo(25);
+		
+                System.out.println(s+" "+i);	
+	}
+
+this keyword is class representative, it will point to only class variables and functions, Now values will be properly assigned
+
+Console:
+========
+Name 25
+
+
+
+
+Constructor chaining
+--------------------
+We can inter link constructors in same class and also in different classes using this and super keywords
+
+public class ConstructorTwo extends ConstructorThree{
+
+	String s;
+	int i;
+	ConstructorTwo(){
+		this("My name is Hari");
+		System.out.println("Default from Two");
+	}
+	
+	ConstructorTwo(String s){
+	this(25);
+	System.out.println(s);
+	}
+	
+	ConstructorTwo(int i){
+		super("Hello");
+		System.out.println(i);
+	}
+	
+	public static void main(String[] args) {
+		
+		ConstructorTwo a = new ConstructorTwo();
+		
+		
+	}
+}
+
+
+public class ConstructorThree {
+
+	ConstructorThree() {
+		
+		System.out.println("Default from three");
+	}
+	ConstructorThree(String s){
+		this();
+		System.out.println(s);
+	}
+
+Console
+=======
+Default from three
+Hello
+25
+My name is Hari
+Default from Two

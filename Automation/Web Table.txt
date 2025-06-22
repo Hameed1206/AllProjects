@@ -4,12 +4,16 @@ Web Table
 This is how the DOM Structure for web table
 
 <table>                  -> Here the table starts
- <tbody>                 -> This is table body locator
+ <thead> 
    <tr>                  -> table row - Inside table body we will have n of rows
      <th> header </th>   -> table head - In the 1st row we will have header of the table (depends on application)
      <th> header </th>   -> In between header tags we will have header value and tags will be closed
      <th> header </th>   -> We need to locate this row(1st row or row having header values) to access header values
    </tr>                 -> After all header values tne particular header row tag will be closed and move to next row 
+ </thead>
+
+ <tbody>                 -> This is table body locator
+  
    <tr>                  -> Here we are moving to 2nd row
      <td> data </td>     -> table data - Here we have datas present in 2nd row 
      <td> data </td>     -> In between data tags we will have data value and tags will be closed
@@ -47,8 +51,8 @@ For eg.,
 scenario-1
 ==========
 Now I want to access to 4th row 2nd data , How I will write xpath
-table[@id = 'customers']/tbody/tr[3]/td[1]    -> With this I can access the particular data.
-In above the index for 4th row is 3 and 2nd data is 1.
+table[@id = 'customers']/tbody/tr[4]/td[2]    -> With this I can access the particular data.
+In above the index for 4th row is 4 and 2nd data is 2.
 
 WebElement element = driver.findElement(By.xpath("table[@id = 'customers']/tbody/tr[3]/td[1]"));
 system.out.printLn(element.getText());
@@ -121,5 +125,14 @@ List<WebElement> element = driver.findElements(By.xpath("table[@id = 'customers'
 for(int i=element.size()-3; i< element.size(); i++) {
  system.out.printLn(element.get(i)); 
 }
+
+-------------------------------------------------------------------------------------------------------
+driver.get("https://www.tutorialspoint.com/selenium/practice/webtables.php");
+		List<WebElement> elements = driver.findElements(By.xpath("//table[contains(@class , 'table')]//tr/td[1]"));
+		System.out.println("Size of data is : "+elements.size());
+		for (int i = 0; i < elements.size(); i++) {
+			String text = elements.get(i).getText();
+			System.out.println(text);
+		}
 
 

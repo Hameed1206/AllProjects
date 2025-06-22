@@ -1,0 +1,52 @@
+Encapsulation
+==============
+
+package org.october;
+
+public class Encapsulation {
+
+	//Wrapping up of all datas into single unit
+	
+	//Data Hiding
+	
+	String s;
+	int i;
+	
+	public String getS() {
+		return s;
+	}
+	public void setS(String s) {
+		this.s = s;
+	}
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
+	
+	
+}
+
+
+
+package org.october;
+
+public class EncapsulationTwo {
+
+	public static void main(String[] args) {
+		
+		Encapsulation ss = new Encapsulation();
+		ss.setS("Java");
+		ss.setI(15);
+		
+		Encapsulation sss = new Encapsulation();
+		sss.setS("Python");
+		sss.setI(30);
+		
+		System.out.println(ss.s);
+		System.out.println(sss.getS() +"  "+ sss.getI());
+
+	}
+
+}

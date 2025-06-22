@@ -1,0 +1,117 @@
+public void GHGSettingsValidation() {
+    	clickOn(weGHGCalculatorsMenu, "Carbon Management");
+    	clickOn(weGHGSettingsMenu, "GHG Settings Menu");
+    	takeScreenshot(driver);
+    	if(weEquityOwnershipCheckBox.isSelected()) {
+    		passed("Successfully Validated - Equity Ownership check box is selected");
+    	}  else {
+			failed(driver, "Fail to Validate Equity Ownership is not selected");;
+		}
+    	if(weCalenderView.isSelected()) {
+    		passed("Successfully Validated - Calender view is on");
+    	}
+    	else {
+			failed(driver, "Fail to Validate Calender view is Not on");;
+		}
+    	if (weCalorificUnit.getText().contains("megawatt-hour")) {
+			passed("Successfully Validated - Calorific unit "+weCalorificUnit.getText());
+		} else {
+			failed(driver, "Fail to Validate Calorific unit Expected -- Megawatt-hour But Actual -- "+weCalorificUnit.getText());;
+		}
+    	if(weTags.isSelected()) {
+    		passed("Successfully Validated - Tags is on");
+    	}
+    	else {
+			failed(driver, "Fail to Validate Tags is Not on");;
+		}
+    	for (int i = 0; i < weGlobalWarmingPotentialAssessmentCheckbox.size(); i++) {
+			if (weGlobalWarmingPotentialAssessmentCheckbox.get(i).isSelected()) {
+				String text = weGlobalWarmingPotentialAssessmentText.get(i).getText();
+				if (text.contains("2014 IPCC Fifth Assessment")) {
+					passed("Successfully Validated "+text+" is selected");
+				} else {
+					failed(driver, "Failed to Validate - Expected -- 2014 IPCC Fifth Assessment But Actual --"+text );
+				}   } else {
+				System.out.println("None of the option is selected");
+			}
+		}
+    	if(weBaseYear.getText().contains("All")) {
+    		passed("Successfully Validated Base year is selected as "+weBaseYear.getText());
+    	}
+    	else {
+    		failed(driver, "Fail to Validate Expected - All but Actual is "+weBaseYear.getText());
+    	}
+    	
+    	if(weNumberFormatDecimalSymbol.getText().equals(".")) {
+    		passed("Successfully Validated Decimal Symbol is "+weNumberFormatDecimalSymbol.getText());
+    	}
+    	else {
+    		failed(driver, "Fail to Validate Expected - '.' but Actual is "+weNumberFormatDecimalSymbol.getText());
+    	}
+    	if (weNumberFormatNoOfDigitsAfterDecimal.getText().equals("6")) {
+    		passed("Successfully Validated No of digits after Decimal : "+weNumberFormatNoOfDigitsAfterDecimal.getText());
+		}
+    	else {
+    		failed(driver, "Fail to Validate Expected - '6' but Actual is "+weNumberFormatNoOfDigitsAfterDecimal.getText());
+    	}
+    	if (weNumberFormatDigitsGroupingSymbol.getText().equals(",")) {
+    		passed("Successfully Validated digit grouping symbol : "+weNumberFormatDigitsGroupingSymbol.getText());
+		}
+    	else {
+    		failed(driver, "Fail to Validate Expected - ',' but Actual is "+weNumberFormatDigitsGroupingSymbol.getText());
+    	}
+    	if (weNumberFormatDigitGrouping.getText().contains("12,34,56,789")) {
+    		passed("Successfully Validated digit grouping : "+weNumberFormatDigitGrouping.getText());
+		}
+    	else {
+    		failed(driver, "Fail to Validate Expected - '12,34,56,789' but Actual is "+weNumberFormatDigitGrouping.getText());
+    	}
+    	String Expected = weNumberFormatDigitGrouping.getText()+weNumberFormatDecimalSymbol.getText()+"000000";
+    	if (weNumberFormatExample.getText().equals(Expected)) {
+    		passed("Successfully Validated Number format : "+weNumberFormatExample.getText());
+		}
+    	else {
+    		failed(driver, "Fail to Validate Expected - '12,34,56,789.000000' but Actual is "+weNumberFormatExample.getText());	
+    	}
+    }
+
+
+
+
+
+			MenuBarPage.GHGSettingsValidation();
+
+
+
+
+
+
+
+
+
+@FindBy(xpath = "//li[@aria-label='GHG Settings']")
+	private WebElement weGHGSettingsMenu;
+	@FindBy(xpath = "//span[text()='Equity Ownership']/preceding-sibling::span")
+	private WebElement weEquityOwnershipCheckBox;
+	@FindBy(xpath = "//h4[text()='Calendarized View']/following-sibling::div/span/span[2]")
+	private WebElement weCalenderView;
+	@FindBy(xpath = "//div[text()='Calorific Units']/../div/div/div")
+	private WebElement weCalorificUnit;
+	@FindBy(xpath = "//h4[text()='Global Warming Potential']/../following-sibling::div//label//span[contains(text(),'Assessment')]//preceding-sibling::span/span")
+	private List<WebElement> weGlobalWarmingPotentialAssessmentCheckbox;
+	@FindBy(xpath = "//h4[text()='Tags']/following-sibling::div/span/span[2]")
+	private WebElement weTags;
+	@FindBy(xpath = "//h4[text()='Global Warming Potential']/../following-sibling::div//label//span[contains(text(),'Assessment')]")
+	private List<WebElement> weGlobalWarmingPotentialAssessmentText;
+	@FindBy(xpath = "//h4[text()='Base Year']/../following-sibling::section//div[@role = 'button']")
+	private WebElement weBaseYear;
+	@FindBy(xpath = "//h4[text()='Number Format Setting']/../following-sibling::div//div[text()='Decimal Symbol']/..//div[@role='button']")
+	private WebElement weNumberFormatDecimalSymbol;
+	@FindBy(xpath = "//h4[text()='Number Format Setting']/../following-sibling::div//div[text()='No. of digits after decimal']/..//div[@role='button']")
+	private WebElement weNumberFormatNoOfDigitsAfterDecimal;
+	@FindBy(xpath = "//h4[text()='Number Format Setting']/../following-sibling::div//div[text()='Digit grouping symbol']/..//div[@role='button']")
+	private WebElement weNumberFormatDigitsGroupingSymbol;
+	@FindBy(xpath = "//h4[text()='Number Format Setting']/../following-sibling::div//div[text()='Digit Grouping']/..//div[@role='button']")
+	private WebElement weNumberFormatDigitGrouping;
+	@FindBy(xpath = "//h4[text()='Number Format Setting']/../following-sibling::div/div//div/h3")
+	private WebElement weNumberFormatExample;

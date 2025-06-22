@@ -1,0 +1,78 @@
+Execution class
+===============
+
+package test;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import base.BaseClass;
+
+public class TestNGDataProvider extends BaseClass{
+	
+	@DataProvider(name = "DataSetOne")
+	public Object[][] data() throws IOException {
+		
+		Object[][] data = TestData.data();
+		
+		return data;
+	}
+	
+	@Test (dataProvider = "DataSetOne")
+	public static void execute(String s1, String s2, String s3, String s4) {
+		driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']")).click();
+		driver.findElement(By.name("firstname")).sendKeys(s1);
+		driver.findElement(By.name("lastname")).sendKeys(s2);
+		driver.findElement(By.name("reg_email__")).sendKeys(s3);
+		driver.findElement(By.name("reg_passwd__")).sendKeys(s4);
+
+		
+//		driver.findElement(By.id("email")).sendKeys(s);
+//		driver.findElement(By.id("pass")).sendKeys(ss);
+	}
+
+}
+
+
+
+
+Data Class
+==========
+
+package test;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class TestData {
+
+public static Object[][] data() throws IOException {
+		
+		FileInputStream fis = new FileInputStream("C:\\Users\\91936\\eclipse-workspace\\MavenProjectOne\\Book1.xlsx");
+		Workbook wbook = new XSSFWorkbook(fis);
+		Sheet sheet = wbook.getSheet("Sheet1");
+		
+		System.out.println("No of rows "+sheet.getPhysicalNumberOfRows());
+		System.out.println("No of column "+sheet.getRow(0).getPhysicalNumberOfCells());
+
+		Object[][] data = new Object[sheet.getPhysicalNumberOfRows()][sheet.getRow(0).getPhysicalNumberOfCells()];
+		
+		for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getPhysicalNumberOfCells(); j++) {
+				Cell cell = row.getCell(j);
+				data[i][j]= cell.getStringCellValue();
+			}
+		}
+	        return data;
+	}
+}

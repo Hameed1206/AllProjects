@@ -6,7 +6,7 @@ Array:
 
 
 Parent for all the Classes is Object
-Parent for all the Interface is Search Context
+Parent for all the Interface is Search Context (Top most interface of all interface)
 
 
 
@@ -28,7 +28,8 @@ Parent for all the Interface is Search Context
 
 Collections
 ===========
-Collections supports dissimilar datatypes
+In Collection, we can store multiple data in single reference
+Collection supports dissimilar datatypes
 It is a dynamic memory allocation or Run time memory allocation, so wastage can be avoided
 
 It has 3 types,

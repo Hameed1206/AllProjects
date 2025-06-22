@@ -1,0 +1,87 @@
+
+Selenium - > Suite of tools
+
+- It has lot of functions
+will be in form class, interface and methods
+
+We should remember all these names
+
+
+
+Automation
+==========
+
+Open the browser ->  WebDriverManager.chromedriver().setup();
+                     WebDriverManager.edgedriver().setup();
+		     WebDriverManager.firefoxdriver().setup();
+		     WebDriverManager.safaridriver().setup();
+		     WebDriverManager.chromiumdriver().setup();
+		     WebDriverManager.operadriver().setup();
+
+
+Launch the application -> WebDriver driver = new ChromeDriver();
+
+                          driver.get(URL)
+
+enter text in textbox -> WebElement var = driver.findElement(By.id("hjhjh"));
+                         var.sendKeys("Value")
+
+Click a button       -> WebElement var = driver.findElement(By.id("hjhjh"));
+                        var.click(); 
+
+To get a text available in webpage -> WebElement var = driver.findElement(By.id("hjhjh"));
+                                     sysout(var.getText());
+                                       or 
+                                     String text =  var.getText();
+                                     sysout(text)
+
+To get a text from textbox , we passed -> WebElement var = driver.findElement(By.id("hjhjh"));
+                                          var.sendKeys("jhgfghjk");
+                                          sysout(var.getAttribute("value"));
+                                          String values = var.getAttribute("value");
+
+To get a title       -> sysout(driver.getTitle());
+                        String title = driver.getTitle();
+                        sysout(title)
+To get a Current URL -> sysout(driver.getCurrentUrl();
+                        String cUrl = driver.getCurrentUrl();
+                        sysout(cUrl);
+
+
+To navigate between pages -> driver.navigate().to("Url");
+                             driver.navigate().back();
+                             driver.navigate().forward();
+                             driver.navigate().refresh();
+
+To Achieve keyboard and mouse actions -> Actions act = new Actions(driver);
+                                         WebElement var = driver.findElement(By.id("hjhjh"));
+                                         act.moveToElement(var).perform();
+
+                                         act.contextClick(var).perform();
+                                         act.doubleClick(var).perform();
+
+
+xpath syntax
+============
+
+1st syntax
+
+//tagname[@attributeName = 'attribute value']
+//input[@name = 'firstname']
+
+2nd syntax
+
+//tagname[text() = 'text from function']
+//label[text() = 'Female']
+
+3rd syntax
+
+//tagname[contains(@attributeName , 'attribute value')]
+//span[contains(@data-name , 'gender')]
+
+4th syntax
+
+//tagname[contains(text() , 'text from function')]
+//label[contains(text() , 'Fem')]
+
+

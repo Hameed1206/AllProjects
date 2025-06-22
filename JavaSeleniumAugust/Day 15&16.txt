@@ -7,6 +7,7 @@ It doesn't have any return type
 It will support method overloading, But won't support method overriding
 We have 2 types,
 
+
 1. Default Constructor / Non parameterized constructor
 ------------------------------------------------------
 Example

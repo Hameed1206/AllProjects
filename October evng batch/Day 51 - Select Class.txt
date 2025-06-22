@@ -1,0 +1,52 @@
+Day 51 - Select Class
+=====================
+
+driver.get("https://www.facebook.com/");
+		driver.findElement(By.xpath("//a[text()='Create new account']")).click();
+		//driver.findElement(By.name("firstname")).sendKeys("Hameed"); 
+		
+		WebElement element = driver.findElement(By.id("day"));
+		
+		//Select class
+		
+		Select s = new Select(element);
+		s.selectByIndex(5);
+		
+		WebElement element2 = driver.findElement(By.id("month"));
+		Select ss = new Select(element2);
+		ss.selectByValue("5");
+		
+		WebElement element3 = driver.findElement(By.id("year"));
+		Select sss = new Select(element3);
+		sss.selectByVisibleText("2015");
+		*/
+		
+		driver.get("http://output.jsbin.com/osebed/2");
+		WebElement element = driver.findElement(By.id("fruits"));
+		Select s = new Select(element);
+		s.selectByIndex(0);
+		s.selectByValue("orange");
+		s.selectByVisibleText("Apple");
+		
+		List<WebElement> options = s.getAllSelectedOptions();
+		for (int i = 0; i < options.size(); i++) {
+			String text = options.get(i).getText();
+			System.out.println(text);
+		}
+		/*WebElement firstSelectedOption = s.getFirstSelectedOption();
+		String text = firstSelectedOption.getText();
+		System.out.println(text); 
+		
+		//List<WebElement> elements = driver.findElements(By.xpath("//input[@type='text']")); 
+		
+		/*
+		driver.get("https://www.amazon.in/");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Iphone 15", Keys.ENTER);
+		
+		List<WebElement> elements = driver.findElements(By.xpath("//div[@data-cy='title-recipe']//h2"));
+		
+		for (int i = 0; i < elements.size(); i++) {
+			String text = elements.get(i).getText();
+			System.out.println(text);
+		}
+		*/

@@ -1,4 +1,4 @@
-Stale Element referenece exception occurs when we try to interact with webelement which is no longer available in the DOM
+Stale Element referenece exception occurs when we try to interact with WebElement which is no longer available in the DOM
 
 stale -> old/decayed
 
@@ -6,13 +6,13 @@ Eg., Amazon webpage we have search box function in all the pages we navigate
 
 In that case if we took the locator in homepage and try to use it in any other page which it navigated
 
-Like ., I took locator in homepage , Now I searched for some product (IPhone) and navigated to product result page , Now I want to search 
-another product , I dont need to come back to homepage again , Because I have search box in all pages , so I will search there. But I wont 
+Like ., I took locator in homepage , Now I searched for some product (iPhone) and navigated to product result page , Now I want to search 
+another product , I don't need to come back to homepage again , Because I have search box in all pages , so I will search there. But I wont 
 take locator again I will use the same locator which I took for homepage since search box locator is same for all pages, But here I will get 
 stale element reference exception because the DOM box will be refreshed while navigating to pages.
 The cause is while in Homepage the the locator will have one property ID and if we navigate other page still the same locator, the property ID 
 is different(changes) , here the locator is going stale , Thats why we get this exception
-This is what we call Stale Element Reference Excpetion
+This is what we call Stale Element Reference Exception
 
-Another best example is CricBuzz webpage which is getting refresh in samepage, so DOM will also get refresh , This will change locator Property
+Another best example is CricBuzz webpage which is getting refresh in same page, so DOM will also get refresh , This will change locator Property
 ID
