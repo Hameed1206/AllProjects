@@ -1,0 +1,76 @@
+JAVA SELENIUM INTERVIEW QUESTIONS
+*********************************
+
+Jan 20th 2024 Interview : : : : :
+
+1, GAVS, Sholinganallur
+
+RegEx in Java
+Alternate for sendKeys
+How to add Map to List
+GIT conflicts
+SQL joints
+How to get and avoid duplicates in ArrayList
+Cucumber report how to attach Screenshot
+Why we can’t implement Interface in Interface -> Because, We cannot implement anything in to methods
+Windows pop up handle
+Sequli framework (Instead of AutoIT for Desktop app automation)
+Split string and store in array
+Day to day activities
+SQL which has m in name
+SQL fetch duplicates
+Image handle
+Where we prefer css selector over xpath
+Burn up and burn down chart in jira
+Interface
+Polymorphism
+StaleElementReferenceException
+Cucumber report
+Occurrence count of a char in a word
+
+
+Feb 3rd 2024 Interviews : : : : : 
+
+1, AnB system, Nandanam
+
+What are the testing techniques we use in manual tesing
+which methodology and type we follow
+How we Write test cases , on what basis
+what is Residual defects
+
+2, OptiSol business solution, Thiruvanmiyur
+
+How to switch between windows using set
+What is Data driven and Keyword driven frameworks
+
+3, Expleo, OMR
+
+How to choose a date from date picker from a webpage using selenium
+How to get a particular value from dynamic web table
+Arrange String in ascending order
+
+
+Nov 28th 2024 COMCAST  1st round : : : : : :
+
+Wildcard from java
+Design pattern from java
+Difference between constant and final variable
+Functional Interface in Java 8  ->  It will allow Abstract, static and normal methods .
+
+In a string with 4 words, which word starts in Capital letter that word should be replaced with other word
+
+SQL query to get Highest salary
+SQL, Groups and orders
+
+Method(Int var, int var, String null, String null)
+Obj.method(value, value)
+Is above correct, will Java accept this ?
+
+How to add value to last string only ?
+Obj.method(value, value, ‘’, Value)
+
+
+Dec 4th 2024 COMCAST 2nd round : : : : : : :
+
+How to clean db after every run
+In a array fetch a index value of which The sum of values in right side is equal to sum of values in left side

@@ -1,0 +1,17 @@
+Topics to learn
+************
+
+String loop forward and reverse
+Array reverse loop
+Object array
+Arrays functions
+Sort array
+Duplicates in array
+Search element
+String split
+Primitive non primitive
+
+
+
+
+

@@ -1,0 +1,50 @@
+Important Selenium Methods
+
+• Navigation Methods:
+get(url): Navigate to a webpage.
+navigate().to(url): Similar to get(url).
+navigate().back(): Go back to the previous page.
+navigate().forward(): Go forward to the next page.
+navigate().refresh(): Refresh the current page.
+
+• Element Interaction Methods:
+
+findElement(By locator): Find an element on the webpage.
+findElements(By locator): Find multiple elements on the webpage.
+click(): Click on an element.
+sendKeys(String text): Send keys to an element (e.g., text input).
+clear(): Clear the text from an element.
+getText(): Get the text from an element.
+getAttribute(String name): Get the attribute value of an element.
+isSelected(): Check if an element is selected (e.g., checkbox).
+isEnabled(): Check if an element is enabled.
+isDisplayed(): Check if an element is displayed.
+
+• Waiting Methods:
+
+implicitly Wait (long time, TimeUnit unit): Set implicit wait for element presence.
+WebDriverWait wait = new WebDriverWait(driver, time): Create an explicit wait instance.
+wait.until(ExpectedConditions.condition): Wait for a specific condition to occur.
+
+• Alert and Window Methods:
+
+switchTo().alert(): Switch to an alert.
+dismiss(): Dismiss an alert.
+accept(): Accept an alert.
+sendKeys(String text): Send keys to an alert.•
+
+Cookie Methods:
+
+manage().getCookies(): Get all cookies.
+manage().getCookieNamed (String name): Get a cookie by name.
+manage().addCookie (Cookie cookie): Add a cookie.
+manage().deleteCookie (Cookie cookie): Delete a cookie.
+manage().delete AllCookies(): Delete all cookies.
+
+• Other Methods:
+
+getTitle(): Get the title of the webpage.
+getCurrentUrl(): Get the current URL.
+getPageSource(): Get the HTML source of the webpage.
+quit(): Quit the driver.
+close(): Close the browser window.
