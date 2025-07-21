@@ -198,3 +198,52 @@ Extracting the response data to perform additional assertions or operations
 
 
 
+
+
+Rest Assured- Interview Questions
+
+1) Difference between Path and Query Parameters with an example
+
+2)How to send a GET request using Rest Assured?
+
+3)How to log a response in Rest Assured only in the case of an error.
+
+4) Explain different ways of extracting a single field from a response body. [like using response, JSONPath, XMLPath) and also they will give you the response of a request and ask you to extract the response of a particular field.
+
+5) How to mask header information in API testing using Rest Assured?
+
+6)How to download a file using rest assured?
+
+7)How do you handle form parameters and multipart parameters [uploading media files]?
+
+8) They will give you an end to end scenario and ask how you will write the rest assured code for that they are trying to understand how well you can do the API chaining here, you can just explain also]
+
+9) What import statement will you use for Rest Assured to work?
+
+10) How to check that a specific item is present in a collection using Rest Assured? [we can use Matchers here
+
+11)What are the common exceptions you encounter in Rest Assured?
+
+13) How do you handle data in Rest Assured? [POJO, Excel, config file, HashMaps]
+
+14) What is the use of ResponseSpecification in Rest Assured?
+
+15)How do you handle authentication and authorization in Rest Assured tests? [basic, oauth, digest.custom]
+
+16) What are the common pitfalls or challenges you have faced while using Rest Assured, and how did you overcome them?
+
+17)What is the difference between given(), when(). and then() methods in Rest Assured and explain with an example.
+
+18)How do you handle cookies in Rest Assured tests?
+
+19)How can you handle timeouts and retries in Rest Assured tests?
+
+20) Reporting in Rest Assured.
+
+21) How do you enable parallel execution of Rest Assured tests? [TestNG, XML]
+
+22)How do you verify the status code of an HTTP response using Rest Assured?
+
+23)How do you handle dynamic status codes or scenarios where the status code may change between test runs?
+
+24)How can you handle dynamic data or parameters in Rest Assured requests?
